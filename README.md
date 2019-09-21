@@ -201,10 +201,9 @@ for software version 1.6 include:
    
 8.  [Appendix 2 Calibration Details](#appendix-2-calibration-details)  
     1. [Detector Calibration](#detector-calibration)  
-    2. Fixture Calibration  
-    3. S21 Compensation  
-    4. [S11 Compensation](#s11-compensation)  
-    5. [Fixture Calibration Data Set](#fixture-calibration-data-set)  
+    2. [S21 Compensation](#s21-compensation)  
+    3. [S11 Compensation](#s11-compensation)  
+    4. [Fixture Calibration Data Set](#fixture-calibration-data-set)  
  
 9.  [Appendix 3 Software Installation, Registry](#appendix-3-software-installation-registry)  
  
@@ -1983,7 +1982,7 @@ build a table to correct those periodic errors.
 All the various data sets are then saved in the file
 `detector.ica` in the VNA program startup directory.
  
-**Fixture Calibration S21 Compensation**
+**S21 Compensation**
  
 The Fixture calibration routine measures the received signal through a
 small bullet or barrel connector. It measures the received magnitude
