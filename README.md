@@ -194,23 +194,22 @@ for software version 1.6 include:
     2.  [Common Display Results](#common-display-results)  
 
 [Appendix 1 Overview of S Parameters](#appendix-1-overview-of-s-parameters)  
-[Polar Display](#polar-display)  
-[Rectangular Display](#rectangular-display)  
-[Group Delay](#group-delay)  
-[SWR](#swr)  
+1.  [Polar Display](#polar-display)  
+2.  [Rectangular Display](#rectangular-display)  
+3.  [Group Delay](#group-delay)  
+4.  [SWR](#swr)  
    
 [Appendix 2 Calibration Details](#appendix-2-calibration-details)  
-[Detector Calibration](#detector-calibration)  
-Fixture Calibration  
-S21 Compensation  
-[S11 Compensation](#s11-compensation)  
-[Fixture Calibration Data Set](#fixture-calibration-data-set)  
+    1. [Detector Calibration](#detector-calibration)  
+    2. Fixture Calibration  
+    3. S21 Compensation  
+    4. [S11 Compensation](#s11-compensation)  
+    5. [Fixture Calibration Data Set](#fixture-calibration-data-set)  
  
 [Appendix 3 Software Installation, Registry](#appendix-3-software-installation-registry)  
  
 [Appendix 4 Group Delay and Aperture](#appendix-4-group-delay-and-aperture)  
- 
-[Aperture Shortening](#aperture-shortening)  
+    1.  [Aperture Shortening](#aperture-shortening)  
 
 Overview
 ========
