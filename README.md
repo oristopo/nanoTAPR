@@ -2266,9 +2266,9 @@ Appendix 4 -- Group Delay and Aperture
 
 Group Delay is an equivalent time delay through a device or network.
 Mathematically, it is defined at the negative of the rate of change
-(the slope) of phase *φ vs. frequency *ω:
+(the slope) of phase φ vs. frequency ω:
 
-	*GroupDelay* = - *d*φ / *d*ω
+*GroupDelay* = - *d*φ / *d*ω
  
 In the VNA, a measurement sweep consists of a number of individual
 discrete data points taken at single spot frequencies. Thus, the group
