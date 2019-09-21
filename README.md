@@ -595,14 +595,11 @@ Currently, the software distribution consists of the following files
 | Setup.exe                         |   Installer bootstrap. Detects if |
 |                                   |   suitable Windows installer is   |
 |                                   |   present,                        |
-|                                   |                                   |
 |                                   |   provides web assistance if not. |
 +-----------------------------------+-----------------------------------+
 | Setup1.msi                        |   The VNAR3 application           |
 |                                   |   (including supporting files) in |
-|                                   |   windows                         |
-|                                   |                                   |
-|                                   |   installer format.               |
+|                                   |   windows installer format.       |
 +-----------------------------------+-----------------------------------+
 | Setup.ini                         |   Provides instructions to the    |
 |                                   |   bootstrapper about              |
@@ -618,47 +615,42 @@ The VNA software installer loads the following files, by default in
 C:\Program Files\TAPR\VNA\. The file location can be changed
 during installation.
 ```
-+-----------------------+-----------------------+-----------------------+
-|   File name           |     Where installed   |     Function          |
-+=======================+=======================+=======================+
-| VNAR3.exe             |   Default directory.  |   Host program.       |
-+-----------------------+-----------------------+-----------------------+
-| VNAR3                 |   Default directory.  |   Compiled help file. |
-|                       |   Needs to be in same |                       |
-| Help.chm              |                       |                       |
-|                       |   directory as        |                       |
-|                       |   VNAR3.exe           |                       |
-+-----------------------+-----------------------+-----------------------+
++----------------+-----------------------+-----------------------+
+|   File name    |     Where installed   |     Function          |
++================+=======================+=======================+
+| VNAR3.exe      |   Default directory.  |   Host program.       |
++----------------+-----------------------+-----------------------+
+| VNAR3          |   Default directory.  |   Compiled help file. |
+|                |   Needs to be in same |                       |
+| Help.chm       |   directory as        |                       |
+|                |   VNAR3.exe           |                       |
++----------------+-----------------------+-----------------------+
 
-+-----------------------+-----------------------+-----------------------+
-|   File name           |     Where installed   |     Function          |
-+=======================+=======================+=======================+
-| VNA_target.bin        |  Default directory.   |   Binary image of     |
-|                       |   Needs to be in same |   target AN2135       |
-|                       |   directory as        |   software.           |
-|                       |   VNAR3.exe           |                       |
-|                       |                       |   Downloaded to       |
-|                       |                       |   target by the host  |
-|                       |                       |   program             |
-+-----------------------+-----------------------+-----------------------+
-| ezusb.sys             |   Win98, ME:          |   Device driver for   |
-|                       |   C:\WINDOWS\SYSTEM   |   AN2135 USB          |
-|                       |                       |                       |
-|                       |   WinNT, Win2000,     |   target.             |
-|                       |   WinXP:              |                       |
-|                       |   C:\WINDOWS\SYSTEMi  |                       |
-|                       | 32\DRIVERS            |                       |
-+-----------------------+-----------------------+-----------------------+
-| ezusbw2k.inf          |   For all Windows     |   Information file    |
-|                       |   versions:           |   used to associate   |
-|                       |   C:\WINDOWS\inf	|                       |
-|                       |                       |   USB device with     |
-|                       |                       |   ezusb.sys driver.   |
-+-----------------------+-----------------------+-----------------------+
-| gpl.txt               |   Default directory.  |   License terms for   |
-|                       |                       |                       |
-|                       |                       |   VNA software.       |
-+-----------------------+-----------------------+-----------------------+
++----------------+-----------------------------+-------------------+
+|   File name    | Where installed             | Function          |
++================+=============================+===================+
+| VNA_target.bin | Default directory.          | Binary image of   |
+|                | Needs to be in the same     | target AN2135     |
+|                | directory as                | software.         |
+|                | VNAR3.exe                   |                   |
+|                |                             | Loaded to target  |
+|                |                             | by VNAR3.exe      |
++----------------+-----------------------------+-------------------+
+| ezusb.sys      | Win98, ME:                  | Device driver for |
+|                | C:\WINDOWS\SYSTEM           | AN2135 USB target |
+|                |                             |                   |
+|                | WinNT, Win2000,             |                   |
+|                | WinXP:                      |                   |
+|                | C:\WINDOWS\SYSTEM32\DRIVERS |                   |
++----------------+-----------------------------+-------------------+
+| ezusbw2k.inf   | For all Windows             | Information file  |
+|                | versions:                   | used to associate |
+|                | C:\WINDOWS\inf              | USB device with   |
+|                |                             | ezusb.sys driver. |
++----------------+-----------------------------+-------------------+
+| gpl.txt        |   Default directory.        | License terms for |
+|                |                             | VNA software.     |
++----------------+-----------------------------+-------------------+
 ```
 Installation Pre-Requisites
 ---------------------------
@@ -1454,7 +1446,7 @@ data in storage.
 'Display Storage' is a toggle that is checked when the contents of
 storage are being displayed.
  
-A Common use of the storage function is to make a measurement, verify
+A common use of the storage function is to make a measurement, verify
 it's useful, then 'store' the data. Next, some change to the device
 under test is made and a new measurement is made. Enabling the Display
 Storage option allows comparing on-screen the two measurements.
