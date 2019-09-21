@@ -22,7 +22,7 @@ for software version 1.4 include:
 
 -   The Group Delay range is increased to 100 microseconds/div.
 
--   The target reads S21 magnitude more slowly when in the SLOW mode.
+-   The target reads `S21` magnitude more slowly when in the SLOW mode.
     This avoids errors when measuring devices with large delay (over
     \~40 microseconds). FAST mode is unchanged and gives serious errors
     if the DUT has large delay (such as narrow crystal filters) -- use
@@ -70,7 +70,7 @@ for software version 1.5 include:
     that the instrument is sweeping under very slow setting
     combinations.
 
--   A bug in S21 magnitude readings near -34 dB has been corrected. This
+-   A bug in `S21` magnitude readings near `-34 dB` has been corrected. This
     error could be small or large depending on the device under test.
 
 -   The glitch detector for slower sweeps has been improved.
@@ -276,8 +276,7 @@ for software version 1.6 include:
  
 [SWR 53](#swr)
  
-[Appendix 2 -- Calibration Details
-55](#appendix-2-calibration-details)
+[Appendix 2 -- Calibration Details 55](#appendix-2-calibration-details)
  
 [Detector Calibration 55](#detector-calibration)
  
@@ -289,27 +288,26 @@ S21 Compensation 55
  
 [Fixture Calibration Data Set 56](#fixture-calibration-data-set)
  
-[Appendix 3 -- Software Installation, Registry
-57](#appendix-3-software-installation-registry)
+[Appendix 3 -- Software Installation, Registry 57](#appendix-3-software-installation-registry)
  
-[Appendix 4 -- Group Delay and Aperture
-58](#appendix-4-group-delay-and-aperture)
+[Appendix 4 -- Group Delay and Aperture 58](#appendix-4-group-delay-and-aperture)
  
 [Aperture Shortening 58](#aperture-shortening)
 
 Overview
 ========
 
-This manual provides instructions for using the TAPR / Ten-Tec Vector
+This manual provides instructions for using TAPR / Ten-Tec Vector
 Network Analyzer (VNA) hardware and software. Due care is required in
-test setup, calibration, and operational methods if the accuracy of
-the VNA instrument is to be fully realized. This manual applies to VNA
+test setup, calibration, and operational methods to fully realize
+VNA instrument accuracy. This manual applies to VNA
 Software Version 1.4.
  
-If you are not already familiar with S-parameters and the concepts of
-forward gain and phase, reflected magnitude and phase, and polar and
-rectangular plots, it may be worthwhile to read **Appendix 1 --
-Overview of S Parameters** before continuing.
+If you are not already familiar
+* S-parameters
+* forward and reflected magnitude, gain and phase
+* polar and rectangular plots
+... consider reading **Appendix 1 -- Overview of S Parameters** before continuing here.
  
 The VNA performs measurements on one-port or two-port networks. A
 two-port network has an input and an output (plus ground(s)). A
@@ -320,16 +318,16 @@ on the VNA.
  
 The VNA is capable of making four measurements:
 
--   S21 Magnitude -- the gain or loss of a two-port network from the
+-   `S21` Magnitude -- the gain or loss of a two-port network from the
     input to the output.
 
--   S21 Phase -- the transfer phase of a two-port network from the input
+-   `S21` Phase -- the transfer phase of a two-port network from the input
     to the output.
 
--   S11 Magnitude -- the return loss of a one-port or a two-port network
+-   `S11` Magnitude -- the return loss of a one-port or a two-port network
     referenced to the input of the network.
 
--   S11 Phase -- the phase angle of the return loss of a one-port or a
+-   `S11` Phase -- the phase angle of the return loss of a one-port or a
     two-port network referenced to the input of the network.
 
 All the other measurements are derived from these four.
@@ -337,12 +335,12 @@ All the other measurements are derived from these four.
 Hardware Version Differences
 ----------------------------
 
-The TAPR VNA R2 unit is an older version of the analyzer, it requires
-the use of an external pre-amplifier and power supply for all
-calibrations and measurements (this pre-amplifier has already supplied
-to all owners of the older TAPR units).
+The TAPR VNA R2 unit is an older version of the analyzer.
+It requires an external pre-amplifier and power supply
+for all calibrations and measurements (this pre-amplifier was supplied
+to all older TAPR unit owners).
  
-The Ten-Tec version of the VNA R3 includes this preamplifier on the
+The Ten-Tec version of VNA R3 includes this preamplifier on the
 main circuit board and is thus fully self-contained.
 
 Instrument Caution
@@ -354,9 +352,9 @@ onto the TRANSMIT connector during measurements.
 Temperature Limitation
 ----------------------
 
-The detectors used in the VNA are somewhat temperature sensitive. For
-best accuracy, always allow the unit to warm up for 10 minutes before
-performing any calibrations or measurements. The detector sensitivity
+Detectors in these VNAs are somewhat temperature sensitive. For
+best accuracy, always allow units to warm up for 10 minutes before
+performing any calibrations or measurements. Detector sensitivity
 drifts approximately 0.5 dB during warm up.
  
 To warm up the unit, apply power to the VNA, connect the USB cable to
@@ -370,13 +368,13 @@ Instrument Limitations
 -   The dynamic range of the VNA in forward modes is limited by the
     noise figure of the receive pre-amplifier. It is approximately 80 dB
     at low frequencies, but degrades to about 75 dB at mid and high
-    frequencies. In the reflected modes, the dynamic range is limited by
-    the directivity of the directional coupler, which is about -35 dB at
+    frequencies. Dynamic range in reflected modes is limited by
+    directional coupler directivity, which is about -35 dB at
     low frequencies, degrading to about -25 dB at mid and higher
     frequencies.
 
--   The basic resolution of the VNA is 0.1 dB for amplitude
-    measurements. The phase measurement resolution is 1 degree.
+-   VNA basic resolution is 0.1 dB for amplitude measurements.
+    Phase measurement resolution is 1 degree.
 
 -   The group delay measurement simply differentiates successive phase
     measurements. As a result, if the phase changes more than 180
@@ -398,7 +396,7 @@ Instrument Limitations
     can do the math for you automatically
     (run a fixture calibration 'through' with the attenuator in place).
 
--   The accuracy of the frequency source is determined by the on-board
+-   Frequency source accuracy is determined by the on-board
     12 MHz crystal oscillator, which is multiplied to 24.000 MHz before
     being applied to the frequency synthesizer. An external reference of
     24.000000 MHz may be used if more precise frequency control is
@@ -412,10 +410,10 @@ Instrument Limitations
     MHz. The instrument is capable of operating up to 120 MHz. However
     the accuracy is degraded below 1 MHz, and above 100 MHz.
 
--   The phase detectors are accurate only down to about 20 dB above the
-    noise floor. Thus, the phase component of an S21 measurement with
-    more than about 60 dB attenuation is not valid. The phase component
-    of S11 measurements is only valid to about 40 dB return loss.
+-   The phase detectors are accurate only down to about `20 dB` above the
+    noise floor. Thus, the phase component of an `S21` measurement with
+    more than about `60 dB` attenuation is not valid. The phase component
+    of `S11` measurements is only valid to about `40 dB` return loss.
 
 Relative Measurements
 ---------------------
@@ -427,7 +425,7 @@ calibration. The accuracy of any measurement is thus directly
 dependent on the accuracy of the reference calibration.
  
 Return loss measurements are extremely sensitive to the fixture
-configuration. Great care must be used in making S11 measurements if
+configuration. Great care must be used in making `S11` measurements if
 the data are to be reasonably accurate. For example, a single 50-ohm
 connector adaptor less than 1 inch in length introduces a measurable
 phase delay in the return loss. The VNA is capable of resolving the
@@ -472,7 +470,7 @@ calibrate the VNA.
 -   A high-quality 50-ohm termination is also needed for Fixture
     calibration.
 
--   A 40 dB attenuator is needed when running the detector calibration
+-   A `40 dB` attenuator is needed when running the detector calibration
     routine (described in section 3); a high-quality, accurate
     attenuator (or a combination of 2 SMA attenuators) should be used
     for this purpose.
@@ -698,7 +696,7 @@ Fixture Calibration
 ===================
 
 Each specific test fixture (test setup) consists of connectors,
-cables, adaptors, and other things that affect the S21 and S11
+cables, adaptors, and other things that affect the `S21` and `S11`
 measurements. Each test fixture setup has different physical
 properties. For example, the length of each interconnecting test cable
 affects the phase of all measurements (due to the propagation time
@@ -784,12 +782,12 @@ Partial Changes to Fixture Calibration Data
 
 It's possible to partially update the Fixture calibration data. For
 example, assume that the cable from the DUT to the VNA RECEIVE
-connector is changed. This does not affect the S11 measurement, but
-will change the S21 measurement. In this case, a previously saved
+connector is changed. This does not affect the `S11` measurement, but
+will change the `S21` measurement. In this case, a previously saved
 calibration dataset can be loaded, and just the one measurement
 ('Through') run, then the dataset saved with a new name or with the
 existing name as appropriate. The newly saved data set will inherit
-the S11 raw and derived errors from the older dataset, but will use
+the `S11` raw and derived errors from the older dataset, but will use
 the new 'through' measurements. In fact, this can be done with any or
 all of the four measurements.
 
@@ -898,22 +896,22 @@ Load Fixture Calibration File
  
 Trace
  
-S11 Magnitude (rectangular) S11 Phase (rectangular) S21 Magnitude
-(rectangular) S21 Phase (rectangular)
+`S11` Magnitude (rectangular) `S11` Phase (rectangular) `S21` Magnitude
+(rectangular) `S21` Phase (rectangular)
  
-S21 Group Delay (rectangular)
+`S21` Group Delay (rectangular)
  
-S11 Magnitude as SWR (rectangular)
+`S11` Magnitude as SWR (rectangular)
  
-Raw Calibration Data S21 -- Through (rectangular) Et -- Tracking Error
+Raw Calibration Data `S21` -- Through (rectangular) Et -- Tracking Error
 (Polar)
  
 Es -- Source Mismatch Error (Polar) Ed -- Directivity Error (Polar)
  
-Raw Calibration Data S11 -- Short (polar) Raw Calibration Data S11 --
+Raw Calibration Data `S11` -- Short (polar) Raw Calibration Data `S11` --
 Open (polar)
  
-Raw Calibration Data S11 -- Terminated (polar)
+Raw Calibration Data `S11` -- Terminated (polar)
  
 Vertical Scale
  
@@ -990,7 +988,7 @@ print parameters Set Plot Title -- allows setting / clearing a textual
 title for the plot that appears underneath the scope display
  
 Store Forward Parameters -- store the measured reflection and
-transmission data as S11 and S21 to temporary storage
+transmission data as `S11` and `S21` to temporary storage
  
 Store Reverse Parameters -- store the measured reflection and
 transmission data as S22 and S12 to temporary storage
@@ -1015,7 +1013,7 @@ current instrument configuration to the file: `last.cfg`.
 ### Exporting S-Parameters
 
 The VNA is a reflection-transmission test set. It can only measure
-half of an S- parameter data set (S11 and S21 in the forward
+half of an S- parameter data set (S11 and `S21` in the forward
 direction) at one time. The DUT must be physically reversed in the
 test setup in order to measure the other direction (S12 and S22 in the
 reverse direction).
@@ -1059,16 +1057,16 @@ The View menu allows selecting the display view:
 
 3)  Time Domain Reflection
 
-The Rectangular display can display S11 magnitude and phase, and S21
-magnitude, phase, and group delay. It can also show S21 ('Through')
+The Rectangular display can display `S11` magnitude and phase, and S21
+magnitude, phase, and group delay. It can also show `S21` ('Through')
 calibration parameters. Magnitude is plotted as dB vs. frequency,
 phase is plotted as degrees vs. frequency, and group delay is plotted
 as time vs. frequency. The display units (dB/div, and seconds/div) can
 be selected in the VertScale menu.
  
-The Polar display can display S11 (reflection measurement) and the
+The Polar display can display `S11` (reflection measurement) and the
 calibration data associated with reflections measurements. The Polar
-display does not show S21 measurements.
+display does not show `S21` measurements.
  
 The Time Domain Reflection (TDR) mode performs a reflection
 measurement then converts from a frequency measurement into the real
@@ -1110,7 +1108,7 @@ Trace Menu
 The Trace menu allows selecting which measurements are displayed. The
 Polar display only displays reflection measurements (S11) and related
 raw and derived calibration constants. The rectangular display can
-show both S11 and S21 measurements, and the calibration constants
+show both `S11` and `S21` measurements, and the calibration constants
 related to S21.
 
 #### Device Under Test -- DUT
@@ -1121,7 +1119,7 @@ when the fixture calibration is run and loaded.
 
 ### Rectangular Display Mode
 
-S21 can be displayed only on the rectangular display. S11 can be
+`S21` can be displayed only on the rectangular display. `S11` can be
 displayed on both the rectangular and polar displays. The traces that
 can be displayed on the Rectangular display are:
 ```
@@ -1158,15 +1156,14 @@ can be displayed on the Rectangular display are:
 |                                   |   (through the actual cables used |
 |                                   |   to connect to the DUT)          |
 +-----------------------------------+-----------------------------------+
-|   S11 Magnitude as                | The value of S11 magnitude        |
+|   S11 Magnitude as SWR            | The value of S11 magnitude        |
 |                                   | converted into SWR.               |
-|   SWR                             |                                   |
 +-----------------------------------+-----------------------------------+
 ```
 ### Polar Display Mode
 
-S11 (as a polar complex number) is always displayed on the Polar
-display. S21 cannot be displayed on the polar display. The raw
+`S11` (as a polar complex number) is always displayed on the Polar
+display. `S21` cannot be displayed on the polar display. The raw
 calibration data (from the
  
 calibration file that is loaded) as well as the error parameters
@@ -1220,7 +1217,7 @@ Transform of a reflection measurement. Because the TDR mode requires a
 specific custom frequency grid, it ignores the Start and Stop
 settings. When switching to the TDR mode, a new Frequency Grid is
 created. Thus, a new sweep is required. Click the sweep button. A
-`TDR interpretation of existing S11 sweep data is not meaningful` 
+`TDR interpretation of existing `S11` sweep data is not meaningful` 
 and should be ignored, instead re-acquire the
 reflection measurement after you have selected the TDR mode. The
 'Apply Calibration' checkbox sets the reference plane for the TDR
@@ -1262,40 +1259,41 @@ reduce the measurement noise for narrow sweeps. However, large
 apertures may smooth the data beyond the range of interest, so care
 must be used to select an appropriate aperture size.
  
-Magnitude. The display resolutions selectable are: 10 dB / division
- 
+Magnitude. The display resolutions selectable are: 10 dB / division 
 5 dB / division 2 dB / division 1 dB / division
  
-SWR. The display resolutions selectable are: SWR 1.0 to 11.0
+SWR display resolutions selectable are:
+SWR 1.0 to 11.0  
+SWR 1.0 to 6.0  
+SWR 1.0 to 3.0  
+SWR 1.0 to 2.0  
  
-SWR 1.0 to 6.0
+Group Delay display resolutions selectable are:
+100 microseconds / division     
+10 microseconds / division   
+1 microsecond / division   
+100 nanoseconds / division  
+10 nanoseconds / division   
+1 nanosecond / division   
+100 picoseconds / division  
  
-SWR 1.0 to 3.0
- 
-SWR 1.0 to 2.0
- 
-Group Delay. The display resolutions selectable are: 100 microseconds
-/ division
- 
-10 microseconds / division 1 microsecond / division 100 nanoseconds /
-division 10 nanoseconds / division 1 nanosecond / division 100
-picoseconds / division
- 
-Group Delay Aperture. This sets the number of adjacent frequency bins
+Group Delay Aperture sets the number of adjacent frequency bins
 over which group delay is measured.
  
-Group Delay Aperture = 1 Group Delay Aperture = 4 Group Delay Aperture
-= 16 Group Delay Aperture = 64
+Group Delay Aperture = 1  
+Group Delay Aperture = 4  
+Group Delay Aperture = 16  
+Group Delay Aperture = 64
  
-Right Scale Display. This selects the scale printed on the rights side
-of the rectangular display. The display values automatically adjust to
+Right Scale Display selects the scale printed on the right side
+of the rectangular display. Display values automatically adjust to
 the selected vertical scale factors.
  
 Phase SWR
  
 Delay
  
-Polar Zoom Factor. This selects a zoom factor to be applied to the
+Polar Zoom Factor selects a zoom factor to be applied to the
 polar display. The default value is 1.0, and represents a normal polar
 (Smith Chart) type of display, with a reflection coefficient of 1.0
 lying on the periphery of the chart. Increasing the zoom magnifies the
@@ -1304,16 +1302,12 @@ center. Magnifying the display thus allows viewing impedances near 50
 + j0 with more resolution. A zoom factor of 2.0 places a reflection
 coefficient value of 0.5 on the periphery of the chart. There are four
 display zoom settings.
+Zoom = 1.0  
+Zoom = 1.5  
+Zoom = 2.0  
+Zoom = 2.5  
  
-Zoom = 1.0
- 
-Zoom = 1.5
- 
-Zoom = 2.0
- 
-Zoom = 2.5
- 
-TDR Setup. The allows setting the Start Time (in nanoseconds) and the
+TDR Setup allows setting the Start Time (in nanoseconds) and the
 Stop Time (in nanoseconds) for the TDR display. This allows you to
 zoom into the area of interest. It also allows entering an estimated
 value of the cable velocity factor, which is used to calculate the
@@ -1340,7 +1334,7 @@ high display resolutions). If all markers are in use, then the
 left-click will not create a new one but can drag an exiting one. The
 screen parameters update in real-time as the marker is dragged.
  
-A value of 0 effectively disables the display of a marker (since 0
+A value of 0 effectively disables marker display (since 0
 will always be off the left side of the display screen). Any marker
 with a value of 0 is considered unused. It can be used by entering a
 displayable value in the marker entry menu.
@@ -1354,7 +1348,7 @@ see the marker move as you drag the mouse left and right. If marker
 parameters are enabled, you will be able to see a reading indicating
 the marker frequency while in the polar display mode. The marker may
 appear to move backwards compared to the mouse movement if the polar
-display is showing S11 in the lower (capacitive) half of the display.
+display is showing `S11` in the lower (capacitive) half of the display.
  
 Vertical (up/down) movement of the mouse does not change the marker
 frequency.
@@ -1362,7 +1356,7 @@ frequency.
 The Marker parameters are color-coded to match the color of the
 corresponding trace on the display.
  
-The parametric values S11, S21, and SWR are displayed only if the
+Parametric values `S11`, `S21`, and `SWR` are displayed only if the
 associated trace display is enabled.
  
 Change Marker Frequency -- Allows setting any of the five marker
@@ -1531,17 +1525,17 @@ the magnitude level of the top line of the display screen. When it is
 set to 0 dB, the top line of the display is 0 dB. Changing the
 Reference Level allows you to optimize the trace location.
  
-For example, if the DUT has an attenuation of approximately 22 dB,
+For example, if the DUT has an attenuation of approximately `22 dB`,
 then it could not be displayed at a scale of 1 dB / division, because
 it would be off the bottom of the screen. Setting the Reference Level
-control to -20 dB would allow the screen to show the range of -20 db
-to -30 db at 1 db/division, making the trace visible.
+control to `-20 dB` would allow the screen to show the range of `-20 db`
+to `-30 db` at 1 db/division, making the trace visible.
  
 The Reference Level control can also be set to positive values. This
-is useful when measuring DUT's (such as amplifiers) with output
-magnitudes near or above 0 dB. Note that the dynamic range of the VNA
-only extends a few dB above 0 dB.
-`An external attenuator should be used if the DUT has any amount of  gain.`
+is useful when measuring DUTs (such as amplifiers) with output
+magnitudes near or above `0 dB`. Note that VNA dynamic range
+extends only a few dB above `0 dB`.
+_External attenuators should be used with DUT's having any amount of gain._
  
 The on-screen amplitude display values on the left-side of the display
 screen automatically adjust when you change the value of the reference
@@ -1551,20 +1545,20 @@ and marker numbers display properly.
  
 The Transmit Level control should normally be left at 0 dBm.
 Decreasing the value of the control will usually degrade the dynamic
-range and accuracy of both the S11 and S21 measurements. However, it
-can be useful to reduce the drive level to a DUT that has gain. The
+range and accuracy of both the `S11` and `S21` measurements.
+However, reduce drive level to DUT's with gain can be useful. The
 control has about 50 dB of adjustment range, but the VNA dynamic range
-consumes 40 dB of that range. Thus, the S21 magnitude measurements can
-only effectively support less than 10 dB of level change. A much
-better approach is to attenuate the Transmit signal to the DUT with an
-attenuator. Additionally, the S11 measurements will be seriously
-degraded with any reduction of the Transmit level.
+consumes 40 dB of that range. Thus, `S21` magnitude measurements
+effectively support less than `10 dB` of level change. A much
+better approach is to attenuate Transmit signals to DUT's with
+attenuators. Additionally,
+reducing Transmit level seriously degrads `S11` measurements.
  
-The magnitude values on the display automatically track changes in the
+Magnitude values displayed automatically track changes in
 Transmit Level. By the way, one valid use for the Transmit Level
-control is to adjust the output level when the VNA is being used as a
-signal generator and the measured values are of no concern. In this
-case, the Transmit level can be used to change the transmit output
+control is to adjust output level when using the VNA as a
+signal generator and measured values are of no concern. In this
+case, the control can change transmit output
 signal level over a 10 dB range.
 
 Apply Calibration
@@ -1601,17 +1595,11 @@ glitches. If set to the Fast mode, the VNA sweeps as fast a possible,
 and does not check the reading data for measurement glitches. As the
 button is successively clicked, the sweep speed will be set to the
 following values:
-
 -   30 microseconds
-
 -   100 microseconds
-
 -   300 microseconds
-
 -   1 millisecond
-
 -   3 milliseconds
-
 -   10 milliseconds
 
 The button recycles back to Fast after the 10 ms step. When the button
@@ -1624,7 +1612,7 @@ the timed modes.
  
 The single sweep mode triggers the VNA one time, and holds the
 measured data after that single sweep.
- 
+
 The Free-run sweep button causes the VNA to trigger continuously
 (recurrently), so that the sweep updates as rapidly as possible.
 Pressing the Free-run sweep button a second time stops the recurrent
@@ -1691,25 +1679,25 @@ single data set.
 
 ![](./media/image10.jpeg)
 
-This screen shows GREEN -- the S21 transfer magnitude (forward
+This screen shows GREEN -- the `S21` transfer magnitude (forward
 gain/loss). The screen in set for 10 dB / division. RED is the S11
 return loss of the filter, again at 10 dB / division. The filter has
-about 60 dB loss at 50 MHz, degrading a bit at 100 MHz. The return
+about `60 dB` loss at 50 MHz, degrading a bit at 100 MHz. The return
 loss of the filter is about 10-15 dB in the filter passband (200 KHZ
-to 40 MHZ) and is 0 dB in the stopband (above 40 MHz).
+to 40 MHZ) and is `0 dB` in the stopband (above 40 MHz).
  
 This type of filter is called a *"reflective filter"* since it
 generates a stopband by reflecting the input signal back.
  
-On the next screen, the S11 (RED) trace has been turned off and only
-the S21 (GREEN) trace is displayed. Five markers have been set, and
+On the next screen, the `S11` (RED) trace has been turned off and only
+the `S21` (GREEN) trace is displayed. Five markers have been set, and
 the display of marker parameters has been enabled. Here we can see
-that the insertion loss of the filter is quite good, only about 0.1 dB
-in the passband, and that the -3 dB frequency is about 39.85 MHz.
+that the insertion loss of the filter is quite good, only about `0.1 dB`
+in the passband, and that the `-3 dB` frequency is about 39.85 MHz.
  
 ![](./media/image11.jpeg)
  
-The last figure shows the input return loss (S11) on a polar chart.
+The last figure shows input return `S11` on a polar chart.
 Four markers (which must be set in the rectangular display mode) are
 selected, and marker parameter display is again enabled. The markers
 show the input magnitude and phase as well as the equivalent input
@@ -1718,15 +1706,10 @@ outwards from the origin, but stays between the SWR=1.5 and SWR=2.0
 concentric bull's eyes until it reaches the stopband frequency, when
 it rapidly spirals out of the center toward the periphery of the
 chart. The light gray concentric SWR circles on the polar chart are:
-
 -   SWR = 1.5 (Innermost)
-
 -   SWR = 2.0
-
 -   SWR = 3.0
-
 -   SWR = 5.0
-
 -   SWR = 10.0 (Outermost)
 
 Due to small ripple errors in the directional coupler, the stopband
@@ -1741,7 +1724,7 @@ The VNA software currently compensates for frequency dependent errors.
 Starting with version 1.4 the software models the coupler V/I tracking
 error and coupler directivity. It compensates readings by subtracting
 the coupler directivity and applying a sinusoidal magnitude correction
-vs. detected phase angle to S11 readings.
+vs. detected phase angle to `S11` readings.
 
 ![](./media/image12.jpeg)
 
@@ -1752,31 +1735,28 @@ Some Cautions
 -------------
 
 -   High quality variable attenuators may have several tenths of a dB
-    loss when set to the zero dB setting. This must be taken into
+    loss at their `0 dB` setting. This must be taken into
     account when characterizing filter insertion loss.
 
--   The resistance of an attenuator may not be exactly 50.0 ohms. This
-    will degrade the 50-ohm calibration.
+-   Attenuator resistance may not be exactly 50.0 ohms. This
+    will degrade 50-ohm calibration.
 
--   An attenuator has finite length. Thus if an attenuator is inserted
-    (or removed) after fixture calibration, the phase angles of the
-    setup will differ
+-   Attenuators have finite length. Thus an attenuator inserted
+    (or removed) after fixture calibration impacts phase angles of the
+    setup from the Fixture correction because the distance to the 'SHORT'
+    and 'OPEN' used for fixture calibration has changed.
 
-from the Fixture correction because the distance to the 'SHORT' and
-'OPEN' used for fixture calibration has changed.
-
--   The input impedance of the VNA RECEIVE connector is only
-    approximately 50 ohms. When measuring the return loss of a network
-    that has minimal attenuation, the phase and amplitude components may
-    experience errors due to this deviation of the RECEIVE connector
-    from an ideal 50 ohm load. To improve the measurement either:
+-   VNA RECEIVE connector input impedance is only approximately 50 ohms.
+    When measuring returns of networks with minimal attenuation,
+    phase and amplitude components may include errors due to
+    this RECEIVE connector deviation from an ideal 50 ohm load.
+    To improve the measurement either:
 
     -   Terminate the unit under test with a 50 ohm termination prior to
-        taking S11 measurements, or
+        `S11` measurements, or
 
-    -   Insert a 10 dB attenuator between the output of the unit under
-        test and the VNA RECEIVE connector. This will assure that the
-        device under test sees an more accurate 50 ohm termination
+    -   Insert 10 dB attenuation between DUT output and VNA RECEIVE connector.
+        This will assure that the DUT sees more accurate 50 ohm termination
         impedance.
 
 Common Display Results
@@ -1880,11 +1860,11 @@ these 4 values describe the behavior of the two port device. To
 characterize a device, the S-parameters are usually measured at a
 number of different frequencies.
  
-In the diagram below, a1 in the voltage input to port one, and a2 is
-the voltage input to port two; b1 is the voltage out of port one,
-while b2 is the voltage out of port two. The S-parameters are defined
-as the ratio of voltages. S11 (the input return loss) is the ratio
-b1/a1. S21 (the transfer gain) is the ratio of b2/a1. The voltage
+In the diagram below, `a1` in the voltage input to port one, and `a2` is
+the voltage input to port two; `b1` is the voltage out of port one,
+while `b2` is the voltage out of port two. S-parameters are defined
+as voltage ratios. `S11` (input return) is the ratio
+b1/a1. `S21` (the transfer gain) is the ratio of `b2/a1`. The voltage
 exiting port one of the block is the sum of the input return loss time
 the input voltage plus the reverse gain times the voltage injected
 into port two of the block. The S-parameters are defined in the
@@ -1929,10 +1909,10 @@ always easy to determine what position on the line is at which
 frequency. The polar chart makes it easy to see what the real and
 reactive components of the input impedance are at any point. Thus, the
 polar chart makes the visualization of the important characteristics
-of S11 very easy.
+of `S11` very easy.
  
-The polar value of S11 is plotted directly on the polar chart, with
-the S11 vector beginning at the center of the chart, the length of the
+The polar value of `S11` is plotted directly on the polar chart, with
+the `S11` vector beginning at the center of the chart, the length of the
 vector being the magnitude of the return loss, and the direction of
 the vector being the phase angle of S11.
  
@@ -1944,7 +1924,7 @@ high-impedance area of the chart.
 Rectangular Display
 -------------------
 
-It is also possible to display the S11 and S21 values on a rectangular
+It is also possible to display the `S11` and `S21` values on a rectangular
 display. In this case, the magnitude of the return loss is displayed
 vs. frequency. This makes it easy to read how large the return loss is
 at any given frequency, but it's difficult to understand how reactive
@@ -1952,7 +1932,7 @@ or resistive the input impedance really is. In contrast, we don't
 usually care too much about the transfer impedance of a network, but
 we do care about its gain vs. frequency, and its phase delay vs.
 frequency. The rectangular chart makes the visualization of the
-important characteristics of S21 very easy.
+important characteristics of `S21` very easy.
  
 The magnitude of the return loss of the transfer gain/loss of the
 network is expressed in dB on the right side of the rectangular chart.
@@ -2007,13 +1987,13 @@ that the network has exactly a 50-ohm input impedance. SWR is directly
 related to the _magnitude_ of input return, ignoring
 input reflection phase, so it is a real number.
 `S11` is a complex number representing both magnitude and
-relative phase angle of input return.
+phase angle of input return loss.
  
 An SWR of 2.0 means that the input impedance is either 25 ohms
 resistive, 100 ohms resistive, or some complex value ranging between
 those two impedances, and containing non-zero reactance. The value of
 SWR does not tell us which of these cases the network looks like,
-whereas S11 does.
+whereas `S11` does.
  
 On the polar chart, each constant value of SWR describes any impedance
 lying on a circle centered on the center of the polar chart. The
@@ -2113,7 +2093,7 @@ small bullet or barrel connector. It measures the received magnitude
 and phase at 1024 points across the range 200 KHz to 120 MHZ and
 stores all the data in a table in the Fixture calibration file (which
 you name during the Fixture calibration save operation). The
-calibration compensation routine divides the S21 actual measurement by
+calibration compensation routine divides the `S21` actual measurement by
 the nearest 'Through' calibration constant (which is a complex number)
 at each different measurement frequency when the 'Apply Calibration'
 box is enabled.
@@ -2121,7 +2101,7 @@ box is enabled.
 S11 Compensation
 ----------------
 
-The calibration compensation for S11 derives three parameters of a
+The calibration compensation for `S11` derives three parameters of a
 virtual S- parameter error matrix computationally inserted between the
 VNA TRANSMIT connector and the DUT. With three measurements and three
 unknowns, the values of the virtual S-parameter error matrix can be resolved.
@@ -2136,7 +2116,7 @@ matrix.
 Es -- source impedance mismatch. This is the S22error of the virtual
 error matrix.
  
-The virtual error matrix is removed from S11 measurements (when
+The virtual error matrix is removed from `S11` measurements (when
 'Apply Calibration' is active) to compensate for these errors in
 reflection measurements.
 
@@ -2147,7 +2127,7 @@ The following data are included in the fixture calibration data set.
 Values can be viewed (for those who are curious) from the **Trace**
 menu. The Polar display only displays reflection measurements (S11)
 and related raw and derived calibration constants. The rectangular
-display can show both S11 and S21 measurements, and the calibration
+display can show both `S11` and `S21` measurements, and the calibration
 constants related to S21.
 ```
 +-----------------------------+-------------------------------------+
