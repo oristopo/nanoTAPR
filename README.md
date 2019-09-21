@@ -136,163 +136,91 @@ for software version 1.6 include:
 
 **Table of Contents**
 
-1.  [Overview 8](#overview)
+1.  [Overview](#overview)  
+    1.  [Hardware Version Differences](#hardware-version-differences)    
+    2.  [Instrument Caution](#instrument-caution)  
+    3.  [Temperature Limitation](#temperature-limitation)  
+    4.  [Instrument Limitations](#instrument-limitations)  
+    5.  [Relative Measurements](#relative-measurements)  
+    6.  [Calibration Standards](#calibration-standards)  
+    7.  [Hibernation or Suspension of Host Computer](#hibernation-or-suspension-of-host-computer)  
+    8.  [Calibration Modes are Single-threaded](#calibration-modes-are-single-threaded)  
 
-    1.  [Hardware Version Differences 8](#hardware-version-differences)
+2.  [Software Installation](#software-installation)  
+    9.  [Initial Software installation](#initial-software-installation)   
+    10. [Supported Operating System Versions](#supported-operating-system-versions.)   
+    11. [Software Distribution](#software-distribution)  
+    12. [Installed VNA Files](#installed-vna-files)  
+    13. [Installation Pre-Requisites](#installation-pre-requisites)  
+    14. [Completing Installation -- Connecting the VNA to your Computer](#completing-installation-connecting-the-vna-to-your-computer)  
+    15. [Uninstall](#uninstall)  
 
-    2.  [Instrument Caution 8](#instrument-caution)
+3.  [Detector Calibration](#_TOC_250054)  
+    16. [Detailed Detector Calibration Steps](#_TOC_250053)  
+    17. [Reflection Phase Detector Calibration](#_TOC_250052)  
+    18. [Reflection Amplitude Detector Calibration Short](#_TOC_250051)  
+    19. [Reflection Amplitude Detector Calibration Open](#_TOC_250050)  
+    20. [Transmission Phase Detector Calibration](#_TOC_250049)  
+    21. [Transmission Amplitude Detector Calibration](#_TOC_250048)  
+    22. [Coupler Directivity Calibration](#_TOC_250047)  
+    23. [Internal Crystal Frequency Calibration](#_TOC_250046)  
 
-    3.  [Temperature Limitation 9](#temperature-limitation)
+4.  [Fixture Calibration](#fixture-calibration)  
+    24. [Fixture Calibration Data](#fixture-calibration-data)  
+    25. [Partial Changes to Fixture Calibration Data](#partial-changes-to-fixture-calibration-data)  
+    26. [Fixture Setup Diagrams](#fixture-setup-diagrams)  
+    27. [Actual measurement](#actual-measurement)  
+    28. [Fixture Calibration Setups](#fixture-calibration-setups)  
+    29. [Short Fixture Calibration](#short-fixture-calibration)  
+    30. [Open Fixture Calibration](#open-fixture-calibration)  
+    31. [50-ohm Terminated Fixture Calibration](#ohm-terminated-fixture-calibration)  
+    32. [Through Fixture Calibration](#through-fixture-calibration)  
 
-    4.  [Instrument Limitations 9](#instrument-limitations)
+5.  [VNA Software Menu](#vna-software-menu)  
+    33. [File Menu](#file-menu)  
+        1.  [Exporting S-Parameters](#exporting-s-parameters)  
+    34. [View Menu](#view-menu)  
+    35. [Calibration Menu](#calibration-menu)  
+    36. [Trace Menu](#trace-menu)  
+        2.  [Rectangular Display Mode](#rectangular-display-mode)  
+        3.  [Polar Display Mode](#polar-display-mode)  
+        4.  [Time Domain Reflection Mode](#time-domain-reflection-mode)  
+    37. [Vertical Scale Menu](#vertical-scale-menu)  
+    38. [Marker Menu](#marker-menu)  
+    39. [Frequency Grid Menu](#frequency-grid-menu)  
+    40. [Storage Menu](#storage-menu)  
+    41. [Integration Menu](#integration-menu)  
+    42. [Help & Software Updates](#help-software-updates)  
 
-    5.  [Relative Measurements 10](#relative-measurements)
+6.  [Controls](#controls)  
+    43. [Frequency Controls](#frequency-controls)  
+    44. [Level Controls](#level-controls)  
+    45. [Apply Calibration](#apply-calibration)  
+    46. [Sweep Controls](#sweep-controls)  
+    47. [Mouse Actions](#mouse-actions)  
 
-    6.  [Calibration Standards 10](#calibration-standards)
+7.  [Example Measurement](#example-measurement)  
+    1.  [Some Cautions](#some-cautions)  
+    2.  [Common Display Results](#common-display-results)  
 
-    7.  [Hibernation or Suspension of Host Computer
-        11](#hibernation-or-suspension-of-host-computer)
-
-    8.  [Calibration Modes are Single-threaded
-        11](#calibration-modes-are-single-threaded)
-
-2.  [Software Installation 12](#software-installation)
-
-    9.  [Initial Software installation
-        12](#initial-software-installation)
-
-    10. [Supported Operating System Versions
-        13](#supported-operating-system-versions.)
-
-    11. [Software Distribution 13](#software-distribution)
-
-    12. [Installed VNA Files 13](#installed-vna-files)
-
-    13. [Installation Pre-Requisites 14](#installation-pre-requisites)
-
-    14. [Completing Installation -- Connecting the VNA to your Computer
-        14](#completing-installation-connecting-the-vna-to-your-computer)
-
-    15. [Uninstall 15](#uninstall)
-
-3.  [Detector Calibration 15](#_TOC_250054)
-
-    16. [Detailed Detector Calibration Steps 16](#_TOC_250053)
-
-    17. [Reflection Phase Detector Calibration 17](#_TOC_250052)
-
-    18. [Reflection Amplitude Detector Calibration Short
-        18](#_TOC_250051)
-
-    19. [Reflection Amplitude Detector Calibration Open
-        18](#_TOC_250050)
-
-    20. [Transmission Phase Detector Calibration 18](#_TOC_250049)
-
-    21. [Transmission Amplitude Detector Calibration 19](#_TOC_250048)
-
-    22. [Coupler Directivity Calibration 19](#_TOC_250047)
-
-    23. [Internal Crystal Frequency Calibration 19](#_TOC_250046)
-
-4.  [Fixture Calibration 20](#fixture-calibration)
-
-    24. [Fixture Calibration Data 20](#fixture-calibration-data)
-
-    25. [Partial Changes to Fixture Calibration Data
-        21](#partial-changes-to-fixture-calibration-data)
-
-    26. [Fixture Setup Diagrams 22](#fixture-setup-diagrams)
-
-    27. [Actual measurement 23](#actual-measurement)
-
-    28. [Fixture Calibration Setups 24](#fixture-calibration-setups)
-
-    29. [Short Fixture Calibration 25](#short-fixture-calibration)
-
-    30. [Open Fixture Calibration 25](#open-fixture-calibration)
-
-    31. [50-ohm Terminated Fixture Calibration
-        26](#ohm-terminated-fixture-calibration)
-
-    32. [Through Fixture Calibration 27](#through-fixture-calibration)
-
-5.  [VNA Software Menu 28](#vna-software-menu)
-
-    33. [File Menu 29](#file-menu)
-
-        1.  [Exporting S-Parameters 30](#exporting-s-parameters)
-
-    34. [View Menu 31](#view-menu)
-
-    35. [Calibration Menu 31](#calibration-menu)
-
-    36. [Trace Menu 32](#trace-menu)
-
-        2.  [Rectangular Display Mode 32](#rectangular-display-mode)
-
-        3.  [Polar Display Mode 32](#polar-display-mode)
-
-        4.  [Time Domain Reflection Mode 33](#time-domain-reflection-mode)
-
-    37. [Vertical Scale Menu 34](#vertical-scale-menu)
-
-    38. [Marker Menu 35](#marker-menu)
-
-    39. [Frequency Grid Menu 36](#frequency-grid-menu)
-
-    40. [Storage Menu 37](#storage-menu)
-
-    41. [Integration Menu 38](#integration-menu)
-
-    42. [Help & Software Updates 38](#help-software-updates)
-
-6.  [Controls 38](#controls)
-
-    43. [Frequency Controls 38](#frequency-controls)
-
-    44. [Level Controls 39](#level-controls)
-
-    45. [Apply Calibration 40](#apply-calibration)
-
-    46. [Sweep Controls 40](#sweep-controls)
-
-    47. [Mouse Actions 41](#mouse-actions)
-
-7.  [Example Measurement 41](#example-measurement)
-
-    1.  [Some Cautions 44](#some-cautions)
-
-    2.  [Common Display Results 45](#common-display-results)
-
-[Appendix 1 -- Overview of S Parameters
-50](#appendix-1-overview-of-s-parameters)
+[Appendix 1 -- Overview of S Parameters](#appendix-1-overview-of-s-parameters)  
+[Polar Display](#polar-display)  
+[Rectangular Display](#rectangular-display)  
+[Group Delay](#group-delay)  
+[SWR](#swr)  
+   
+[Appendix 2 -- Calibration Details](#appendix-2-calibration-details)  
+[Detector Calibration](#detector-calibration)  
+Fixture Calibration  
+S21 Compensation  
+[S11 Compensation](#s11-compensation)  
+[Fixture Calibration Data Set](#fixture-calibration-data-set)  
  
-[Polar Display 51](#polar-display)
+[Appendix 3 -- Software Installation, Registry](#appendix-3-software-installation-registry)  
  
-[Rectangular Display 52](#rectangular-display)
+[Appendix 4 -- Group Delay and Aperture](#appendix-4-group-delay-and-aperture)  
  
-[Group Delay 52](#group-delay)
- 
-[SWR 53](#swr)
- 
-[Appendix 2 -- Calibration Details 55](#appendix-2-calibration-details)
- 
-[Detector Calibration 55](#detector-calibration)
- 
-Fixture Calibration 55
- 
-S21 Compensation 55
- 
-[S11 Compensation 55](#s11-compensation)
- 
-[Fixture Calibration Data Set 56](#fixture-calibration-data-set)
- 
-[Appendix 3 -- Software Installation, Registry 57](#appendix-3-software-installation-registry)
- 
-[Appendix 4 -- Group Delay and Aperture 58](#appendix-4-group-delay-and-aperture)
- 
-[Aperture Shortening 58](#aperture-shortening)
+[Aperture Shortening](#aperture-shortening)  
 
 Overview
 ========
