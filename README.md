@@ -46,8 +46,6 @@ for software version 1.4 include:
 -   Marker parameters in polar display also show the equivalent value of
     jX as Lseries or Cseries with appropriate engineering units.
 
-</details>
-<details>
 Buffer amplifier U8 hardware rework is needed on most units.
 The value of R19 is changed from 24.7 ohms to 12 ohms,
 and a 1500 ohm resistor is added to pull up the base.
