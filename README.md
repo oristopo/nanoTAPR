@@ -519,7 +519,7 @@ located on the included CD-ROM.
     or XP). Insert the CD-ROM into your CD drive. The installer should
     start automatically. If it does not, using Windows Explorer open the
     icon that the CD is inserted into, and double-click the
-    ['setup.exe']{.underline} file.
+    `setup.exe` file.
 
 -   Select the directory for installation. The default directory is:
     C:\\Program Files\\TAPR\\VNA.
@@ -531,11 +531,11 @@ located on the included CD-ROM.
         the Internet from the Microsoft website. This will be
         approximately 23 MB in size, and is referred to as the
         redistributable file. You need to download the file for "General
-        Users". It will be named ['dotnetfx.exe']{.underline}. This will
+        Users". It will be named `dotnetfx.exe`. This will
         assure that you get the most current version with recent service
         patches. The URL at the time this manual was written is:
 
-[[http://msdn.microsoft.com/netframework/downloads/framework1%5F1redist/]{.underline}](http://msdn.microsoft.com/netframework/downloads/framework1_1redist/)
+[http://msdn.microsoft.com/netframework/downloads/framework1%5F1redist/](http://msdn.microsoft.com/netframework/downloads/framework1_1redist/)
 
 -   Alternate: Install the dotNET 1.1 framework from the CR-ROM. Cancel
     the VNA installation, then install the framework by double- clicking
