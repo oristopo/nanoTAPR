@@ -539,9 +539,9 @@ located on the included CD-ROM.
 
 -   Alternate: Install the dotNET 1.1 framework from the CR-ROM. Cancel
     the VNA installation, then install the framework by double- clicking
-    on the file ['dotnetfx.exe']{.underline} located on the CD-ROM.
+    on the file `dotnetfx.exe` located on the CD-ROM.
     After completion, restart the VNA software installation by
-    double-clicking on the ['setup.exe']{.underline} file.
+    double-clicking on the `setup.exe` file.
 
 Supported Operating System Versions.
 ------------------------------------
@@ -675,7 +675,7 @@ and is called the "*redistributable*" (it is allowed to be
 redistributed by applications).
  
 Download and install as needed, the filename is
-[dotnetfx.exe]{.underline}. The .NET framework redistributable is
+`dotnetfx.exe`. The .NET framework redistributable is
 included on the CD-ROM, but we recommend downloading the latest
 version from Microsoft (its about 23 MB in size). Many newer
 applications and some recent Microsoft service packs install the
@@ -785,7 +785,7 @@ Normally, there will be a number of different calibration data sets
 taken and stored, one for each test setup. These can have any valid
 windows filename (so it's helpful to be descriptive and verbose with
 the filename), but the extension is always '.cal'. The \"Apply Fixture
-Calibration\" checkbox is [grayed-out]{.underline} until a valid
+Calibration\" checkbox is `grayed-out` until a valid
 Fixture Calibration Data set is loaded.
 
 Partial Changes to Fixture Calibration Data
@@ -926,20 +926,19 @@ Raw Calibration Data S11 -- Terminated (polar)
  
 Vertical Scale
  
-10 dB / division 5 dB / division 2 dB / division [1 dB /
-division]{.underline}
+10 dB / division 5 dB / division 2 dB / division `1 dB / division`
  
 SWR 1.0 to 11.0
  
 SWR 1.0 to 6.0
  
-SWR 1.0 to 3.0 [SWR 1.0 to 2.0]{.underline}
+SWR 1.0 to 3.0 `SWR 1.0 to 2.0`
  
 10 microseconds / division 1 microsecond / division 100 nanoseconds /
-division 10 nanoseconds / division 1 nanosecond / division [100
-picoseconds / division]{.underline} Group Delay Aperture = 1 Group
-Delay Aperture = 4 Group Delay Aperture = 16 [Group Delay Aperture =
-64]{.underline} Right Scale display
+division 10 nanoseconds / division 1 nanosecond / division
+`100 picoseconds / division` Group Delay Aperture = 1 Group
+Delay Aperture = 4 Group Delay Aperture = 16
+`Group Delay Aperture = 64` Right Scale display
  
 Phase SWR
  
@@ -1020,8 +1019,7 @@ Load Configuration -- Loads a previously saved configuration file to
 restore the state of the instrument from a previous measurement setup.
  
 Exit -- immediately terminates the VNA application (and saves the
-current instrument configuration to the file: [ ]{.underline}
-last.cfg).
+current instrument configuration to the file: `last.cfg`.
 
 ### Exporting S-Parameters
 
@@ -1230,9 +1228,9 @@ The TDR mode displays the real part of the Inverse Fast Fourier
 Transform of a reflection measurement. Because the TDR mode requires a
 specific custom frequency grid, it ignores the Start and Stop
 settings. When switching to the TDR mode, a new Frequency Grid is
-created. Thus, a new sweep is required. Click the sweep button. A [TDR
-interpretation of existing S11 sweep data is not]{.underline}
-[meaningful]{.underline} and should be ignored, instead re-acquire the
+created. Thus, a new sweep is required. Click the sweep button. A
+`TDR interpretation of existing S11 sweep data is not meaningful` 
+and should be ignored, instead re-acquire the
 reflection measurement after you have selected the TDR mode. The
 'Apply Calibration' checkbox sets the reference plane for the TDR
 analysis. When the 'Apply Calibration' box is checked, distances
@@ -1551,8 +1549,8 @@ to -30 db at 1 db/division, making the trace visible.
 The Reference Level control can also be set to positive values. This
 is useful when measuring DUT's (such as amplifiers) with output
 magnitudes near or above 0 dB. Note that the dynamic range of the VNA
-only extends a few dB above 0 dB. [An external attenuator should be
-used if the DUT has any amount of]{.underline} [gain.]{.underline}
+only extends a few dB above 0 dB.
+`An external attenuator should be used if the DUT has any amount of  gain.`
  
 The on-screen amplitude display values on the left-side of the display
 screen automatically adjust when you change the value of the reference
@@ -1812,12 +1810,12 @@ were performed in the 'Slow' mode.
 
 ![](./media/image13.png)
 
-*3 meter cable terminated in 'Short' [without]{.underline} fixture
+*3 meter cable terminated in 'Short' `without` fixture
 calibration applied.*
 
 ![](./media/image14.png)
 
-*3 meter cable terminated in 'Short' [with]{.underline} fixture
+*3 meter cable terminated in 'Short' `with` fixture
 calibration applied.*
 
 -   Open cable -- with and without cable calibration. The following
@@ -1829,12 +1827,12 @@ calibration applied.*
 
 ![](./media/image15.png)
 
-*3 meter cable terminated in ''Open' [without]{.underline} fixture
+*3 meter cable terminated in ''Open' `without` fixture
 calibration applied.*
 
 ![](./media/image16.png)
 
-*3 meter cable terminated in ''Open' [with]{.underline} fixture
+*3 meter cable terminated in ''Open' `with` fixture
 calibration applied.*
 
 -   Terminated cable -- with and without cable calibration. The
@@ -1844,32 +1842,32 @@ calibration applied.*
     performed with the same cable and termination as the measurement, so
     the fixture and amplitude compensation should match (excepting
     sweep-by-sweep measurement errors, instrument temperature change,
-    etc.). [Note]{.underline}: many cables connected to the VNA (through
+    etc.). __Note__: many cables connected to the VNA (through
     a multitude of adaptors) may exhibit much poorer return loss than
     the example shown here.
 
 ![](./media/image17.png)
 
-*1 meter cable terminated in 50-ohm load [without]{.underline} fixture
+*1 meter cable terminated in 50-ohm load `without` fixture
 calibration applied. The polar scale has been zoomed to 2.5:1 to show
 more details.*
  
 ![](./media/image18.png)
  
-*1 meter cable terminated in 50-ohm load [with]{.underline} fixture
+*1 meter cable terminated in 50-ohm load `with` fixture
 calibration applied. The polar scale has been zoomed to 2.5:1 to show
 more details.*
 
 ![](./media/image19.png)
 
-*1 meter cable terminated in 50-ohm load [without]{.underline} fixture
+*1 meter cable terminated in 50-ohm load `without` fixture
 calibration applied.*
  
 *Rectangular display of S11.*
  
 ![](./media/image20.png)
  
-*1 meter cable terminated in 50-ohm load [with]{.underline} fixture
+*1 meter cable terminated in 50-ohm load `with` fixture
 calibration applied.*
  
 *Rectangular display of S11.*
@@ -2013,8 +2011,7 @@ foot). Ten feet of free space would have a light speed delay of
 120/11.8 = 10.17 nanoseconds. Thus the velocity factor of this cable
 would be:
  
-[10.17 nanoseconds (free space delay)]{.underline} 15 nanoseconds
-(measured delay)
+`10.17 nanoseconds (free space delay)` 15 nanoseconds (measured delay)
  
 or a value of 0.68.
 
@@ -2126,7 +2123,7 @@ and the detector calibration routine uses a linear delay model to
 build a table to correct those periodic errors.
  
 All the various data sets are then saved in the file
-['detector.ica']{.underline} in the VNA program startup directory.
+`detector.ica` in the VNA program startup directory.
  
 **Fixture Calibration S21 Compensation**
  
