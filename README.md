@@ -535,7 +535,7 @@ located on the included CD-ROM.
         assure that you get the most current version with recent service
         patches. The URL at the time this manual was written is:
 
-[http://msdn.microsoft.com/netframework/downloads/framework1%5F1redist/](http://msdn.microsoft.com/netframework/downloads/framework1_1redist/)
+[https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
 
 -   Alternate: Install the dotNET 1.1 framework from the CR-ROM. Cancel
     the VNA installation, then install the framework by double- clicking
