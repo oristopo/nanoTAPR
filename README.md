@@ -148,11 +148,11 @@ for software version 1.6 include:
 
 2.  [Software Installation](#software-installation)  
     9.  [Initial Software installation](#initial-software-installation)   
-    10. [Supported Operating System Versions](#supported-operating-system-versions.)   
+    10. [Supported Operating System Versions](#supported-operating-system-versions)   
     11. [Software Distribution](#software-distribution)  
     12. [Installed VNA Files](#installed-vna-files)  
     13. [Installation Pre-Requisites](#installation-pre-requisites)  
-    14. [Completing Installation -- Connecting the VNA to your Computer](#completing-installation-connecting-the-vna-to-your-computer)  
+    14. [Connecting the VNA to your Computer](#connecting-the-vna-to-your-computer)  
     15. [Uninstall](#uninstall)  
 
 3.  [Detector Calibration](#_TOC_250054)  
@@ -467,8 +467,8 @@ located on the included CD-ROM.
     After completion, restart the VNA software installation by
     double-clicking on the `setup.exe` file.
 
-Supported Operating System Versions.
-------------------------------------
+Supported Operating System Versions
+-----------------------------------
 
 The Vector network analyzer software should be able to run on the
 Windows operating systems as shown:
@@ -597,8 +597,8 @@ version from Microsoft (its about 23 MB in size). Many newer
 applications and some recent Microsoft service packs install the
 framework, so you may have it already.
 
-Completing Installation -- Connecting the VNA to your Computer
---------------------------------------------------------------
+Connecting the VNA to your Computer
+-----------------------------------
 
 After installation of the software using the setup program is
 completed, connect the VNA to your computer using a USB cable. Then
