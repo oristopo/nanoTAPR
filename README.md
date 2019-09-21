@@ -392,12 +392,11 @@ Instrument Limitations
 -   The return loss of the RECEIVE circuit on the VNA is about -15 dB.
     This is due to variations in the pre-amplifier device. If the
     measurement result critically depends upon a more accurate
-    termination, be sure to use a
-
-highly accurate attenuator of at least 10 dB between the device under
-test (DUT) and the RECEIVE connector. The VNA fixture calibration can
-do the math for you automatically (run a fixture calibration 'through'
-with the attenuator in place).
+    termination, be sure to use a highly accurate attenuator of
+    at least 10 dB between the device under test (DUT)
+    and the RECEIVE connector. The VNA fixture calibration
+    can do the math for you automatically
+    (run a fixture calibration 'through' with the attenuator in place).
 
 -   The accuracy of the frequency source is determined by the on-board
     12 MHz crystal oscillator, which is multiplied to 24.000 MHz before
@@ -688,12 +687,12 @@ Uninstall
 ---------
 
 The installer program will create an uninstall module.
-If you need to uninstall the VNA application,
+To uninstall this VNA application,
 use the control panel `add new software` selection,
 and use it to uninstall the application. The
-uninstaller will not delete the Registry key or ezusbw2k.PNF files.
-You may delete these manually if you wish, but it's not required. See
-Appendix 3 for details.
+uninstaller deletes neither the Registry key nor ezusbw2k.PNF files.
+You may delete these manually if you wish, but it's not required.  
+See Appendix 3 for details.
 
 Fixture Calibration
 ===================
@@ -2146,7 +2145,7 @@ matrix.
 Es -- source impedance mismatch. This is the S22error of the virtual
 error matrix.
  
-The virtual error matrix is removed from the S11 measurement (when
+The virtual error matrix is removed from S11 measurements (when
 'Apply Calibration' is active) to compensate for these errors in
 reflection measurements.
 
@@ -2160,42 +2159,35 @@ and related raw and derived calibration constants. The rectangular
 display can show both S11 and S21 measurements, and the calibration
 constants related to S21.
 ```
-+-----------------------------------+-----------------------------------+
-|   Et -- Tracking Error            |   A complex plot of the amplitude |
-|   compensation                    |   and phase of                    |
-|                                   |                                   |
-|                                   |   the cables connecting the       |
-|                                   |   TRANSMIT connector of the VNA   |
-|                                   |   to the DUT                      |
-+===================================+===================================+
-|   Es -- Source Mismatch Error     |   A complex plot of the error due |
-|                                   |   to imperfect                    |
-|   compensation                    |                                   |
-|                                   |   source impedance termination.   |
-+-----------------------------------+-----------------------------------+
-|   Ed -- Directivity Error         |   A complex plot of the error due |
-|                                   |   to finite                       |
-|   compensation                    |                                   |
-|                                   |   directivity in the directional  |
-|                                   |   coupler circuitry.              |
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data -- S11     |   Raw data taken from the shorted |
-|                                   |   load during                     |
-|   'Short'                         |                                   |
-|                                   |   calibration (or loaded from a   |
-|                                   |   calibration file).              |
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data -- S11     |   Raw data taken from the open    |
-|                                   |   load during calibration         |
-|   'Open'                          |                                   |
-|                                   |(or loaded from a calibration file)|
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data -- S11     |   Raw data taken from the 50-ohm  |
-|                                   |   terminated load                 |
-|   'Terminated'                    |                                   |
-|                                   |   (or loaded from a               |
-|                                   |   calibration file).              |
-+-----------------------------------+-----------------------------------+
++-----------------------------+-------------------------------------+
+| Et -- Tracking Error        | A complex plot of the amplitude     |
+| compensation                | and phase of                        |
+|                             | the cables connecting the           |
+|                             | TRANSMIT connector of the VNA       |
+|                             | to the DUT                          |
++=============================+=====================================+
+| Es -- Source Mismatch Error | A complex plot of the error due     |
+|                             | to imperfect                        |
+| compensation                | source impedance termination.       |
++-----------------------------+-------------------------------------+
+| Ed -- Directivity Error     | A complex plot of the error due     |
+|                             | to finite                           |
+| compensation                | directivity in the directional      |
+|                             | coupler circuitry.                  |
++-----------------------------+-------------------------------------+
+| Raw Calibration Data -- S11 | Raw data taken from the shorted     |
+|                             | load during                         |
+| 'Short'                     | calibration (or loaded from a       |
+|                             | calibration file).                  |
++-----------------------------+-------------------------------------+
+| Raw Calibration Data -- S11 | Raw data taken from the open        |
+|                             | load during calibration             |
+| 'Open'                      | (or loaded from a calibration file) |
++-----------------------------+-------------------------------------+
+| Raw Calibration Data -- S11 | Raw data taken from the 50-ohm      |
+|                             | terminated load                     |
+| 'Terminated'                | (or loaded from a calibration file) |
++-----------------------------+-------------------------------------+
 ```
 Appendix 3 -- Software Installation, Registry
 =============================================
@@ -2241,8 +2233,7 @@ structures, and the keys are placed in different locations.
 +-----------+-----------------------------------------------------------+
 | Version   |  Registry Key Location                                    |
 +===========+===========================================================+
-| Win98,    |  \HKEY_LOCAL_MACHINE\Enum\USB                             |
-| ME        |                                                           |
+| Win98, ME |  \HKEY_LOCAL_MACHINE\Enum\USB                             |
 +-----------+-----------------------------------------------------------+
 | WinNT,    |  \HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB    |
 | 2000, XP  |                                                           |
