@@ -175,12 +175,16 @@ for software version 1.6 include:
         1.  [Rectangular Display Mode](#rectangular-display-mode)  
         2.  [Polar Display Mode](#polar-display-mode)  
         3.  [Time Domain Reflection Mode](#time-domain-reflection-mode)  
-    1.  [Vertical Scale Menu](#vertical-scale-menu)  
-    2.  [Marker Menu](#marker-menu)  
-    3.  [Frequency Grid Menu](#frequency-grid-menu)  
-    4.  [Storage Menu](#storage-menu)  
-    5.  [Integration Menu](#integration-menu)  
-    6.  [Help & Software Updates](#help-software-updates)  
+    5.  [Device Under Test](device-under-test)
+    6.  [Rectangular Display Mode](rectangular-display-mode)
+    7.  [Polar Display Mode](polar-display-mode)
+    8.  [Time Domain Reflection Mode](#time-domain-reflection-mode)
+    9.  [Vertical Scale Menu](#vertical-scale-menu)  
+    10. [Marker Menu](#marker-menu)  
+    11. [Frequency Grid Menu](#frequency-grid-menu)  
+    12. [Storage Menu](#storage-menu)  
+    13. [Integration Menu](#integration-menu)  
+    14. [Help & Software Updates](#help-software-updates)  
 
 5.  [Controls](#controls)  
     1.  [Frequency Controls](#frequency-controls)  
@@ -1027,13 +1031,15 @@ raw and derived calibration constants. The rectangular display can
 show both `S11` and `S21` measurements, and the calibration constants
 related to S21.
 
-#### Device Under Test -- DUT
+Device Under Test
+-----------------
 
 The reflection and forward measurements are made with respect to the
 Device Under Test (DUT). The reference plane location is established
 when the fixture calibration is run and loaded.
 
-### Rectangular Display Mode
+Rectangular Display Mode
+------------------------
 
 `S21` can be displayed only on the rectangular display. `S11` can be
 displayed on both the rectangular and polar displays. The traces that
@@ -1076,7 +1082,8 @@ can be displayed on the Rectangular display are:
 |                                   | converted into SWR.               |
 +-----------------------------------+-----------------------------------+
 ```
-### Polar Display Mode
+Polar Display Mode
+------------------
 
 `S11` (as a polar complex number) is always displayed on the Polar
 display. `S21` cannot be displayed on the polar display. The raw
@@ -1126,7 +1133,8 @@ The traces that can be added to the Polar mode display are:
 |                                   |   calibration file).              |
 +-----------------------------------+-----------------------------------+
 ```
-### Time Domain Reflection Mode
+Time Domain Reflection Mode
+---------------------------
 
 The TDR mode displays the real part of the Inverse Fast Fourier
 Transform of a reflection measurement. Because the TDR mode requires a
@@ -1982,7 +1990,8 @@ build a table to correct those periodic errors.
 All the various data sets are then saved in the file
 `detector.ica` in the VNA program startup directory.
  
-**S21 Compensation**
+S21 Compensation
+----------------
  
 The Fixture calibration routine measures the received signal through a
 small bullet or barrel connector. It measures the received magnitude
