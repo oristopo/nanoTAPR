@@ -1892,16 +1892,8 @@ following two equations:
 
 #### b1 = a1 \* S11 + a2 \* S12 b2 = a1 \* S21 + a2 \* S22
 
-![](./media/image21.png)
+![](./media/Sparam.gif)
 
-![](./media/image23.png)
-![](./media/image24.png)
-![](./media/image28.png)
-![](./media/image29.png)
-![](./media/image30.png)
-![](./media/image32.png)
- 
-![](./media/image33.png)
 The VNA is really a transmission-reflection test set.
 It can launch a voltage into port one of the device (a1),
 and measure the voltage received by ports one
