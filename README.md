@@ -193,22 +193,22 @@ for software version 1.6 include:
     1.  [Some Cautions](#some-cautions)  
     2.  [Common Display Results](#common-display-results)  
 
-[Appendix 1 -- Overview of S Parameters](#appendix-1-overview-of-s-parameters)  
+[Appendix 1 Overview of S Parameters](#appendix-1-overview-of-s-parameters)  
 [Polar Display](#polar-display)  
 [Rectangular Display](#rectangular-display)  
 [Group Delay](#group-delay)  
 [SWR](#swr)  
    
-[Appendix 2 -- Calibration Details](#appendix-2-calibration-details)  
+[Appendix 2 Calibration Details](#appendix-2-calibration-details)  
 [Detector Calibration](#detector-calibration)  
 Fixture Calibration  
 S21 Compensation  
 [S11 Compensation](#s11-compensation)  
 [Fixture Calibration Data Set](#fixture-calibration-data-set)  
  
-[Appendix 3 -- Software Installation, Registry](#appendix-3-software-installation-registry)  
+[Appendix 3 Software Installation, Registry](#appendix-3-software-installation-registry)  
  
-[Appendix 4 -- Group Delay and Aperture](#appendix-4-group-delay-and-aperture)  
+[Appendix 4 Group Delay and Aperture](#appendix-4-group-delay-and-aperture)  
  
 [Aperture Shortening](#aperture-shortening)  
 
@@ -225,7 +225,7 @@ If you are not already familiar
 * S-parameters
 * forward and reflected magnitude, gain and phase
 * polar and rectangular plots
-... consider reading **Appendix 1 -- Overview of S Parameters** before continuing here.
+... consider reading **Appendix 1 Overview of S Parameters** before continuing here.
  
 The VNA performs measurements on one-port or two-port networks. A
 two-port network has an input and an output (plus ground(s)). A
@@ -1017,7 +1017,7 @@ fixture.
 The Detector calibration procedure is described in section 3. The
 Fixture calibration procedure is described in section 4.
  
-**Appendix 2 -- Calibration Details** provides a more detailed
+**Appendix 2 Calibration Details** provides a more detailed
 description of how the calibration routines work.
 
 Trace Menu
@@ -1165,7 +1165,7 @@ scale units per division for magnitude (in dB / division), the maximum
 SWR display (minimum is always 1.0), the group delay (seconds per
 division), and the aperture size of the group delay computation.
  
-For more information see **Appendix 4 -- Group Delay and Aperture**
+For more information see **Appendix 4 Group Delay and Aperture**
 for more details on how group delay is derived and how the data can be
 smoothed (or distorted) by changing the aperture size.
  
@@ -1743,8 +1743,8 @@ The polar scale is zoomed 2.5:1 to show more details.*
 *1 meter cable terminated in 50-ohm load `with` fixture calibration applied.*  
 *Rectangular display of S11.*
 
-Appendix 1 -- Overview of S Parameters
-======================================
+Appendix 1 Overview of S Parameters
+===================================
 
 This overview briefly covers the basics of reflection and transmission
 measurements using S-parameters, and visualization of them on
@@ -1952,8 +1952,8 @@ return loss.
 | infinite |   0.00      |
 +----------+-------------+
 ```
-Appendix 2 -- Calibration Details
-=================================
+Appendix 2 Calibration Details
+==============================
 
 Detector Calibration
 --------------------
@@ -2058,8 +2058,8 @@ constants related to S21.
 | 'Terminated'                | (or loaded from a calibration file) |
 +-----------------------------+-------------------------------------+
 ```
-Appendix 3 -- Software Installation, Registry
-=============================================
+Appendix 3 Software Installation, Registry
+==========================================
 
 When you apply power to the VNA and first attach it to the computer
 via its USB cable, its USB device ID will not be found. The New
@@ -2108,8 +2108,8 @@ structures, and the keys are placed in different locations.
 | 2000, XP  |                                                           |
 +-----------+-----------------------------------------------------------+
 ```
-Appendix 4 -- Group Delay and Aperture
-======================================
+Appendix 4 Group Delay and Aperture
+===================================
 
 Group Delay is an equivalent time delay through a device or network.
 Mathematically, it is defined at the negative of the rate of change
