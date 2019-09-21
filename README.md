@@ -233,8 +233,7 @@ for software version 1.6 include:
 
         3.  [Polar Display Mode 32](#polar-display-mode)
 
-        4.  [Time Domain Reflection Mode
-            > 33](#time-domain-reflection-mode)
+        4.  [Time Domain Reflection Mode 33](#time-domain-reflection-mode)
 
     37. [Vertical Scale Menu 34](#vertical-scale-menu)
 
@@ -550,36 +549,36 @@ The Vector network analyzer software should be able to run on the
 Windows operating systems as shown:
 ```
 +-----------------------+-----------------------+-----------------------+
-| **Operating System**  | > **Support**         | > **Reason(s)**       |
+|   Operating System    |     Support           |     Reason(s)         |
 +=======================+=======================+=======================+
-| > Windows 95 -- all   | > No                  | > Does not support    |
-| > editions            |                       | > USB.                |
-|                       |                       | >                     |
-|                       |                       | > Does not support    |
-|                       |                       | > .NET framework      |
-|                       |                       | >                     |
-|                       |                       | > Does not support    |
-|                       |                       | > current Windows     |
-|                       |                       | > Installer           |
+|   Windows 95 -- all   |   No                  |   Does not support    |
+|   editions            |                       |   USB.                |
+|                       |                       |                       |
+|                       |                       |   Does not support    |
+|                       |                       |   .NET framework      |
+|                       |                       |                       |
+|                       |                       |   Does not support    |
+|                       |                       |   current Windows     |
+|                       |                       |   Installer           |
 +-----------------------+-----------------------+-----------------------+
-| Windows 98 -- Gold    | > Maybe               | > Does not support    |
-|                       |                       | > USB version 1.1,    |
-|                       |                       | > only                |
-|                       |                       | >                     |
-|                       |                       | > supports USB        |
-|                       |                       | > version 1.0         |
+| Windows 98 -- Gold    |   Maybe               |   Does not support    |
+|                       |                       |   USB version 1.1,    |
+|                       |                       |   only                |
+|                       |                       |                       |
+|                       |                       |   supports USB        |
+|                       |                       |   version 1.0         |
 +-----------------------+-----------------------+-----------------------+
-| Windows 98 -- SE      | > Yes                 | > Tested.             |
+| Windows 98 -- SE      |   Yes                 |   Tested.             |
 |                       |                       |                       |
 | (Second Edition)      |                       |                       |
 +-----------------------+-----------------------+-----------------------+
-| Windows ME            | > Probably            | > Not tested yet.     |
+| Windows ME            |   Probably            |   Not tested yet.     |
 +-----------------------+-----------------------+-----------------------+
-| Windows NT            | > Probably            | > Not tested yet      |
+| Windows NT            |   Probably            |   Not tested yet      |
 +-----------------------+-----------------------+-----------------------+
-| Windows 2000          | > Yes                 | > Tested.             |
+| Windows 2000          |   Yes                 |   Tested.             |
 +-----------------------+-----------------------+-----------------------+
-| Windows XP            | > Yes                 | > Tested.             |
+| Windows XP            |   Yes                 |   Tested.             |
 +-----------------------+-----------------------+-----------------------+
 ```
 Software Distribution
@@ -587,29 +586,29 @@ Software Distribution
 
 You must be logged on with *administrator* privileges if using Windows
 NT, 2000, or XP in order to install the software.
->
+
 Currently, the software distribution consists of the following files
 ```
 +-----------------------------------+-----------------------------------+
-| **Filename**                      | > **Function**                    |
+|   Filename                        |     Function                      |
 +===================================+===================================+
-| Setup.exe                         | > Installer bootstrap. Detects if |
-|                                   | > suitable Windows installer is   |
-|                                   | > present,                        |
-|                                   | >                                 |
-|                                   | > provides web assistance if not. |
+| Setup.exe                         |   Installer bootstrap. Detects if |
+|                                   |   suitable Windows installer is   |
+|                                   |   present,                        |
+|                                   |                                   |
+|                                   |   provides web assistance if not. |
 +-----------------------------------+-----------------------------------+
-| Setup1.msi                        | > The VNAR3 application           |
-|                                   | > (including supporting files) in |
-|                                   | > windows                         |
-|                                   | >                                 |
-|                                   | > installer format.               |
+| Setup1.msi                        |   The VNAR3 application           |
+|                                   |   (including supporting files) in |
+|                                   |   windows                         |
+|                                   |                                   |
+|                                   |   installer format.               |
 +-----------------------------------+-----------------------------------+
-| Setup.ini                         | > Provides instructions to the    |
-|                                   | > bootstrapper about              |
-|                                   | > prerequisites.                  |
+| Setup.ini                         |   Provides instructions to the    |
+|                                   |   bootstrapper about              |
+|                                   |   prerequisites.                  |
 +-----------------------------------+-----------------------------------+
-| Dotnetfx.exe                      | > dotNET 1.1 framework            |
+| Dotnetfx.exe                      |   dotNET 1.1 framework            |
 +-----------------------------------+-----------------------------------+
 ```
 Installed VNA Files
@@ -620,45 +619,45 @@ C:\Program Files\TAPR\VNA\. The file location can be changed
 during installation.
 ```
 +-----------------------+-----------------------+-----------------------+
-| **File name**         | > **Where installed** | > **Function**        |
+|   File name           |     Where installed   |     Function          |
 +=======================+=======================+=======================+
-| VNAR3.exe             | > Default directory.  | > Host program.       |
+| VNAR3.exe             |   Default directory.  |   Host program.       |
 +-----------------------+-----------------------+-----------------------+
-| VNAR3                 | > Default directory.  | > Compiled help file. |
-|                       | > Needs to be in same |                       |
-| Help.chm              | >                     |                       |
-|                       | > directory as        |                       |
-|                       | > VNAR3.exe           |                       |
+| VNAR3                 |   Default directory.  |   Compiled help file. |
+|                       |   Needs to be in same |                       |
+| Help.chm              |                       |                       |
+|                       |   directory as        |                       |
+|                       |   VNAR3.exe           |                       |
 +-----------------------+-----------------------+-----------------------+
 
 +-----------------------+-----------------------+-----------------------+
-| **File name**         | > **Where installed** | > **Function**        |
+|   File name           |     Where installed   |     Function          |
 +=======================+=======================+=======================+
-| VNA_target.bin       | > Default directory.   | > Binary image of     |
-|                       | > Needs to be in same | > target AN2135       |
-|                       | > directory as        | > software.           |
-|                       | > VNAR3.exe           | >                     |
-|                       |                       | > Downloaded to       |
-|                       |                       | > target by the host  |
-|                       |                       | > program             |
+| VNA_target.bin        |  Default directory.   |   Binary image of     |
+|                       |   Needs to be in same |   target AN2135       |
+|                       |   directory as        |   software.           |
+|                       |   VNAR3.exe           |                       |
+|                       |                       |   Downloaded to       |
+|                       |                       |   target by the host  |
+|                       |                       |   program             |
 +-----------------------+-----------------------+-----------------------+
-| ezusb.sys             | > Win98, ME:          | > Device driver for   |
-|                       | > C:\WINDOWS\SYSTEM   | > AN2135 USB          |
-|                       | >                     | >                     |
-|                       | > WinNT, Win2000,     | > target.             |
-|                       | > WinXP:              |                       |
-|                       | > C:\WINDOWS\SYSTEMi  |                       |
+| ezusb.sys             |   Win98, ME:          |   Device driver for   |
+|                       |   C:\WINDOWS\SYSTEM   |   AN2135 USB          |
+|                       |                       |                       |
+|                       |   WinNT, Win2000,     |   target.             |
+|                       |   WinXP:              |                       |
+|                       |   C:\WINDOWS\SYSTEMi  |                       |
 |                       | 32\DRIVERS            |                       |
 +-----------------------+-----------------------+-----------------------+
-| ezusbw2k.inf          | > For all Windows     | > Information file    |
-|                       | > versions:           | > used to associate   |
-|                       | > C:\WINDOWS\inf	| >                     |
-|                       |                       | > USB device with     |
-|                       |                       | > ezusb.sys driver.   |
+| ezusbw2k.inf          |   For all Windows     |   Information file    |
+|                       |   versions:           |   used to associate   |
+|                       |   C:\WINDOWS\inf	|                       |
+|                       |                       |   USB device with     |
+|                       |                       |   ezusb.sys driver.   |
 +-----------------------+-----------------------+-----------------------+
-| gpl.txt               | > Default directory.  | > License terms for   |
-|                       |                       | >                     |
-|                       |                       | > VNA software.       |
+| gpl.txt               |   Default directory.  |   License terms for   |
+|                       |                       |                       |
+|                       |                       |   VNA software.       |
 +-----------------------+-----------------------+-----------------------+
 ```
 Installation Pre-Requisites
@@ -1136,41 +1135,41 @@ displayed on both the rectangular and polar displays. The traces that
 can be displayed on the Rectangular display are:
 ```
 +-----------------------------------+-----------------------------------+
-| > S11 Magnitude                   | The magnitude, in dB., of the     |
+|   S11 Magnitude                   | The magnitude, in dB., of the     |
 |                                   | input return loss of the          |
 |                                   |                                   |
 |                                   | Device Under Test (DUT).          |
 +===================================+===================================+
-| > S11 Phase                       | The phase angle, in degrees, of   |
+|   S11 Phase                       | The phase angle, in degrees, of   |
 |                                   | the input return loss of          |
 |                                   |                                   |
 |                                   | the DUT, from +180 to --180.      |
 +-----------------------------------+-----------------------------------+
-| > S21 Magnitude                   | The magnitude, in dB. of the      |
+|   S21 Magnitude                   | The magnitude, in dB. of the      |
 |                                   | forward transfer gain (or         |
 |                                   |                                   |
 |                                   | loss) of the DUT.                 |
 +-----------------------------------+-----------------------------------+
-| > S21 Phase                       | The phase, in degrees, of the     |
+|   S21 Phase                       | The phase, in degrees, of the     |
 |                                   | forward transfer gain (or         |
 |                                   |                                   |
 |                                   | loss) of the DUT.                 |
 +-----------------------------------+-----------------------------------+
-| > S21 Group Delay                 | The derived group delay of the    |
+|   S21 Group Delay                 | The derived group delay of the    |
 |                                   | forward transfer gain (or         |
 |                                   |                                   |
 |                                   | loss) of the DUT.                 |
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data            | Raw data taken from the through   |
-| >                                 | connection of                     |
-| > -- S21 'Through'                |                                   |
-|                                   | > TRANSMIT to RECEIVE on the VNA  |
-|                                   | > (through the actual cables used |
-|                                   | > to connect to the DUT)          |
+|   Raw Calibration Data            | Raw data taken from the through   |
+|                                   | connection of                     |
+|   -- S21 'Through'                |                                   |
+|                                   |   TRANSMIT to RECEIVE on the VNA  |
+|                                   |   (through the actual cables used |
+|                                   |   to connect to the DUT)          |
 +-----------------------------------+-----------------------------------+
-| > S11 Magnitude as                | The value of S11 magnitude        |
-| >                                 | converted into SWR.               |
-| > SWR                             |                                   |
+|   S11 Magnitude as                | The value of S11 magnitude        |
+|                                   | converted into SWR.               |
+|   SWR                             |                                   |
 +-----------------------------------+-----------------------------------+
 ```
 ### Polar Display Mode
@@ -1187,40 +1186,40 @@ and are not displayed.
 The traces that can be added to the Polar mode display are:
 ```
 +-----------------------------------+-----------------------------------+
-| > Et -- Tracking Error            | > A complex plot of the amplitude |
-| > compensation                    | > and phase of the cables         |
-|                                   | > connecting the TRANSMIT         |
-|                                   | >                                 |
-|                                   | > connector of the VNA to the DUT |
+|   Et -- Tracking Error            |   A complex plot of the amplitude |
+|   compensation                    |   and phase of the cables         |
+|                                   |   connecting the TRANSMIT         |
+|                                   |                                   |
+|                                   |   connector of the VNA to the DUT |
 +===================================+===================================+
-| > Es -- Source Mismatch Error     | > A complex plot of the error due |
-| >                                 | > to imperfect                    |
-| > compensation                    | >                                 |
-|                                   | > source impedance termination.   |
+|   Es -- Source Mismatch Error     |   A complex plot of the error due |
+|                                   |   to imperfect                    |
+|   compensation                    |                                   |
+|                                   |   source impedance termination.   |
 +-----------------------------------+-----------------------------------+
-| > Ed -- Directivity Error         | > A complex plot of the error due |
-| >                                 | > to finite                       |
-| > compensation                    | >                                 |
-|                                   | > directivity in the directional  |
-|                                   | > coupler circuitry.              |
+|   Ed -- Directivity Error         |   A complex plot of the error due |
+|                                   |   to finite                       |
+|   compensation                    |                                   |
+|                                   |   directivity in the directional  |
+|                                   |   coupler circuitry.              |
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data -- S11     | > Raw data taken from the shorted |
-| >                                 | > load during                     |
-| > 'Short'                         | >                                 |
-|                                   | > calibration (or loaded from a   |
-|                                   | > calibration file).              |
+|   Raw Calibration Data -- S11     |   Raw data taken from the shorted |
+|                                   |   load during                     |
+|   'Short'                         |                                   |
+|                                   |   calibration (or loaded from a   |
+|                                   |   calibration file).              |
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data -- S11     | > Raw data taken from the open    |
-| >                                 | > load during                     |
-| > 'Open'                          | >                                 |
-|                                   | > calibration (or loaded from a   |
-|                                   | > calibration file)               |
+|   Raw Calibration Data -- S11     |   Raw data taken from the open    |
+|                                   |   load during                     |
+|   'Open'                          |                                   |
+|                                   |   calibration (or loaded from a   |
+|                                   |   calibration file)               |
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data -- S11     | > Raw data taken from the 50-ohm  |
-| >                                 | > terminated                      |
-| > 'Terminated'                    | >                                 |
-|                                   | > load (or loaded from a          |
-|                                   | > calibration file).              |
+|   Raw Calibration Data -- S11     |   Raw data taken from the 50-ohm  |
+|                                   |   terminated                      |
+|   'Terminated'                    |                                   |
+|                                   |   load (or loaded from a          |
+|                                   |   calibration file).              |
 +-----------------------------------+-----------------------------------+
 ```
 ### Time Domain Reflection Mode
@@ -1402,17 +1401,17 @@ Frequency to Stop Frequency and displayed on the display. The values
 allowed are:
 ```
 +---------------+-------------------------------------------+
-| > 100 Points  | > Coarsest frequency display, but fastest |
-|               | >                                         |
-|               | > acquisition of measurement data.        |
+|   100 Points  |   Coarsest frequency display, but fastest |
+|               |                                           |
+|               |   acquisition of measurement data.        |
 +===============+===========================================+
-| > 200 Points  |                                           |
+|   200 Points  |                                           |
 +---------------+-------------------------------------------+
-| > 400 Points  |                                           |
+|   400 Points  |                                           |
 +---------------+-------------------------------------------+
-| > 1020 Points | > Finest frequency display, but slowest   |
-|               | >                                         |
-|               | > acquisition of measurement data.        |
+|   1020 Points |   Finest frequency display, but slowest   |
+|               |                                           |
+|               |   acquisition of measurement data.        |
 +---------------+-------------------------------------------+
 ```
 The instrument defaults to 200 points at startup. More points allows
@@ -2045,53 +2044,52 @@ The following table relates the SWR to the magnitude of the input
 return loss.
 ```
 +-----------+--------------------+
-| > **SWR** | > **Return Loss,** |
-|           | >                  |
-|           | > **dB.**          |
+|     SWR   |     Return Loss,   |
+|           |     dB.            |
 +===========+====================+
-| > 1.00    | > infinite         |
+|   1.00    |   infinite         |
 +-----------+--------------------+
-| > 1.03    | > 36.60            |
+|   1.03    |   36.60            |
 +-----------+--------------------+
-| > 1.05    | > 32.25            |
+|   1.05    |   32.25            |
 +-----------+--------------------+
-| > 1.10    | > 26.45            |
+|   1.10    |   26.45            |
 +-----------+--------------------+
-| > 1.15    | > 23.12            |
+|   1.15    |   23.12            |
 +-----------+--------------------+
-| > 1.20    | > 20.83            |
+|   1.20    |   20.83            |
 +-----------+--------------------+
-| > 1.30    | > 17.70            |
+|   1.30    |   17.70            |
 +-----------+--------------------+
-| > 1.40    | > 15.56            |
+|   1.40    |   15.56            |
 +-----------+--------------------+
-| > 1.50    | > 13.98            |
+|   1.50    |   13.98            |
 +-----------+--------------------+
-| > 1.60    | > 12.74            |
+|   1.60    |   12.74            |
 +-----------+--------------------+
-| > 1.70    | > 11.73            |
+|   1.70    |   11.73            |
 +-----------+--------------------+
-| > 1.80    | > 10.88            |
+|   1.80    |   10.88            |
 +-----------+--------------------+
-| > 1.90    | > 10.16            |
+|   1.90    |   10.16            |
 +-----------+--------------------+
 
 +------------+--------+
-| > 2.00     | > 9.54 |
+|   2.00     |   9.54 |
 +============+========+
-| > 2.50     | > 7.36 |
+|   2.50     |   7.36 |
 +------------+--------+
-| > 3.0      | > 6.02 |
+|   3.0      |   6.02 |
 +------------+--------+
-| > 4.0      | > 4.44 |
+|   4.0      |   4.44 |
 +------------+--------+
-| > 5.0      | > 3.52 |
+|   5.0      |   3.52 |
 +------------+--------+
-| > 10.0     | > 1.74 |
+|   10.0     |   1.74 |
 +------------+--------+
-| > 20.0     | > 0.87 |
+|   20.0     |   0.87 |
 +------------+--------+
-| > infinite | > 0.00 |
+|   infinite |   0.00 |
 +------------+--------+
 ```
 Appendix 2 -- Calibration Details
@@ -2171,41 +2169,40 @@ display can show both S11 and S21 measurements, and the calibration
 constants related to S21.
 ```
 +-----------------------------------+-----------------------------------+
-| > Et -- Tracking Error            | > A complex plot of the amplitude |
-| > compensation                    | > and phase of                    |
-|                                   | >                                 |
-|                                   | > the cables connecting the       |
-|                                   | > TRANSMIT connector of the VNA   |
-|                                   | > to the DUT                      |
+|   Et -- Tracking Error            |   A complex plot of the amplitude |
+|   compensation                    |   and phase of                    |
+|                                   |                                   |
+|                                   |   the cables connecting the       |
+|                                   |   TRANSMIT connector of the VNA   |
+|                                   |   to the DUT                      |
 +===================================+===================================+
-| > Es -- Source Mismatch Error     | > A complex plot of the error due |
-| >                                 | > to imperfect                    |
-| > compensation                    | >                                 |
-|                                   | > source impedance termination.   |
+|   Es -- Source Mismatch Error     |   A complex plot of the error due |
+|                                   |   to imperfect                    |
+|   compensation                    |                                   |
+|                                   |   source impedance termination.   |
 +-----------------------------------+-----------------------------------+
-| > Ed -- Directivity Error         | > A complex plot of the error due |
-| >                                 | > to finite                       |
-| > compensation                    | >                                 |
-|                                   | > directivity in the directional  |
-|                                   | > coupler circuitry.              |
+|   Ed -- Directivity Error         |   A complex plot of the error due |
+|                                   |   to finite                       |
+|   compensation                    |                                   |
+|                                   |   directivity in the directional  |
+|                                   |   coupler circuitry.              |
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data -- S11     | > Raw data taken from the shorted |
-| >                                 | > load during                     |
-| > 'Short'                         | >                                 |
-|                                   | > calibration (or loaded from a   |
-|                                   | > calibration file).              |
+|   Raw Calibration Data -- S11     |   Raw data taken from the shorted |
+|                                   |   load during                     |
+|   'Short'                         |                                   |
+|                                   |   calibration (or loaded from a   |
+|                                   |   calibration file).              |
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data -- S11     | > Raw data taken from the open    |
-| >                                 | > load during                     |
-| > 'Open'                          | >                                 |
-|                                   | > calibration (or loaded from a   |
-|                                   | > calibration file)               |
+|   Raw Calibration Data -- S11     |   Raw data taken from the open    |
+|                                   |   load during calibration         |
+|   'Open'                          |                                   |
+|                                   |(or loaded from a calibration file)|
 +-----------------------------------+-----------------------------------+
-| > Raw Calibration Data -- S11     | > Raw data taken from the 50-ohm  |
-| >                                 | > terminated                      |
-| > 'Terminated'                    | >                                 |
-|                                   | > load (or loaded from a          |
-|                                   | > calibration file).              |
+|   Raw Calibration Data -- S11     |   Raw data taken from the 50-ohm  |
+|                                   |   terminated load                 |
+|   'Terminated'                    |                                   |
+|                                   |   (or loaded from a               |
+|                                   |   calibration file).              |
 +-----------------------------------+-----------------------------------+
 ```
 Appendix 3 -- Software Installation, Registry
