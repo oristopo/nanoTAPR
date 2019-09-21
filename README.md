@@ -1780,14 +1780,10 @@ were performed in the 'Slow' mode.
     measurement errors, instrument temperature change, etc.).
 
 ![](./media/image13.png)
-
-*3 meter cable terminated in 'Short' `without` fixture
-calibration applied.*
+*3 meter cable terminated in 'Short' `without` fixture calibration applied.*
 
 ![](./media/image14.png)
-
-*3 meter cable terminated in 'Short' `with` fixture
-calibration applied.*
+*3 meter cable terminated in 'Short' `with` fixture calibration applied.*
 
 -   Open cable -- with and without cable calibration. The following
     charts show the polar and rectangular displays of an open cable on
@@ -1797,14 +1793,10 @@ calibration applied.*
     errors, instrument temperature change, etc.).
 
 ![](./media/image15.png)
-
-*3 meter cable terminated in ''Open' `without` fixture
-calibration applied.*
+*3 meter cable terminated in ''Open' `without` fixture calibration applied.*
 
 ![](./media/image16.png)
-
-*3 meter cable terminated in ''Open' `with` fixture
-calibration applied.*
+*3 meter cable terminated in ''Open' `with` fixture calibration applied.*
 
 -   Terminated cable -- with and without cable calibration. The
     following charts show the polar and rectangular displays of a
@@ -1818,29 +1810,19 @@ calibration applied.*
     the example shown here.
 
 ![](./media/image17.png)
-
-*1 meter cable terminated in 50-ohm load `without` fixture
-calibration applied. The polar scale has been zoomed to 2.5:1 to show
-more details.*
+*1 meter cable terminated in 50-ohm load `without` fixture calibration applied. 
+The polar scale has been zoomed to 2.5:1 to show more details.*
  
 ![](./media/image18.png)
- 
-*1 meter cable terminated in 50-ohm load `with` fixture
-calibration applied. The polar scale has been zoomed to 2.5:1 to show
-more details.*
+*1 meter cable terminated in 50-ohm load `with` fixture calibration applied.  
+The polar scale has been zoomed to 2.5:1 to show more details.*
 
 ![](./media/image19.png)
-
-*1 meter cable terminated in 50-ohm load `without` fixture
-calibration applied.*
- 
+*1 meter cable terminated in 50-ohm load `without` fixture calibration applied.*  
 *Rectangular display of S11.*
  
 ![](./media/image20.png)
- 
-*1 meter cable terminated in 50-ohm load `with` fixture
-calibration applied.*
- 
+*1 meter cable terminated in 50-ohm load `with` fixture calibration applied.*  
 *Rectangular display of S11.*
 
 Appendix 1 -- Overview of S Parameters
