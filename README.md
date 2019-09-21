@@ -547,7 +547,7 @@ Supported Operating System Versions.
 
 The Vector network analyzer software should be able to run on the
 Windows operating systems as shown:
-
+```
 +-----------------------+-----------------------+-----------------------+
 | **Operating System**  | > **Support**         | > **Reason(s)**       |
 +=======================+=======================+=======================+
@@ -580,7 +580,7 @@ Windows operating systems as shown:
 +-----------------------+-----------------------+-----------------------+
 | Windows XP            | > Yes                 | > Tested.             |
 +-----------------------+-----------------------+-----------------------+
-
+```
 Software Distribution
 ---------------------
 
@@ -588,7 +588,7 @@ You must be logged on with *administrator* privileges if using Windows
 NT, 2000, or XP in order to install the software.
 >
 Currently, the software distribution consists of the following files
-
+```
 +-----------------------------------+-----------------------------------+
 | **Filename**                      | > **Function**                    |
 +===================================+===================================+
@@ -610,14 +610,14 @@ Currently, the software distribution consists of the following files
 +-----------------------------------+-----------------------------------+
 | Dotnetfx.exe                      | > dotNET 1.1 framework            |
 +-----------------------------------+-----------------------------------+
-
+```
 Installed VNA Files
 -------------------
 
 The VNA software installer loads the following files, by default in
 C:\\Program Files\\TAPR\\VNA\\. The file location can be changed
 during installation.
-
+```
 +-----------------------+-----------------------+-----------------------+
 | **File name**         | > **Where installed** | > **Function**        |
 +=======================+=======================+=======================+
@@ -659,7 +659,7 @@ during installation.
 |                       |                       | >                     |
 |                       |                       | > VNA software.       |
 +-----------------------+-----------------------+-----------------------+
-
+```
 Installation Pre-Requisites
 ---------------------------
 
@@ -1134,7 +1134,7 @@ when the fixture calibration is run and loaded.
 S21 can be displayed only on the rectangular display. S11 can be
 displayed on both the rectangular and polar displays. The traces that
 can be displayed on the Rectangular display are:
-
+```
 +-----------------------------------+-----------------------------------+
 | > S11 Magnitude                   | The magnitude, in dB., of the     |
 |                                   | input return loss of the          |
@@ -1172,7 +1172,7 @@ can be displayed on the Rectangular display are:
 | >                                 | converted into SWR.               |
 | > SWR                             |                                   |
 +-----------------------------------+-----------------------------------+
-
+```
 ### Polar Display Mode
 
 S11 (as a polar complex number) is always displayed on the Polar
@@ -1185,7 +1185,7 @@ compensation and raw error data are for informational purposes only
 and are not displayed.
  
 The traces that can be added to the Polar mode display are:
-
+```
 +-----------------------------------+-----------------------------------+
 | > Et -- Tracking Error            | > A complex plot of the amplitude |
 | > compensation                    | > and phase of the cables         |
@@ -1222,7 +1222,7 @@ The traces that can be added to the Polar mode display are:
 |                                   | > load (or loaded from a          |
 |                                   | > calibration file).              |
 +-----------------------------------+-----------------------------------+
-
+```
 ### Time Domain Reflection Mode
 
 The TDR mode displays the real part of the Inverse Fast Fourier
@@ -1400,7 +1400,7 @@ The FreqGrid menu allows selecting the number of points in the
 Frequency Grid. This is the number of measurements made from Start
 Frequency to Stop Frequency and displayed on the display. The values
 allowed are:
-
+```
 +---------------+-------------------------------------------+
 | > 100 Points  | > Coarsest frequency display, but fastest |
 |               | >                                         |
@@ -1414,7 +1414,7 @@ allowed are:
 |               | >                                         |
 |               | > acquisition of measurement data.        |
 +---------------+-------------------------------------------+
-
+```
 The instrument defaults to 200 points at startup. More points allows
 greater resolution in the display, fewer points shortens the
 measurement time period. The current setting of the number of points
@@ -2044,7 +2044,7 @@ circle lying at the outside periphery of the polar chart.
  
 The following table relates the SWR to the magnitude of the input
 return loss.
-
+```
 +-----------+--------------------+
 | > **SWR** | > **Return Loss,** |
 |           | >                  |
@@ -2094,7 +2094,7 @@ return loss.
 +------------+--------+
 | > infinite | > 0.00 |
 +------------+--------+
-
+```
 Appendix 2 -- Calibration Details
 =================================
 
@@ -2170,7 +2170,7 @@ menu. The Polar display only displays reflection measurements (S11)
 and related raw and derived calibration constants. The rectangular
 display can show both S11 and S21 measurements, and the calibration
 constants related to S21.
-
+```
 +-----------------------------------+-----------------------------------+
 | > Et -- Tracking Error            | > A complex plot of the amplitude |
 | > compensation                    | > and phase of                    |
@@ -2208,7 +2208,7 @@ constants related to S21.
 |                                   | > load (or loaded from a          |
 |                                   | > calibration file).              |
 +-----------------------------------+-----------------------------------+
-
+```
 Appendix 3 -- Software Installation, Registry
 =============================================
 
@@ -2249,7 +2249,7 @@ structures, and the keys are placed in different locations.
 
 -   If you delete the Registry key, you should also delete the file
     ezusbw2k.PNF located in the WINDOWS\\INF directory.
-
+```
 +-----------------------------------+-----------------------------------+
 | **Version**                       | > **Registry Key Location**       |
 +===================================+===================================+
@@ -2261,7 +2261,7 @@ structures, and the keys are placed in different locations.
 |                                   | \CurrentControlSet\\Enum\\USB     |
 | 2000, XP                          |                                   |
 +-----------------------------------+-----------------------------------+
-
+```
 Appendix 4 -- Group Delay and Aperture
 ======================================
 
