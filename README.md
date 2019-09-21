@@ -2247,19 +2247,17 @@ structures, and the keys are placed in different locations.
     plugged in, the new hardware detected wizard will run.
 
 -   If you delete the Registry key, you should also delete the file
-    ezusbw2k.PNF located in the WINDOWS\INF directory.
+    `ezusbw2k.PNF` located in the `WINDOWS\INF` directory.
 ```
-+-----------------------------------+-----------------------------------+
-| **Version**                       | > **Registry Key Location**       |
-+===================================+===================================+
-| Win98,                            | > \HKEY_LOCAL_MACHINE\Enum\U      |
-|                                   | SB                                |
-| ME                                |                                   |
-+-----------------------------------+-----------------------------------+
-| WinNT,                            | > \HKEY_LOCAL_MACHINE\SYSTEM\     |
-|                                   | \CurrentControlSet\Enum\USB       |
-| 2000, XP                          |                                   |
-+-----------------------------------+-----------------------------------+
++-----------+-----------------------------------------------------------+
+| Version   |  Registry Key Location                                    |
++===========+===========================================================+
+| Win98,    |  \HKEY_LOCAL_MACHINE\Enum\USB                             |
+| ME        |                                                           |
++-----------+-----------------------------------------------------------+
+| WinNT,    |  \HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB    |
+| 2000, XP  |                                                           |
++-----------+-----------------------------------------------------------+
 ```
 Appendix 4 -- Group Delay and Aperture
 ======================================
