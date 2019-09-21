@@ -522,7 +522,7 @@ located on the included CD-ROM.
     `setup.exe` file.
 
 -   Select the directory for installation. The default directory is:
-    C:\\Program Files\\TAPR\\VNA.
+    C:\Program Files\TAPR\VNA.
 
 -   If the installer gives a notification that the dotNET 1.1 runtime is
     not found, you have two choices:
@@ -616,7 +616,7 @@ Installed VNA Files
 -------------------
 
 The VNA software installer loads the following files, by default in
-C:\\Program Files\\TAPR\\VNA\\. The file location can be changed
+C:\Program Files\TAPR\VNA\. The file location can be changed
 during installation.
 ```
 +-----------------------+-----------------------+-----------------------+
@@ -634,7 +634,7 @@ during installation.
 +-----------------------+-----------------------+-----------------------+
 | **File name**         | > **Where installed** | > **Function**        |
 +=======================+=======================+=======================+
-| VNA\_target.bin       | > Default directory.  | > Binary image of     |
+| VNA_target.bin       | > Default directory.   | > Binary image of     |
 |                       | > Needs to be in same | > target AN2135       |
 |                       | > directory as        | > software.           |
 |                       | > VNAR3.exe           | >                     |
@@ -643,16 +643,16 @@ during installation.
 |                       |                       | > program             |
 +-----------------------+-----------------------+-----------------------+
 | ezusb.sys             | > Win98, ME:          | > Device driver for   |
-|                       | > C:\\WINDOWS\\SYSTEM | > AN2135 USB          |
+|                       | > C:\WINDOWS\SYSTEM   | > AN2135 USB          |
 |                       | >                     | >                     |
 |                       | > WinNT, Win2000,     | > target.             |
 |                       | > WinXP:              |                       |
-|                       | > C:\\WINDOWS\\SYSTEM |                       |
-|                       | 32\\DRIVERS           |                       |
+|                       | > C:\WINDOWS\SYSTEMi  |                       |
+|                       | 32\DRIVERS            |                       |
 +-----------------------+-----------------------+-----------------------+
 | ezusbw2k.inf          | > For all Windows     | > Information file    |
 |                       | > versions:           | > used to associate   |
-|                       | > C:\\WINDOWS\\inf    | >                     |
+|                       | > C:\WINDOWS\inf	| >                     |
 |                       |                       | > USB device with     |
 |                       |                       | > ezusb.sys driver.   |
 +-----------------------+-----------------------+-----------------------+
@@ -696,9 +696,10 @@ have been installed there by the setup program).
 Uninstall
 ---------
 
-The installer program will create an uninstall module. If you need to
-uninstall the VNA application, use the control panel -\> add new
-software selection, and use it to uninstall the application. The
+The installer program will create an uninstall module.
+If you need to uninstall the VNA application,
+use the control panel `add new software` selection,
+and use it to uninstall the application. The
 uninstaller will not delete the Registry key or ezusbw2k.PNF files.
 You may delete these manually if you wish, but it's not required. See
 Appendix 3 for details.
@@ -752,7 +753,7 @@ run:
     adaptor) in place of the DUT.
 
 3)  The error compensation parameters are computed, and the data set is
-    saved with a descriptive filename using the extension '.cal'.
+    saved with a descriptive filename using the extension `.cal`.
 
 The Fixture Calibration dialog box lists the 4 individual steps needed
 to perform the calibration. After each step is completed, and green
@@ -784,7 +785,7 @@ sensitive to the accuracy of these loads.
 Normally, there will be a number of different calibration data sets
 taken and stored, one for each test setup. These can have any valid
 windows filename (so it's helpful to be descriptive and verbose with
-the filename), but the extension is always '.cal'. The \"Apply Fixture
+the filename), but the extension is always `.cal`. The \"Apply Fixture
 Calibration\" checkbox is `grayed-out` until a valid
 Fixture Calibration Data set is loaded.
 
@@ -841,7 +842,7 @@ sure to use a description filename, as you are likely to have many
 different fixture calibration files.
  
 Filenames are allowed to be long and may contain embedded spaces. The
-software will automatically append a .cal suffix to your name.
+software will automatically append a `.cal` suffix to your name.
 Filenames are not limited to an 8.3 format, which would not be
 sufficiently descriptive.
 
@@ -1911,9 +1912,9 @@ following two equations:
 ![](./media/image32.png)
  
 ![](./media/image33.png)
-The VNA is really a
-transmission-reflection test set. It can launch a voltage into port
-one of the device (a1), and measure the voltage received by ports one
+The VNA is really a transmission-reflection test set.
+It can launch a voltage into port one of the device (a1),
+and measure the voltage received by ports one
 (b1) and two (b2). Thus, it is capable of deriving the value of S11
 (because a2 is zero
 
@@ -2226,9 +2227,9 @@ between the USB device ID and the correct device driver. In the future
 when this USB device is plugged into the host, it is not necessary to
 go through the selection process again.
  
-The Cypress AN2135 uses the following USB IDs: Vendor\_ID: 0547
+The Cypress AN2135 uses the following USB IDs: Vendor_ID: 0547
  
-Product\_ID: 2131
+Product_ID: 2131
  
 The software installation makes a registry entry in order to associate
 the device drive for the Cypress EZUSB device with the driver needed
@@ -2246,17 +2247,17 @@ structures, and the keys are placed in different locations.
     plugged in, the new hardware detected wizard will run.
 
 -   If you delete the Registry key, you should also delete the file
-    ezusbw2k.PNF located in the WINDOWS\\INF directory.
+    ezusbw2k.PNF located in the WINDOWS\INF directory.
 ```
 +-----------------------------------+-----------------------------------+
 | **Version**                       | > **Registry Key Location**       |
 +===================================+===================================+
-| Win98,                            | > \\HKEY\_LOCAL\_MACHINE\\Enum\\U |
+| Win98,                            | > \HKEY_LOCAL_MACHINE\Enum\U      |
 |                                   | SB                                |
 | ME                                |                                   |
 +-----------------------------------+-----------------------------------+
-| WinNT,                            | > \\HKEY\_LOCAL\_MACHINE\\SYSTEM\ |
-|                                   | \CurrentControlSet\\Enum\\USB     |
+| WinNT,                            | > \HKEY_LOCAL_MACHINE\SYSTEM\     |
+|                                   | \CurrentControlSet\Enum\USB       |
 | 2000, XP                          |                                   |
 +-----------------------------------+-----------------------------------+
 ```
