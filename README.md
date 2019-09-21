@@ -1810,12 +1810,12 @@ were performed in the 'Slow' mode.
     the example shown here.
 
 ![](./media/image17.png)
-*1 meter cable terminated in 50-ohm load `without` fixture calibration applied. 
-The polar scale has been zoomed to 2.5:1 to show more details.*
+*1 meter cable terminated in 50-ohm load `without` fixture calibration applied.  
+The polar scale is zoomed 2.5:1 to show more details.*
  
 ![](./media/image18.png)
-*1 meter cable terminated in 50-ohm load `with` fixture calibration applied.  
-The polar scale has been zoomed to 2.5:1 to show more details.*
+*1 meter cable terminated in 50-ohm load `with` fixture calibration applied.   
+The polar scale is zoomed 2.5:1 to show more details.*
 
 ![](./media/image19.png)
 *1 meter cable terminated in 50-ohm load `without` fixture calibration applied.*  
@@ -1829,14 +1829,14 @@ Appendix 1 -- Overview of S Parameters
 ======================================
 
 This overview briefly covers the basics of reflection and transmission
-measurements using S-parameters, and the visualization of them on a
-rectangular and polar display.
+measurements using S-parameters, and visualization of them on
+rectangular and polar displays.
  
 A linear two port device can be characterized by the behavior of the
 voltage returned to voltage injected at the ports. The S-parameter
 model provides all the linear characteristics of a two port device at
-discrete spot frequencies. The S- parameters describe the input return
-loss, forward gain, reverse gain, and output return loss each as a
+discrete spot frequencies. S- parameters describe input return,
+forward gain, reverse gain, and output return each as a
 complex number at a single frequency. For each discrete frequency,
 these 4 values describe the behavior of the two port device. To
 characterize a device, the S-parameters are usually measured at a
@@ -1987,54 +1987,52 @@ circle lying at the outside periphery of the polar chart.
 The following table relates the SWR to the magnitude of the input
 return loss.
 ```
-+-----------+--------------------+
-|     SWR   |     Return Loss,   |
-|           |     dB.            |
-+===========+====================+
-|   1.00    |   infinite         |
-+-----------+--------------------+
-|   1.03    |   36.60            |
-+-----------+--------------------+
-|   1.05    |   32.25            |
-+-----------+--------------------+
-|   1.10    |   26.45            |
-+-----------+--------------------+
-|   1.15    |   23.12            |
-+-----------+--------------------+
-|   1.20    |   20.83            |
-+-----------+--------------------+
-|   1.30    |   17.70            |
-+-----------+--------------------+
-|   1.40    |   15.56            |
-+-----------+--------------------+
-|   1.50    |   13.98            |
-+-----------+--------------------+
-|   1.60    |   12.74            |
-+-----------+--------------------+
-|   1.70    |   11.73            |
-+-----------+--------------------+
-|   1.80    |   10.88            |
-+-----------+--------------------+
-|   1.90    |   10.16            |
-+-----------+--------------------+
-
-+------------+--------+
-|   2.00     |   9.54 |
-+============+========+
-|   2.50     |   7.36 |
-+------------+--------+
-|   3.0      |   6.02 |
-+------------+--------+
-|   4.0      |   4.44 |
-+------------+--------+
-|   5.0      |   3.52 |
-+------------+--------+
-|   10.0     |   1.74 |
-+------------+--------+
-|   20.0     |   0.87 |
-+------------+--------+
-|   infinite |   0.00 |
-+------------+--------+
++----------+-------------+
+|    SWR   | Return Loss |
+|          | (dB)        |
++==========+=============+
+|   1.00   | infinite    |
++----------+-------------+
+|   1.03   |  36.60      |
++----------+-------------+
+|   1.05   |  32.25      |
++----------+-------------+
+|   1.10   |  26.45      |
++----------+-------------+
+|   1.15   |  23.12      |
++----------+-------------+
+|   1.20   |  20.83      |
++----------+-------------+
+|   1.30   |  17.70      |
++----------+-------------+
+|   1.40   |  15.56      |
++----------+-------------+
+|   1.50   |  13.98      |
++----------+-------------+
+|   1.60   |  12.74      |
++----------+-------------+
+|   1.70   |  11.73      |
++----------+--------- ---+
+|   1.80   |  10.88      |
++----------+-------------+
+|   1.90   |  10.16      |
++----------+-------------+
+|   2.00   |   9.54      |
++----------+-------------+
+|   2.50   |   7.36      |
++----------+-------------+
+|   3.0    |   6.02      |
++----------+-------------+
+|   4.0    |   4.44      |
++----------+-------------+
+|   5.0    |   3.52      |
++----------+-------------+
+|  10.0    |   1.74      |
++----------+-------------+
+|  20.0    |   0.87      |
++----------+-------------+
+| infinite |   0.00      |
++----------+-------------+
 ```
 Appendix 2 -- Calibration Details
 =================================
