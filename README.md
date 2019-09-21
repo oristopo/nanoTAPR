@@ -1890,33 +1890,33 @@ the input voltage plus the reverse gain times the voltage injected
 into port two of the block. The S-parameters are defined in the
 following two equations:
 
-#### b1 = a1 \* S11 + a2 \* S12 b2 = a1 \* S21 + a2 \* S22
+#### b1 = a1 \* S11 + a2 \* S12
+#### b2 = a1 \* S21 + a2 \* S22
 
 ![](./media/Sparam.gif)
 
 The VNA is really a transmission-reflection test set.
-It can launch a voltage into port one of the device (a1),
-and measure the voltage received by ports one
-(b1) and two (b2). Thus, it is capable of deriving the value of S11
-(because a2 is zero
+It applies stimulus `a1` to port one of the device while
+measuring `b1` and `b2`, then calculates `S11`
+(because `a2` is zero).
 
--   nothing is launched into port 2 of the block), and the value of S21
-    (similarly because a2 is zero). In order to derive the values of S12
-    and S22, the network has to be reversed in the test fixture so that
-    ports one and two swap positions.
+-   port 2 of the block receives no stimulus (`a2` = 0).
+    To derive values for `S12` and `S22`,
+    swap ports in the test fixture
+    so that VNA stimulus becomes `a2`.
 
-In general, both S11 and S21 are complex numbers -- in other words, at
-any spot frequency the network reflects voltage back to the input, but
-the magnitude and the phase of the reflection are both non-zero.
-Similarly, the network amplifies the input power (a1), and alters both
-the magnitude and phase the resultant signal (b2). Thus the VNA
-measures and displays the input reflection loss and the forward
-transmission gain as complex numbers.
+`S11` and `S21` are generally both complex numbers -- in other words,
+devices reflect energy back to the input for any spot frequency
+with reflection magnitude and phase both generally non-zero.
+Similarly, two-port devices typically change both amplitude
+and phase of `b2` from `a1`.
+The VNA measures and displays input reflection loss
+and forward transmission gain as complex numbers.
 
 Polar Display
 -------------
 
-Since the reflection ratio (S11) is always less than or equal to unity
+Since reflection ratio `S11` is always less than or equal to unity
 for passive networks, the value can be displayed in magnitude/phase
 format on a polar chart. In general, we expect the forward gain to be
 composed of both gain and loss values, so it may exceed unity. This
@@ -1988,9 +1988,8 @@ The phase velocity of a cable is simply the time delay of the speed of
 light traveling the length of the cable divided by the actual time
 delay of the cable. Suppose a 10 foot piece of cable has a measured
 delay of 15 nanoseconds. The speed of light is 11.8 inches per
-nanosecond (very close to 1 nanosecond per
- 
-foot). Ten feet of free space would have a light speed delay of
+nanosecond (very close to 1 nanosecond per foot).
+Ten feet of free space would have a light speed delay of
 120/11.8 = 10.17 nanoseconds. Thus the velocity factor of this cable
 would be:
  
@@ -2005,10 +2004,10 @@ The SWR of a network at any specific frequency is a description of how
 well the network input looks like a 50 ohm non-reactive load when the
 output of that network is terminated in 50 ohms. An SWR of 1.0 means
 that the network has exactly a 50-ohm input impedance. SWR is directly
-related to the magnitude of the input return loss. SWR ignores the
-phase angle portion of the input reflection, so it is a real number
-whereas S11 is a complex number (containing both the magnitude and
-phase angle of the input return loss.
+related to the _magnitude_ of input return, ignoring
+input reflection phase, so it is a real number.
+`S11` is a complex number representing both magnitude and
+relative phase angle of input return.
  
 An SWR of 2.0 means that the input impedance is either 25 ohms
 resistive, 100 ohms resistive, or some complex value ranging between
