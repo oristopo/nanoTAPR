@@ -420,11 +420,11 @@ another Windows program has the *focus*, and will
 continue when the VNA application regains focus. The progressbar may
 take awhile to update after the VNA program regains focus.
 
-2.  Software Installation
-    =====================
+Software Installation
+=====================
 
-    1.  Initial Software installation
-        -----------------------------
+Initial Software installation
+-----------------------------
 
 The VNA software is installed from the included CD-ROM. Additionally,
 you may need to install the Microsoft Windows© dotNET 1.1 run-time
