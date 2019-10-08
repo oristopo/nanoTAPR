@@ -8,18 +8,7 @@ nanoVNA version 0.1
  
 October 7, 2019
 
-<details>
-<summary>click for <b>Revision History</b></summary>
- 
-Issue 1 September 17, 2005. Original, covered software version 1.3.
- 
-Issue 2 December 29, 2005. Covers version 1.4 of the software.
-
-Issue 3 March 23, 2006. Covers version 1.5 of the software.
-
-Issue 4 August 13, 2006. Covers version 1.6 of the software.
-
-</details>
+[Previous version](https://github.com/erikkaashoek/Tapr-VNA/blob/master/Doc/Background/TAPR3_Instruction_Manual_Issue_7.pdf) for Ten-Tec VNA  
 
 **Table of Contents**
 
@@ -37,7 +26,7 @@ Issue 4 August 13, 2006. Covers version 1.6 of the software.
     1.  [Initial Software installation](#initial-software-installation)   
     2.  [Supported Operating System Versions](#supported-operating-system-versions)   
     3.  [Software Distribution](#software-distribution)  
-    4.  [Installed VNA Files](#installed-vna-files)  
+    4.  [Installed TAPR Files](#installed-vna-files)  
     5.  [Installation Pre-Requisites](#installation-pre-requisites)  
     6.  [Connecting the VNA to your Computer](#connecting-the-vna-to-your-computer)  
     7.  [Uninstall](#uninstall)  
@@ -53,7 +42,7 @@ Issue 4 August 13, 2006. Covers version 1.6 of the software.
     8.  [50-ohm Terminated Fixture Calibration](#ohm-terminated-fixture-calibration)  
     9.  [Through Fixture Calibration](#through-fixture-calibration)  
 
-4.  [VNA Software Menu](#vna-software-menu)  
+4.  [TAPR Software Menu](#vna-software-menu)  
     1.  [File Menu](#file-menu)  
         1.  [Exporting S-Parameters](#exporting-s-parameters)  
     2.  [View Menu](#view-menu)  
@@ -150,32 +139,37 @@ onto the CH0 connector during measurements.
 Temperature Limitation
 ----------------------
 
-nanoVNA components are somewhat temperature sensitive. For
-best accuracy, always allow units to warm up for 10 minutes before
-performing any calibrations or measurements. Effective directivity
-has been reported to drift up to 10dB during warm up.
+Overclocked nanoVNA Si5351 is somewhat temperature sensitive.
+For best performance, allow nanoVNA to warm for 10 minutes before
+calibrating or measuring, but also avoid overheating.
+Key nanoVNA temperature dependence is stimulus performance approaching 300/900 MHz.
  
-To warm up a nanoVNA, turn it on, connect a USB cable between
-it and the host, then start the VNAR program.
+To begin, connect nanoVNA to host by USB cable, turn it on, then launch the TAPR program.
+
+Basic Performance
+-----------------
+- Power 120mA USB-C
+- USB type CDC (virtual COM port) serial console
+- Frequency Range 50kHz - 900MHz
+- Frequency Tolerance / Stability (ppm) < 2.5 / < 0.5
+- Measurement Range 70dB (<300MHz), 50dB (<600MHz), 40dB
+- Scan points 101 max
+- Port SWR < 1.1
+- Display 2/4 traces, 4 markers, 5 stored configurations
 
 Instrument Limitations
 ----------------------
 
--   The dynamic range of the VNA in forward modes is limited by the
-    noise figure of the receive pre-amplifier. It is approximately 80 dB
-    at low frequencies, but degrades to about 75 dB at mid and high
-    frequencies. Dynamic range in reflected modes is limited by
-    directional coupler directivity, which is about -35 dB at
-    low frequencies, degrading to about -25 dB at mid and higher
-    frequencies.
+-   VNA S21 dynamic range is limited by the receiver noise figure (mostly cross-talk).
+    S11 dynamic range is limited by bridge directivity,
+    then stimulus harmonics power and mixer response above 300MHz. 
 
 -   VNA basic resolution is 0.1 dB for amplitude measurements.
     Phase measurement resolution is 1 degree.
 
 -   The group delay measurement simply differentiates successive phase
-    measurements. As a result, if the phase changes more than 180
-    degrees between successive measurement points, the group delay
-    calculation will be wrong.
+    measurements. Consequently, groupd delay calculations will be wrong
+    if phase changes more than 180 degrees between successive measurement points.
 
 -   The smallest frequency measurement interval is 1 hertz. Thus the
     span width (STOP Frequency -- START Frequency) must be at least as
@@ -195,7 +189,7 @@ Instrument Limitations
     12 MHz crystal oscillator, which is multiplied to 24.000 MHz before
     being applied to the frequency synthesizer. An external reference of
     24.000000 MHz may be used if more precise frequency control is
-    required. The VNA application *requires* that the reference
+    required. The TAPR application *requires* that the reference
     frequency be 24.000 MHz, but other applications (such as a frequency
     generator program which is not described by this manual) can be
     setup to utilize different external reference frequencies. Consult
@@ -213,20 +207,20 @@ Instrument Limitations
 Relative Measurements
 ---------------------
 
-The VNA does not measure absolute signal magnitude or phase delays. It
-takes all measurements relative to some other measurement. In most
+nanoVNA measures neither signal magnitudes nor phase delays absolutely.
+All measurements are calculated relative to other measurements. In most
 cases, this other measurement will be an instrument or fixture
-calibration. The accuracy of any measurement is thus directly
-dependent on the accuracy of the reference calibration.
+calibration. Measurement accuracies thus directly
+depend on reference calibrations.
  
-Return measurements are extremely sensitive to the fixture
-configuration. Great care must be used in making `S11` measurements if
-the data are to be reasonably accurate. For example, a single 50-ohm
-connector adaptor less than 1 inch in length introduces a measurable
-phase delay in the return loss. The VNA is capable of resolving the
-length of this connector adaptor when properly setup, and calibration
-should include all connector adaptors used in the actual measurement
-to the extent practical.
+Return measurements are extremely sensitive to fixture configurations.
+Great care must be used making `S11` measurements to obtain
+reasonably accurate data. For example, a single 50-ohm
+connector adaptor less than 1 inch long introduces measurable
+phase delay in return signals. Properly set up,
+nanoVNA can resolve connector adaptor lengths.  Practically,
+calibrations should include connector adaptors as used in
+actual measurements.
 
 Calibration Standards
 ---------------------
@@ -234,17 +228,19 @@ Calibration Standards
 Some high quality commercial attenuators are not exactly 50.0 ohms in
 impedance. A resistance error of 0.5 ohms in the \"50 ohm terminated\"
 calibration step is enough to degrade the return loss dynamic range.
-Similarly, the quality of the SHORT and OPEN used in the fixture
-calibration can degrade the calibration. This is one reason the VNA
+Similarly, quality of SHORTs and OPENs used in fixture
+calibration can degrade calibrations. This is one reason nanoVNA
 uses SMA rather than BNC connectors for
- 
 CH1 and CH0 ports \-- these connectors cause less
 discontinuity than other types.
  
-A high-quality SHORT with minimal excess inductance, and a high
-quality OPEN with minimal excess capacitance is needed to properly
-calibrate the VNA.
+Proper calibration needs:
+-   a high-quality SHORT with minimal excess inductance,  
+-   a high quality OPEN with minimal excess capacitance, and  
+-   a high-quality 50-ohm termination with known delay
+  
 
+Details:
 -   A high-quality SHORT normally consists of a screw-on connector shell
     that shorts the center pin to the outside shell with minimal excess
     inductance. These are manufactured commercially. Alternatively, an
@@ -262,37 +258,32 @@ calibrate the VNA.
     best termination, but an open connector is adequate for many
     purposes.
 
--   A high-quality 50-ohm termination is also needed for Fixture
-    calibration.
-
 -   A `40 dB` attenuator is needed when running the detector calibration
     routine (described in section 3); a high-quality, accurate
     attenuator (or a combination of 2 SMA attenuators) should be used
     for this purpose.
 
--   A one-meter cable and three-meter cable are needed for detector
-    calibration (although the exact lengths of these two cables are not
-    critical).
+-   One-meter and three-meter cables are needed for detector calibration
+    (although exact cable lengths are not critical).
+
 
 Hibernation or Suspension of Host Computer
 ------------------------------------------
 
-The VNA instrument can not automatically recover from the host
-computer hibernating or suspending. If the host computer (typically a
-laptop) hibernates or suspends, you will have to remove power from the
-VNA and exit the VNA software. Then reconnect power to the VNA and
-restart the VNA application.
+If the host computer (typically a laptop) hibernates or suspends,
+you will have to remove power from the VNA and exit TAPR software.
+Then reconnect power to the VNA and restart the TAPR application.
 
 Calibration Modes are Single-threaded
 -------------------------------------
 
-This VNA software is multi-threaded, meaning that other Windows
+This TAPR software is multi-threaded, meaning that other Windows
 programs can run while this software acquires data in the background.
 However both fixture and instrument calibration are single-threaded
 code. This means that these two calibrations routines will stall if
 another Windows program has the *focus*, and will
-continue when the VNA application regains focus. The progressbar may
-take awhile to update after the VNA program regains focus.
+continue when the TAPR application regains focus. The progressbar may
+take awhile to update after the TAPR program regains focus.
 
 Software Installation
 =====================
@@ -300,20 +291,20 @@ Software Installation
 Initial Software installation
 -----------------------------
 
-This VNA software is installed from the Internet. Additionally,
+TAPR software is installed from [the Internet](https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR4.zip).
+Additionally,
 you may need to install the Microsoft Windows© dotNET 1.1 run-time
 (and even possibly the Windows installer).
 
 -   You must have *administrator* privileges.
-    Click on the downloaded installer, which should
-    start automatically. If it does not, verify that
+    Double-click on the downloaded `VNAR4.zip`, which should
+    open to reveal `VNAR4.exe`. If it does not, verify that zip
     file was not corrupted during download.
 
--   Select the directory for installation. The default directory is:
-    C:\Program Files\TAPR\VNA.
+-   Launch `VNAR4.exe`  
+    ![](media/splash.gif)  
 
--   If the installer gives a notification that the dotNET 1.1 runtime is
-    not found:
+-   If notification that the dotNET 1.1 runtime is not found:
 
     -   Recommended: Install the most recent dotNET 1.1 framework via
         the Internet from the Microsoft website. This will be
@@ -392,10 +383,10 @@ Currently, the software distribution consists of the following files
 | Dotnetfx.exe                      |   dotNET 1.1 framework            |
 +-----------------------------------+-----------------------------------+
 ```
-Installed VNA Files
+Installed TAPR Files
 -------------------
 
-The VNA software installer loads the following files, by default in
+The TAPR software installer loads the following files, by default in
 C:\Program Files\TAPR\VNA\. The file location can be changed
 during installation.
 ```
@@ -433,7 +424,7 @@ during installation.
 |                |                             | ezusb.sys driver. |
 +----------------+-----------------------------+-------------------+
 | gpl.txt        |   Default directory.        | License terms for |
-|                |                             | VNA software.     |
+|                |                             | TAPR software.     |
 +----------------+-----------------------------+-------------------+
 ```
 Installation Pre-Requisites
@@ -472,7 +463,7 @@ Uninstall
 ---------
 
 The installer program will create an uninstall module.
-To uninstall this VNA application,
+To uninstall this TAPR application,
 use the control panel `add new software` selection,
 and use it to uninstall the application. The
 uninstaller deletes neither the Registry key nor ezusbw2k.PNF files.
@@ -490,7 +481,8 @@ affects the phase of all measurements (due to the propagation time
 delay specific to that particular cable). Therefore, each test setup
 requires a different set of calibration data to compensate for not
 only the test setup, but also propagation delay and other errors in
-the VNA device itself. The VNA software can perform these \"fixture
+the VNA device itself.
+ The TAPR software can perform these \"fixture
 calibrations\", you can take and save one for each different
 measurement set up that you use. Each calibration can be saved with a
 different file name. Use as descriptive a filename as possible so that
@@ -651,10 +643,10 @@ order to minimize these errors.
 
 ![](./media/image9.png)
 
-VNA Software Menu
-=================
+TAPR Software Menu
+==================
 
-The following menu items are available in the VNA program. Each menu
+The following menu items are available in the TAPR program. Each menu
 item is explained in the following sections.
  
 File
@@ -794,7 +786,7 @@ The filename can be selected and should be very descriptive.
 Load Configuration -- Loads a previously saved configuration file to
 restore the state of the instrument from a previous measurement setup.
  
-Exit -- immediately terminates the VNA application (and saves the
+Exit -- immediately terminates the TAPR application (and saves the
 current instrument configuration to the file: `last.cfg`.
 
 ### Exporting S-Parameters
@@ -1261,20 +1253,20 @@ see the initial results.
 Help & Software Updates
 -----------------------
 
-The help menu launches the HTML Help viewer with the VNA help menu.
+The help menu launches the HTML Help viewer with the TAPR help menu.
  
-The About command opens an 'about VNA' menu. This menu displays the
+The About command opens an 'about TAPR' menu. This menu displays the
 current build number of the software
  
 It also contains a button to launch your Internet Browser with the
-address of the TAPR VNA software update website. This will display a
-page showing the current software available for the VNA. You can
+address of the TAPR software update website. This will display a
+page showing the current TAPR software available. You can
 compare your build number with the latest build available number shown
 on the web page. Be sure to REFRESH your web browser display. If you
 wish, you may download the update from this page (right-click, and
 Save as ...)
  
-To install the update, you will need to exit the VNA application
+To install the update, you will need to exit the TAPR application
 first.
 
 Controls
@@ -1369,7 +1361,7 @@ calibration applied.
 Sweep Controls
 --------------
 
-There are three buttons on the screen that control how the VNA
+There are three buttons on the screen that control how the TAPR
 acquires data. These three buttons are:
 
 -   Sweep Speed
@@ -1509,7 +1501,7 @@ the center of the chart to change a lot when the return loss is near
 zero dB, but these changes are minimal when the return loss is more
 than a few dB.
  
-The VNA software currently compensates for frequency dependent errors.
+TAPR software currently compensates for frequency dependent errors.
 Starting with version 1.4 the software models the coupler V/I tracking
 error and coupler directivity. It compensates readings by subtracting
 the coupler directivity and applying a sinusoidal magnitude correction
@@ -1519,6 +1511,8 @@ vs. detected phase angle to `S11` readings.
 
 By the way, these plots are of a high-quality Bencher YA-1
 low-pass-filter designed for amateur radio HF work.
+
+[Other example measurements](https://github.com/erikkaashoek/Tapr-VNA/tree/master/Doc/Measurement%20examples)  
 
 Some Cautions
 -------------
@@ -1646,7 +1640,7 @@ following two equations:
 
 ![](./media/Sparam.gif)
 
-The VNA is really a transmission-reflection test set.
+A VNA is really a transmission-reflection test set.
 It applies stimulus `a1` to port one of the device while
 measuring `b1` and `b2`, then calculates `S11`
 (because `a2` is zero).
@@ -1853,7 +1847,7 @@ and the detector calibration routine uses a linear delay model to
 build a table to correct those periodic errors.
  
 All the various data sets are then saved in the file
-`detector.ica` in the VNA program startup directory.
+`detector.ica` in the TAPR program startup directory.
  
 S21 Compensation
 ----------------
@@ -1932,30 +1926,27 @@ Appendix 3 Software Installation, Registry
 ==========================================
 
 When you apply power to the VNA and first attach it to the computer
-via its USB cable, its USB device ID will not be found. The New
+via its USB cable, its USB device ID may not be found. The New
 Hardware Detected wizard will be invoked and will ask if a disk or
 file is available for the new device. The file it is looking for is
 usbw2k.inf. This is installed in the INF directory by the installer.
 So, you should allow windows to search for the file by itself (the
 *recommended* option presented). The correct device type is:
  
-Cypress EZ-USB (2131Q/2131S/2135S) - EEPROM missing
+STMicroelectronics Virtual COM Port
  
-The wizard will create a registry key that associates the USB vendor
-and product ID to the ezusb.sys driver. This provides the linkage
-between the USB device ID and the correct device driver. In the future
-when this USB device is plugged into the host, it is not necessary to
-go through the selection process again.
+The wizard creates a registry key associating that USB vendor
+and product ID to a device driver.
+When this USB device is subsequently plugged into that USB host port,
+it avoids going through the selection process again.
  
-The Cypress AN2135 uses the following USB IDs: Vendor_ID: 0547
- 
-Product_ID: 2131
+nanoVNA uses the following USB IDs: Vendor_ID: 0483 Product_ID: 5740
  
 The software installation makes a registry entry in order to associate
-the device drive for the Cypress EZUSB device with the driver needed
-to communicate with it (ezusb.sys). This registry can be removed (but
-does not need to be removed) if it the VNA software is uninstalled.
-Normally the registry key is left in place, but if for some reason you
+the device with the driver needed to communicate with it (usbser.sys).
+This registry can be removed (but need not be removed)
+if TAPR software is uninstalled.
+Registry keys are normally left in place, but if for some reason you
 would like to delete after a software uninstall, it can be deleted
 with Regedit.
  
@@ -1963,7 +1954,7 @@ Different versions of windows have different Registry directory
 structures, and the keys are placed in different locations.
 
 -   You can delete the Registry key associated with this particular USB
-    device (VID 0547, PID 2131), in which case the next time it is
+    device (VID 0483, PID 5740), in which case the next time it is
     plugged in, the new hardware detected wizard will run.
 
 -   If you delete the Registry key, you should also delete the file
@@ -2002,7 +1993,7 @@ phase, or from actual noise in the measurements.
 One way to reduce the noise on the display is to average the group
 delay readings over a number of samples. This delay reading is less
 noisy, but it may miss some important rapid changes in the phase
-response. Thus the VNA allows selecting how large this averaging
+response. Thus the TAPR allows selecting how large this averaging
 function is. The number of samples included in the average is known as
 the *aperture* size of the measurement.
  
@@ -2023,11 +2014,11 @@ should be used with appropriate caution.
 Aperture Shortening
 -------------------
 
-In the VNA software, the aperture window concept runs into another
+In the TAPR software, the aperture window concept runs into another
 difficulty and that is calculating the aperture window for samples
 near the start frequency and near the stop frequency. In the case of
 the start frequency, there are no samples below the current
-measurement frequency f<sub>n</sub> thus the VNA does not have a value of phase
+measurement frequency f<sub>n</sub> thus the TAPR does not have a value of phase
 taken at a frequency less than f<sub>n</sub>. In the case of an aperture window
 of 64, the software *shortens* the effective aperture window by using
 f<sub>n</sub> and f<sub>n+32</sub> (rather than f<sub>n-32</sub> and f<sub>n+32</sub>). Thus the effective
