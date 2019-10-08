@@ -367,65 +367,25 @@ Currently, the software distribution consists of the following files
 +-----------------------------------+-----------------------------------+
 |   Filename                        |     Function                      |
 +===================================+===================================+
-| Setup.exe                         |   Installer bootstrap. Detects if |
-|                                   |   suitable Windows installer is   |
-|                                   |   present,                        |
-|                                   |   provides web assistance if not. |
+| VNAR4.zip                         |   Installer ZIP file.             |
 +-----------------------------------+-----------------------------------+
-| Setup1.msi                        |   The VNAR3 application           |
-|                                   |   (including supporting files) in |
-|                                   |   windows installer format.       |
-+-----------------------------------+-----------------------------------+
-| Setup.ini                         |   Provides instructions to the    |
-|                                   |   bootstrapper about              |
-|                                   |   prerequisites.                  |
-+-----------------------------------+-----------------------------------+
-| Dotnetfx.exe                      |   dotNET 1.1 framework            |
-+-----------------------------------+-----------------------------------+
-```
+
 Installed TAPR Files
 -------------------
 
-The TAPR software installer loads the following files, by default in
-C:\Program Files\TAPR\VNA\. The file location can be changed
-during installation.
-```
+`VNAR4.zip` includes only `VNAR4.exe`  
+File locations can be changed...  
+
 +----------------+-----------------------+-----------------------+
-|   File name    |     Where installed   |     Function          |
+|   File name    |     Where found       |     Function          |
 +================+=======================+=======================+
-| VNAR3.exe      |   Default directory.  |   Host program.       |
+| VNAR4.exe      |   Inside VNAR4.zip    |   Host program.       |
 +----------------+-----------------------+-----------------------+
-| VNAR3          |   Default directory.  |   Compiled help file. |
-|                |   Needs to be in same |                       |
-| Help.chm       |   directory as        |                       |
-|                |   VNAR3.exe           |                       |
+| Help.chm       |   [GitHub](https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR3%20Help.chm)  |   Compiled help file. |
+|                |   Should be in folder |                       |
+|                |   with VNAR4.exe      |                       |
 +----------------+-----------------------+-----------------------+
 
-+----------------+-----------------------------+-------------------+
-|   File name    | Where installed             | Function          |
-+================+=============================+===================+
-| VNA_target.bin | Default directory.          | Binary image of   |
-|                | Needs to be in the same     | target AN2135     |
-|                | directory as                | software.         |
-|                | VNAR3.exe                   |                   |
-|                |                             | Loaded to target  |
-|                |                             | by VNAR3.exe      |
-+----------------+-----------------------------+-------------------+
-| ezusb.sys      | Win98, ME:                  | Device driver for |
-|                | C:\WINDOWS\SYSTEM           | AN2135 USB target |
-|                |                             |                   |
-|                | WinNT, Win2000,             |                   |
-|                | WinXP:                      |                   |
-|                | C:\WINDOWS\SYSTEM32\DRIVERS |                   |
-+----------------+-----------------------------+-------------------+
-| ezusbw2k.inf   | For all Windows             | Information file  |
-|                | versions:                   | used to associate |
-|                | C:\WINDOWS\inf              | USB device with   |
-|                |                             | ezusb.sys driver. |
-+----------------+-----------------------------+-------------------+
-| gpl.txt        |   Default directory.        | License terms for |
-|                |                             | TAPR software.     |
-+----------------+-----------------------------+-------------------+
 ```
 Installation Pre-Requisites
 ---------------------------
@@ -450,24 +410,21 @@ framework, so you may have it already.
 Connecting the VNA to your Computer
 -----------------------------------
 
-After installation of the software using the setup program is
-completed, connect the VNA to your computer using a USB cable. Then
-plug the supplied +5V power cube into a proper outlet and connect the
-2.1mm plug into the power receptacle on the VNA. This sequence will
-activate Windows "New Hardware Detected Wizard". The wizard will find
-the VNA device and attempt to find an associated device driver. When
-prompted, let the wizard search to find the driver (since it should
-have been installed there by the setup program).
+After verifying program launch,
+connect the VNA to your computer using a USB cable and power on.
+This sequence may provoke Windows "New Hardware Detected Wizard".r
+The wizard finds nanoVNA device and attempts to associate a device driver.
+When prompted, let the wizard search to find the driver
+(since it may have been installed for STM DFU utility).
 
 Uninstall
 ---------
 
-The installer program will create an uninstall module.
 To uninstall this TAPR application,
 use the control panel `add new software` selection,
 and use it to uninstall the application. The
-uninstaller deletes neither the Registry key nor ezusbw2k.PNF files.
-You may delete these manually if you wish, but it's not required.  
+uninstaller does not delete the Registry key.
+You may delete it manually if you wish, but it's not required.  
 See Appendix 3 for details.
 
 Fixture Calibration
@@ -481,9 +438,9 @@ affects the phase of all measurements (due to the propagation time
 delay specific to that particular cable). Therefore, each test setup
 requires a different set of calibration data to compensate for not
 only the test setup, but also propagation delay and other errors in
-the VNA device itself.
- The TAPR software can perform these \"fixture
-calibrations\", you can take and save one for each different
+the VNA device itself.  
+ TAPR software can perform these \"fixture calibrations\",  
+you can take and save one for each different
 measurement set up that you use. Each calibration can be saved with a
 different file name. Use as descriptive a filename as possible so that
 you can remember exactly what each fixture calibration refers to!
