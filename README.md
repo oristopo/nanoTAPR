@@ -363,6 +363,10 @@ You must be logged on with *administrator* privileges if using Windows
 NT, 2000, or XP in order to install the software.
 
 Currently, the software distribution consists of the following files
+<table>
+<tr><td>Filename</td><td>Function</td></tr>
+<tr><td>VNAR4.4.zip</td><td>Installer ZIP file</td></tr>
+</table>
 ```
 +-----------------------------------+-----------------------------------+
 |   Filename                        |     Function                      |
