@@ -1,10 +1,8 @@
-**TAPR VNA Software**
- 
-**Instruction Manual**
+**TAPR VNA Software Instruction Manual**
 
 ![](./media/image1.png)
 
-nanoVNA version 0.1
+preliminary for nanoVNA release 0.2.3 and VNAR4.4
  
 October 7, 2019
 
@@ -93,11 +91,11 @@ October 7, 2019
 Overview
 ========
 
-This manual provides instructions for using TAPR 
-Network Analyzer (VNA) software with nanoVNA. Due care is required in
-test setup, calibration, and operational methods to fully realize
-nanoVNA accuracy. This manual applies to nanoVNA
-firmware release 0.2.2_1.
+This manual provides instructions for using
+TAPR Network Analyzer (VNA) software with nanoVNA.
+Due care is required in test setup, calibration,
+and operational methods to fully realize nanoVNA accuracy.
+This manual applies to nanoVNA firmware release 0.2.3.
  
 If you are not already familiar
 * S-parameters
@@ -107,9 +105,9 @@ If you are not already familiar
  
 A VNA performs measurements on one-port or two-port networks.  
 A two-port network has input and output (plus ground(s)).  
-A one-port network has only an input (and ground). The 
-network input is connected to nanoVNA CH0 (TX) connector, and the
-output of the network is connected to nanoVNA CH1 (RX) connector.
+A one-port network has only an input (and ground).
+The network input is connected to nanoVNA CH0 (TX) connector,
+and the network output is connected to nanoVNA CH1 (RX) connector.
  
 This VNA is capable of four measurements:
 
@@ -185,15 +183,7 @@ Instrument Limitations
     can do the math for you automatically
     (run a fixture calibration 'through' with the attenuator in place).
 
--   Frequency source accuracy is determined by the on-board
-    12 MHz crystal oscillator, which is multiplied to 24.000 MHz before
-    being applied to the frequency synthesizer. An external reference of
-    24.000000 MHz may be used if more precise frequency control is
-    required. The TAPR application *requires* that the reference
-    frequency be 24.000 MHz, but other applications (such as a frequency
-    generator program which is not described by this manual) can be
-    setup to utilize different external reference frequencies. Consult
-    the software for those other applications.
+-   Frequency source accuracy is determined by an on-board 26 MHz crystal oscillator,
 
 -   The default frequency range on instrument startup is 50 KHz to 900
     MHz. The instrument is capable of operating higher, but
@@ -292,19 +282,16 @@ Initial Software installation
 -----------------------------
 
 TAPR software is installed from [the Internet](https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR4.4.zip).
-Additionally,
-you may need to install the Microsoft Windows© dotNET 1.1 run-time
-(and even possibly the Windows installer).
+Additionally, you may need to install the Microsoft Windows© dotNET 1.1 run-time
 
--   You must have *administrator* privileges.
-    Double-click on the downloaded `VNAR4.4.zip`, which should
-    open to reveal `VNAR4.4.exe`. If it does not, verify that zip
-    file was not corrupted during download.
+-   Double-click on the downloaded `VNAR4.4.zip`, which should
+    open to reveal `VNAR4.4.exe`. If it does not,
+    verify that zip file was not corrupted during download.
 
 -   Launch `VNAR4.4.exe`  
     ![](media/splash.gif)  
 
--   If notification that the dotNET 1.1 runtime is not found:
+-   If alerted that dotNET 1.1 runtime is not found:
 
     -   Recommended: Install the most recent dotNET 1.1 framework via
         the Internet from the Microsoft website. This will be
@@ -320,16 +307,15 @@ you may need to install the Microsoft Windows© dotNET 1.1 run-time
 Supported Operating System Versions
 -----------------------------------
 
-While VNAR4.3 software should be able to run on the
-Windows operating systems as shown, support for nanoVNA should
-be expected for no older than Windows 7:
+While VNAR4.3 software may run on Windows operating systems as shown,
+nanoVNA support is expected for no older than Windows 7:
 
 <table><tr>
-<th>Operating System</th><th>Support</th><th>Reason(s)</th>
+<th>Operating System</th><th>Support</th><th>Notes</th>
 </tr><tr>
 <td>Windows 95</td><td>No</td><td>Lacks USB support</td>
 </tr><tr>
-</td><td> Windows 98 -- Gold</td><td>Maybe</td><td>Supports only USB 1.0<br>not 1.1</td>
+<td> Windows 98 -- Gold</td><td>Maybe</td><td>Supports only USB 1.0<br>not 1.1</td>
 </tr><tr>
 <td>Windows 98 SE<br>(Second Edition)</td><td>Yes</td><td>Tested</td>
 </tr><tr>
@@ -341,7 +327,7 @@ be expected for no older than Windows 7:
 </tr><tr>
 <td>Windows XP</td><td>Yes</td><td>Tested</td>
 </tr><tr>
-<td>Windows 7</td><td>nanoVNA</td><td>Tested</td>
+<td>Windows 7</td><td>nanoVNA</td><td>Tested?</td>
 </tr><tr>
 <td>Windows 8.1</td><td>nanoVNA</td><td>Tested</td>
 </tr><tr>
@@ -848,15 +834,15 @@ Traces supported by Rectangular display are:
 </tr><tr>
 <td>S11 Phase</td><td>DUT input return loss phase angle, in degrees, from +180 to --180</td>
 </tr><tr>
-</td><td>S21 Magnitude</td><td>DUT forward transfer gain (or loss) magnitude, in dB</td>
+<td>S21 Magnitude</td><td>DUT forward transfer gain (or loss) magnitude, in dB</td>
 </tr><tr>
-</td><td>S21 Phase</td><td>DUT forward transfer phase, in degrees</td>
+<td>S21 Phase</td><td>DUT forward transfer phase, in degrees</td>
 </tr><tr>
 <td>S21 Group Delay</td><td>DUT forward transfer gain (or  loss) derived group delay</td>
 </tr><tr>
 <td>Raw Calibration Data<br><br>-- S21 'Through'</td><td>Raw data taken from the through
 VNA connection CH0 to CH1<br><br>
-(through cables actually connecting to the DUT) </td>
+(through cables actually connecting to the DUT)</td>
 </tr><tr>
 <td>S11 Magnitude as SWR</td><td>S11 magnitude value converted to SWR</td>
 </tr></table>
@@ -864,52 +850,30 @@ VNA connection CH0 to CH1<br><br>
 Polar Display Mode
 ------------------
 
-`S11` (as a polar complex number) is always displayed on the Polar
-display. `S21` cannot be displayed on the polar display. The raw
-calibration data (from the
- 
-calibration file that is loaded) as well as the error parameters
-derived from the calibration data can be displayed. Normally the error
-compensation and raw error data are for informational purposes only
+`S11` (as a polar complex number) is always displayed on the Polar display.
+`S21` *cannot* be displayed on the polar display.
+Raw calibration data (from a calibration file that is loaded)
+as well as error parameters derived from calibration data can be displayed.
+Normally, error compensation and raw error data are for informational purposes only
 and are not displayed.
  
-The traces that can be added to the Polar mode display are:
-```
-+-----------------------------------+-----------------------------------+
-|   Et -- Tracking Error            |   A complex plot of the amplitude |
-|   compensation                    |   and phase of the cables         |
-|                                   |   connecting nanoVNA CH0 to the DUT             |
-+===================================+===================================+
-|   Es -- Source Mismatch Error     |   A complex plot of the error due |
-|                                   |   to imperfect                    |
-|   compensation                    |                                   |
-|                                   |   source impedance termination.   |
-+-----------------------------------+-----------------------------------+
-|   Ed -- Directivity Error         |   A complex plot of the error due |
-|                                   |   to finite                       |
-|   compensation                    |                                   |
-|                                   |   directivity in the directional  |
-|                                   |   coupler circuitry.              |
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data -- S11     |   Raw data taken from the shorted |
-|                                   |   load during                     |
-|   'Short'                         |                                   |
-|                                   |   calibration (or loaded from a   |
-|                                   |   calibration file).              |
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data -- S11     |   Raw data taken from the open    |
-|                                   |   load during                     |
-|   'Open'                          |                                   |
-|                                   |   calibration (or loaded from a   |
-|                                   |   calibration file)               |
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data -- S11     |   Raw data taken from the 50-ohm  |
-|                                   |   terminated                      |
-|   'Terminated'                    |                                   |
-|                                   |   load (or loaded from a          |
-|                                   |   calibration file).              |
-+-----------------------------------+-----------------------------------+
-```
+Traces that can be added to Polar mode display are:
+<table>
+<tr>
+<td>Et -- Tracking Error compensation</td><td>complex plot of amplitude and phase<br>
+                                              for cable from nanoVNA CH0 to the DUT</td>
+</tr><tr>
+<td>Es -- Source Mismatch Error compensation</td><td>complex error plot for imperfect source impedance termination</td>
+</tr><tr>
+<td>Ed -- Directivity Error compensation</td><td>complex error plot due to finite directivity in the bridge</td>
+</tr><tr>
+<td>Raw Calibration Data -- S11 'Short'</td><td>for shorted CH0 during calibration<br>(or loaded from a calibration file)</td>
+</tr><tr>
+<td>Raw Calibration Data -- S11 'Open'</td><td>for unterminated CH0 during calibration<br>(or loaded from a calibration file)</td>
+</tr><tr>
+<td>Raw Calibration Data -- S11 'Terminated'</td><td>for CH0 terminated by "known" 50-ohm load<br>during calibration (or loaded from a calibration file).</td>
+</tr></table>
+
 Time Domain Reflection Mode
 ---------------------------
 
@@ -1080,25 +1044,20 @@ Disable -- turns off the marker parametric display.
 Frequency Grid Menu
 -------------------
 
-The FreqGrid menu allows selecting the number of points in the
-Frequency Grid. This is the number of measurements made from Start
-Frequency to Stop Frequency and displayed on the display. The values
-allowed are:
-```
-+---------------+-------------------------------------------+
-|   100 Points  |   Coarsest frequency display, but fastest |
-|               |                                           |
-|               |   acquisition of measurement data.        |
-+===============+===========================================+
-|   200 Points  |                                           |
-+---------------+-------------------------------------------+
-|   400 Points  |                                           |
-+---------------+-------------------------------------------+
-|   1020 Points |   Finest frequency display, but slowest   |
-|               |                                           |
-|               |   acquisition of measurement data.        |
-+---------------+-------------------------------------------+
-```
+The FreqGrid menu allows selecting a Frequency Grid point count,
+the number of measurements made from Start to Stop Frequency.
+Allowed values are:
+<table>
+<tr>
+<td>100 Points</td><td>Coarsest frequency display, but fastest measurement data acquisition</td>
+</tr><tr>
+<td>200 Points</td><td></td>
+</tr><tr>
+<td>400 Points</td><td></td>
+</tr><tr>
+<td>1020 Points</td><td>Finest frequency display, but slowest measurement data acquisition</td>
+</tr></table>
+
 The instrument defaults to 200 points at startup. More points allows
 greater resolution in the display, fewer points shortens the
 measurement time period. The current setting of the number of points
@@ -1181,9 +1140,8 @@ It also contains a button to launch your Internet Browser with the
 address of the TAPR software update website. This will display a
 page showing the current TAPR software available. You can
 compare your build number with the latest build available number shown
-on the web page. Be sure to REFRESH your web browser display. If you
-wish, you may download the update from this page (right-click, and
-Save as ...)
+on the web page. Be sure to REFRESH your web browser display.  
+If you wish, you may download the update from here (right-click, and Save as ...)
  
 Exit the TAPR application before installing updates.
 
@@ -1191,9 +1149,7 @@ Exit the TAPR application before installing updates.
 Controls
 ========
 
-TAPR's window has controls for changing
-start and stop frequencies, reference and transmit signal
-levels, and sweep functions.
+TAPR window controls change start & stop frequencies, reference & transmit signal levels, and sweep functions.
 ![](media/TAPR.gif)  
  Those controls are not shown on the printed outputs.
 
@@ -1353,11 +1309,10 @@ moved a few pixels at which point it will disappear.
 Example Measurement
 ===================
 
-To make a measurement of a device under test, the following general
-steps are used.
+The following general steps are used to measure a device under test, 
 
-1.  Make sure that the detector calibration has been run (you do not get
-    the warning message on program startup).
+1.  Make sure that detector calibration has been run  
+    (you do not get a warning message on program startup).
 
 2.  Connect the cables and adaptor to be used to connect to the device
     under test (DUT) to the VNA.
@@ -1430,8 +1385,7 @@ vs. detected phase angle to `S11` readings.
 
 ![](./media/image12.jpeg)
 
-By the way, these plots are of a high-quality Bencher YA-1
-low-pass-filter designed for amateur radio HF work.
+By the way, these plots are of a high-quality Bencher YA-1 low-pass-filter designed for HF amateur radio.
 
 [Other example measurements](https://github.com/erikkaashoek/Tapr-VNA/tree/master/Doc/Measurement%20examples)  
 
@@ -1515,19 +1469,17 @@ were performed in the 'Slow' mode.
 
 ![](./media/image17.png)
 *1 meter cable terminated in 50-ohm load `without` fixture calibration applied.  
-The polar scale is zoomed 2.5:1 to show more details.*
+Polar scale is zoomed 2.5:1 to show more details.*
  
 ![](./media/image18.png)
 *1 meter cable terminated in 50-ohm load `with` fixture calibration applied.   
-The polar scale is zoomed 2.5:1 to show more details.*
+Polar scale is zoomed 2.5:1 to show more details.*
 
 ![](./media/image19.png)
-*1 meter cable terminated in 50-ohm load `without` fixture calibration applied.*  
-*Rectangular display of S11.*
+*Rectangular display of S11 for 1 meter cable terminated by 50-ohm load `without` fixture calibration applied.*  
  
 ![](./media/image20.png)
-*1 meter cable terminated in 50-ohm load `with` fixture calibration applied.*  
-*Rectangular display of S11.*
+*Rectangular display of S11 for 1 meter cable terminated by 50-ohm load `with` fixture calibration applied.*  
 
 Appendix 1 Overview of S Parameters
 ===================================
@@ -1688,56 +1640,52 @@ a point). Higher values of SWR produce circles of increasing radius
 centered on the chart center point. An SWR value of infinite is a
 circle lying at the outside periphery of the polar chart.
  
-The following table relates the SWR to the magnitude of the input
-return loss.
-```
-+----------+-------------+
-|    SWR   | Return Loss |
-|          | (dB)        |
-+==========+=============+
-|   1.00   | infinite    |
-+----------+-------------+
-|   1.03   |  36.60      |
-+----------+-------------+
-|   1.05   |  32.25      |
-+----------+-------------+
-|   1.10   |  26.45      |
-+----------+-------------+
-|   1.15   |  23.12      |
-+----------+-------------+
-|   1.20   |  20.83      |
-+----------+-------------+
-|   1.30   |  17.70      |
-+----------+-------------+
-|   1.40   |  15.56      |
-+----------+-------------+
-|   1.50   |  13.98      |
-+----------+-------------+
-|   1.60   |  12.74      |
-+----------+-------------+
-|   1.70   |  11.73      |
-+----------+--------- ---+
-|   1.80   |  10.88      |
-+----------+-------------+
-|   1.90   |  10.16      |
-+----------+-------------+
-|   2.00   |   9.54      |
-+----------+-------------+
-|   2.50   |   7.36      |
-+----------+-------------+
-|   3.0    |   6.02      |
-+----------+-------------+
-|   4.0    |   4.44      |
-+----------+-------------+
-|   5.0    |   3.52      |
-+----------+-------------+
-|  10.0    |   1.74      |
-+----------+-------------+
-|  20.0    |   0.87      |
-+----------+-------------+
-| infinite |   0.00      |
-+----------+-------------+
-```
+This table relates SWR to input return loss magnitude: <table> <tr> <th> SWR </th><th> Return Loss (dB)</th>
+</tr><tr>
+<td>1.00 </td><td> infinite</td>
+</tr><tr>
+<td>1.03 </td><td>36.60</td>
+</tr><tr>
+<td>1.05 </td><td>32.25</td>
+</tr><tr>
+<td>1.10 </td><td>26.45</td>
+</tr><tr>
+<td>1.15 </td><td>23.12</td>
+</tr><tr>
+<td>1.20 </td><td>20.83</td>
+</tr><tr>
+<td>1.30 </td><td>17.70</td>
+</tr><tr>
+<td>1.40 </td><td>15.56</td>
+</tr><tr>
+<td>1.50 </td><td>13.98</td>
+</tr><tr>
+<td>1.60 </td><td>12.74</td>
+</tr><tr>
+<td>1.70 </td><td>11.73</td>
+</tr><tr>
+<td>1.80 </td><td>10.88</td>
+</tr><tr>
+<td>1.90 </td><td>10.16</td>
+</tr><tr>
+<td>2.00 </td><td>9.54</td>
+</tr><tr>
+<td>2.50 </td><td>7.36</td>
+</tr><tr>
+<td>3.0</td><td>6.02</td>
+</tr><tr>
+<td>4.0</td><td>4.44</td>
+</tr><tr>
+<td>5.0</td><td>3.52</td>
+</tr><tr>
+<td>10.0</td><td>1.74</td>
+</tr><tr>
+<td>20.0</td><td>0.87</td>
+</tr><tr>
+<td> infinite </td><td>0.00</td>
+</tr>
+</table>
+
 Appendix 2 Calibration Details
 ==============================
 
@@ -1808,41 +1756,33 @@ reflection measurements.
 Fixture Calibration Data Set
 ----------------------------
 
-The following data are included in the fixture calibration data set.
-Values can be viewed (for those who are curious) from the **Trace**
-menu. The Polar display only displays reflection measurements (S11)
-and related raw and derived calibration constants. The rectangular
-display can show both `S11` and `S21` measurements, and the calibration
-constants related to S21.
-```
-+-----------------------------+-------------------------------------+
-| Et -- Tracking Error        | A complex plot of the amplitude     |
-| compensation                | and phase of the cables connecting  |
-|                             | from CH0 to the DUT                 |
-+=============================+=====================================+
-| Es -- Source Mismatch Error | A complex plot of the error         |
-|                             | due to imperfect                    |
-| compensation                | source impedance termination.       |
-+-----------------------------+-------------------------------------+
-| Ed -- Directivity Error     | A complex plot of the error due     |
-|                             | to finite                           |
-| compensation                | directivity in the directional      |
-|                             | coupler circuitry.                  |
-+-----------------------------+-------------------------------------+
-| Raw Calibration Data -- S11 | Raw data taken from the shorted     |
-|                             | load during                         |
-| 'Short'                     | calibration (or loaded from a       |
-|                             | calibration file).                  |
-+-----------------------------+-------------------------------------+
-| Raw Calibration Data -- S11 | Raw data taken from the open        |
-|                             | load during calibration             |
-| 'Open'                      | (or loaded from a calibration file) |
-+-----------------------------+-------------------------------------+
-| Raw Calibration Data -- S11 | Raw data taken from the 50-ohm      |
-|                             | terminated load                     |
-| 'Terminated'                | (or loaded from a calibration file) |
-+-----------------------------+-------------------------------------+
-```
+The following are included in fixture calibration data sets.
+Values can be viewed (by the curious) from the **Trace** menu.
+Polar display is only for reflection measurements (S11)
+and related raw and derived calibration constants.
+Rectangular display can show both `S11` and `S21` measurements and related calibration constants.
+<table>
+<tr>
+</td><td> Et -- Tracking Error compensation       </td><td> A complex plot of amplitude
+and phase<br> for cables connecting CH0 to a DUT </td>
+</tr><tr>
+</td><td> Es -- Source Mismatch Error compensation</td>
+<td> A complex plot of error<br> due to imperfect source impedance termination</td><td>
+</tr><tr>
+</td><td> Ed -- Directivity Error compensation    </td>
+<td> A complex plot of the error due to finite directivity in the bridge </td>
+</tr><tr>
+</td><td> Raw Calibration Data -- S11 'Short' </td><td> Raw data taken from the shorted
+load during calibration<br> (or loaded from a calibration file).                 </td>
+</tr><tr>
+</td><td> Raw Calibration Data -- S11 'Open'</td><td> Raw data taken from the open
+load during calibration<br> (or loaded from a calibration file) </td>
+</tr><tr>
+</td><td> Raw Calibration Data -- S11  'Terminated' </td>
+<td> Raw data taken from the 50-ohm terminated load <br>(or loaded from a calibration file) </td>
+</tr>
+</table>
+
 Appendix 3 Software Installation, Registry
 ==========================================
 
@@ -1882,9 +1822,9 @@ structures, and the keys are placed in different locations.
 <tr>
 <th>Version</th><th>Registry Key Location</th>
 </tr><tr>
-<td>Win98, ME </td><td>\HKEY_LOCAL_MACHINE\Enum\USB</td>
+<td>Win98, ME</td><td>\HKEY_LOCAL_MACHINE\Enum\USB</td>
 </tr><tr>
-</td><td>Win NT, 2000, XP</td><td>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB</td>
+<td>Win NT, 2000, XP</td><td>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB</td>
 </tr></table>
 
 Appendix 4 Group Delay and Aperture
