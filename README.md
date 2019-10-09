@@ -2,11 +2,17 @@
 -> ## TAPR VNA Software <-
 -> ## Instruction Manual <-
 
-->![](media/image1.png)<-  
+<p align=center>
+<img src="media/image1.png">
+</p>  
 
-->preliminary for nanoVNA release 0.2.3 and VNAR4.4<-
+<p align=center>
+preliminary for nanoVNA release 0.2.3 and VNAR4.4
+</p>  
 
-->October 7, 2019<-
+<p align=center>
+October 7, 2019
+</p>  
 
 
 [Previous version](https://github.com/erikkaashoek/Tapr-VNA/blob/master/Doc/Background/TAPR3_Instruction_Manual_Issue_7.pdf) for Ten-Tec VNA  
@@ -719,6 +725,8 @@ transmission data as `S11` and `S21` to temporary storage
 Store Reverse Parameters -- store the measured reflection and
 transmission data as S22 and S12 to temporary storage
  
+<div style="page-break-after: always;"></div>
+
 Export S-Parameters -- exports the stored data in text format
 Rectangular Format -- Real and Imaginary components of the S-
 parameters normalized to 50 ohms
@@ -892,6 +900,8 @@ Traces that can be added to Polar mode display are:
 <td>Raw Calibration Data - S11term</td><td>for CH0 terminated by "known" 50-ohm load<br>during calibration (or loaded from a calibration file).</td>
 </tr></table>
 
+<div style="page-break-after: always;"></div>
+
 ### Time Domain Reflection Mode
 
 The TDR mode displays the real part of the Inverse Fast Fourier
@@ -947,6 +957,8 @@ reduce the measurement noise for narrow sweeps. However, large
 apertures may smooth the data beyond the range of interest, so care
 must be used to select an appropriate aperture size.
  
+<div style="page-break-after: always;"></div>
+
 Magnitude. The display resolutions selectable are:  
 10 dB / div `5 dB / div` 2 dB / div `1 dB / div` 0.5 dB / div
  
@@ -984,6 +996,8 @@ Group Delay Aperture = 1
 Group Delay Aperture = 4  
 Group Delay Aperture = 16  
 Group Delay Aperture = 64
+
+<div style="page-break-after: always;"></div>
 
 Polar Zoom Factor applies a zoom factor to polar displays.
 The default value is 1.0, representing normal Smith Chart display,
@@ -1066,6 +1080,8 @@ Enable -- displays the marker parametric value(s) underneath marker
 frequency.
  
 Disable -- turns off the marker parametric display.
+
+<div style="page-break-after: always;"></div>
 
 Frequency Grid Menu
 -------------------
@@ -1169,6 +1185,8 @@ If you wish, you may download the update from here (right-click, and Save as ...
  
 Exit the TAPR application before installing updates.
 
+
+<div style="page-break-after: always;"></div>
 
 Controls
 ========
@@ -1330,6 +1348,8 @@ are any traces near the mouse). This works in both rectangular and
 polar modes. The popup window will stay in place until the mouse is
 moved a few pixels at which point it will disappear.
 
+<div style="page-break-after: always;"></div>
+
 Example Measurement
 ===================
 
@@ -1453,6 +1473,8 @@ Also, there may be minor variations between consecutive instrument
 sweeps due to measurement variation or other artifacts. These sweeps
 were performed in the 'Slow' mode.
 
+<div style="page-break-after: always;"></div>
+
 -   Shorted cable -- with and without cable calibration. The following
     charts show the polar and rectangular displays of a shorted cable on
     the CH0 connector. The fixture calibration was performed with
@@ -1466,6 +1488,8 @@ were performed in the 'Slow' mode.
 ![](./media/image14.png)
 *3 meter cable terminated in 'Short' `with` fixture calibration applied.*
 
+<div style="page-break-after: always;"></div>
+
 -   Open cable -- with and without cable calibration. The following
     charts show the polar and rectangular displays of an open cable on
     the CH0 connector. The fixture calibration was performed with
@@ -1478,6 +1502,8 @@ were performed in the 'Slow' mode.
 
 ![](./media/image16.png)
 *3 meter cable terminated in ''Open' `with` fixture calibration applied.*
+
+<div style="page-break-after: always;"></div>
 
 -   Terminated cable -- with and without cable calibration. The
     following charts show the polar and rectangular displays of a
