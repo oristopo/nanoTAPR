@@ -1,6 +1,6 @@
 
-->##TAPR VNA Software##<-
-->Instruction Manual##<-
+-> ## TAPR VNA Software <-
+-> ## Instruction Manual <-
 
 ->![](media/image1.png)<-  
 
