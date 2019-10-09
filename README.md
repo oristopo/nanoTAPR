@@ -291,17 +291,17 @@ Software Installation
 Initial Software installation
 -----------------------------
 
-TAPR software is installed from [the Internet](https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR4.zip).
+TAPR software is installed from [the Internet](https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR4.4.zip).
 Additionally,
 you may need to install the Microsoft Windows© dotNET 1.1 run-time
 (and even possibly the Windows installer).
 
 -   You must have *administrator* privileges.
-    Double-click on the downloaded `VNAR4.zip`, which should
-    open to reveal `VNAR4.exe`. If it does not, verify that zip
+    Double-click on the downloaded `VNAR4.4.zip`, which should
+    open to reveal `VNAR4.4.exe`. If it does not, verify that zip
     file was not corrupted during download.
 
--   Launch `VNAR4.exe`  
+-   Launch `VNAR4.4.exe`  
     ![](media/splash.gif)  
 
 -   If notification that the dotNET 1.1 runtime is not found:
@@ -362,35 +362,24 @@ Software Distribution
 You must be logged on with *administrator* privileges if using Windows
 NT, 2000, or XP in order to install the software.
 
-Currently, the software distribution consists of the following files
+Currently, the software distribution consists of the following
 <table>
-<tr><td>Filename</td><td>Function</td></tr>
+<tr><th>Filename</th><th>Function</th></tr>
 <tr><td>VNAR4.4.zip</td><td>Installer ZIP file</td></tr>
 </table>
-```
-+-----------------------------------+-----------------------------------+
-|   Filename                        |     Function                      |
-+===================================+===================================+
-| VNAR4.zip                         |   Installer ZIP file.             |
-+-----------------------------------+-----------------------------------+
 
 Installed TAPR Files
 -------------------
 
-`VNAR4.zip` includes only `VNAR4.exe`  
+`VNAR4.4.zip` includes only `VNAR4.4.exe`  
 File locations can be changed...  
 
-+----------------+-----------------------+-----------------------+
-|   File name    |     Where found       |     Function          |
-+================+=======================+=======================+
-| VNAR4.exe      |   Inside VNAR4.zip    |   Host program.       |
-+----------------+-----------------------+-----------------------+
-| Help.chm       |   [GitHub](https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR3%20Help.chm)  |   Compiled help file. |
-|                |   Should be in folder |                       |
-|                |   with VNAR4.exe      |                       |
-+----------------+-----------------------+-----------------------+
+<table>
+<tr><th>File name</th><th>Where found</th><th>Function</th></tr>
+<tr><td>VNAR4.4.exe</td><td>Inside VNAR4.4.zip</td><td>Host program</td></tr>
+<tr><td>Help.chm</td><td><a href="https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR3%20Help.chm">GitHub</a><br>Should be in folder with VNAR4.4.exe</td><td>Compiled help file</td></tr>
+</table>
 
-```
 Installation Pre-Requisites
 ---------------------------
 
