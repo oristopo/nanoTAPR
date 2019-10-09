@@ -42,23 +42,20 @@ October 7, 2019
 
 4.  [TAPR Software Menu](#vna-software-menu)  
     1.  [File Menu](#file-menu)  
-        1.  [Exporting S-Parameters](#exporting-s-parameters)  
+        a.  [Exporting S-Parameters](#exporting-s-parameters)  
     2.  [View Menu](#view-menu)  
     3.  [Calibration Menu](#calibration-menu)  
     4.  [Trace Menu](#trace-menu)  
-        1.  [Rectangular Display Mode](#rectangular-display-mode)  
-        2.  [Polar Display Mode](#polar-display-mode)  
-        3.  [Time Domain Reflection Mode](#time-domain-reflection-mode)  
+        a.  [Rectangular Display Mode](#rectangular-display-mode)  
+        b.  [Polar Display Mode](#polar-display-mode)  
+        c.  [Time Domain Reflection Mode](#time-domain-reflection-mode)  
     5.  [Device Under Test](#device-under-test)
-    6.  [Rectangular Display Mode](#rectangular-display-mode)
-    7.  [Polar Display Mode](#polar-display-mode)
-    8.  [Time Domain Reflection Mode](#time-domain-reflection-mode)
-    9.  [Vertical Scale Menu](#vertical-scale-menu)  
-    10. [Marker Menu](#marker-menu)  
-    11. [Frequency Grid Menu](#frequency-grid-menu)  
-    12. [Storage Menu](#storage-menu)  
-    13. [Integration Menu](#integration-menu)  
-    14. [Help & Software Updates](#help-software-updates)  
+    6.  [Vertical Scale Menu](#vertical-scale-menu)  
+    7.  [Marker Menu](#marker-menu)  
+    8.  [Frequency Grid Menu](#frequency-grid-menu)  
+    9.  [Storage Menu](#storage-menu)  
+    10. [Integration Menu](#integration-menu)  
+    11. [Help & Software Updates](#help-software-updates)  
 
 5.  [Controls](#controls)  
     1.  [Frequency Controls](#frequency-controls)  
@@ -816,15 +813,7 @@ raw and derived calibration constants. The rectangular display can
 show both `S11` and `S21` measurements, and the calibration constants
 related to S21.
 
-Device Under Test
------------------
-
-The reflection and forward measurements are made with respect to the
-Device Under Test (DUT). The reference plane location is established
-when the fixture calibration is run and loaded.
-
-Rectangular Display Mode
-------------------------
+### Rectangular Display Mode
 
 `S21` can be displayed only on the rectangular display.  
 `S11` can be displayed on both the rectangular and polar displays.  
@@ -841,15 +830,18 @@ Traces supported by Rectangular display are:
 </tr><tr>
 <td>S21 Group Delay</td><td>DUT forward transfer gain (or  loss) derived group delay</td>
 </tr><tr>
-<td>Raw Calibration Data<br><br>-- S21 'Through'</td><td>Raw data taken from the through
+<td>S11 Magnitude as SWR</td><td></td>
+</tr><tr>
+<td>S11 as R Ohms</td><td>S11 real value converted to Ohms</td>
+</tr><tr>
+<td>S11 as jX Ohms</td><td>S11 quadrature value converted to Ohms</td>
+</tr></table><table><tr>
+<td>Raw Calibration Data - S21thru</td><td>Raw data taken from the through
 VNA connection CH0 to CH1<br><br>
 (through cables actually connecting to the DUT)</td>
-</tr><tr>
-<td>S11 Magnitude as SWR</td><td>S11 magnitude value converted to SWR</td>
 </tr></table>
 
-Polar Display Mode
-------------------
+### Polar Display Mode
 
 `S11` (as a polar complex number) is always displayed on the Polar display.
 `S21` *cannot* be displayed on the polar display.
@@ -867,16 +859,16 @@ Traces that can be added to Polar mode display are:
 <td>Es -- Source Mismatch Error compensation</td><td>complex error plot for imperfect source impedance termination</td>
 </tr><tr>
 <td>Ed -- Directivity Error compensation</td><td>complex error plot due to finite directivity in the bridge</td>
+</tr></table>
+<table><tr>
+<td>Raw Calibration Data - S11short</td><td>for shorted CH0 during calibration<br>(or loaded from a calibration file)</td>
 </tr><tr>
-<td>Raw Calibration Data -- S11 'Short'</td><td>for shorted CH0 during calibration<br>(or loaded from a calibration file)</td>
+<td>Raw Calibration Data - S11open</td><td>for unterminated CH0 during calibration<br>(or loaded from a calibration file)</td>
 </tr><tr>
-<td>Raw Calibration Data -- S11 'Open'</td><td>for unterminated CH0 during calibration<br>(or loaded from a calibration file)</td>
-</tr><tr>
-<td>Raw Calibration Data -- S11 'Terminated'</td><td>for CH0 terminated by "known" 50-ohm load<br>during calibration (or loaded from a calibration file).</td>
+<td>Raw Calibration Data - S11term</td><td>for CH0 terminated by "known" 50-ohm load<br>during calibration (or loaded from a calibration file).</td>
 </tr></table>
 
-Time Domain Reflection Mode
----------------------------
+### Time Domain Reflection Mode
 
 The TDR mode displays the real part of the Inverse Fast Fourier
 Transform of a reflection measurement. Because the TDR mode requires a
@@ -904,6 +896,13 @@ interpolating. For example, if two consecutive TDR points have the
 same large time reflection, the actual time position will lie in
 between those two consecutive times.
 
+Device Under Test
+-----------------
+
+The reflection and forward measurements are made with respect to the
+Device Under Test (DUT). The reference plane location is established
+when the fixture calibration is run and loaded.
+
 Vertical Scale Menu
 -------------------
 
@@ -924,63 +923,65 @@ reduce the measurement noise for narrow sweeps. However, large
 apertures may smooth the data beyond the range of interest, so care
 must be used to select an appropriate aperture size.
  
-Magnitude. The display resolutions selectable are: 10 dB / division 
-5 dB / division 2 dB / division 1 dB / division
+Magnitude. The display resolutions selectable are:  
+10 dB / div `5 dB / div` 2 dB / div `1 dB / div` 0.5 dB / div
  
-SWR display resolutions selectable are:  
+SWR Scale selections are:  
 SWR 1.0 to 11.0  
 SWR 1.0 to 6.0  
 SWR 1.0 to 3.0  
 SWR 1.0 to 2.0  
  
-Group Delay display resolutions selectable are:  
-100 microseconds / division     
-10 microseconds / division   
-1 microsecond / division   
-100 nanoseconds / division  
-10 nanoseconds / division   
-1 nanosecond / division   
-100 picoseconds / division  
+Impedance Scale selections are:  
+1k Ohms / div  
+100 Ohms / div  
+10 Ohms / div  
  
-Group Delay Aperture sets the number of adjacent frequency bins
-over which group delay is measured.
+Right Scale Display selections are:  
+Phase  
+SWR  
+Delay  
+Ohms  
+[rectangular] Right Scale Display values adjust to selected vertical scale factors.
  
+Group Delay Time Scale selections are:  
+1 millisecond / div     
+100 microsec / div     
+10 microsec / div   
+1 microsec / div   
+100 nanosec / div  
+10 nanosec / div   
+1 nanosec / div   
+100 picosec / div  
+ 
+Group Delay Aperture  
+-   the number of adjacent frequency bins over which group delay is measured.   
 Group Delay Aperture = 1  
 Group Delay Aperture = 4  
 Group Delay Aperture = 16  
 Group Delay Aperture = 64
- 
-Right Scale Display selects the scale printed on the right side
-of the rectangular display.  
-Display values automatically adjust to
-the selected vertical scale factors.
- 
-Phase SWR
- 
-Delay
- 
-Polar Zoom Factor selects a zoom factor to be applied to the
-polar display. The default value is 1.0, and represents a normal polar
-(Smith Chart) type of display, with a reflection coefficient of 1.0
-lying on the periphery of the chart. Increasing the zoom magnifies the
-display keeping the 50 + j0 point (the center of the chart) in the
-center. Magnifying the display thus allows viewing impedances near 50
-+ j0 with more resolution. A zoom factor of 2.0 places a reflection
-coefficient value of 0.5 on the periphery of the chart. There are four
-display zoom settings.
+
+Polar Zoom Factor applies a zoom factor to polar displays.
+The default value is 1.0, representing normal Smith Chart display,
+with a reflection coefficient of 1.0 lying on the chart periphery.
+Increasing zoom keeps the 50 + j0 point the centered 
+and displays impedances near 50 + j0 with more resolution.
+A zoom factor of 2.0 places reflection coefficient values of 0.5 on the chart periphery.
+There are four display zoom settings:
 Zoom = 1.0  
 Zoom = 1.5  
 Zoom = 2.0  
 Zoom = 2.5  
  
-TDR Setup allows setting the Start Time (in nanoseconds) and the
-Stop Time (in nanoseconds) for the TDR display. This allows you to
-zoom into the area of interest. It also allows entering an estimated
-value of the cable velocity factor, which is used to calculate the
-distance from the reference plane to the marker point (perhaps a cable
-fault). The valid range of velocity factors is 0.4 to 0.99. It also
-allows selecting whether the distance display should be in Meters or
-Feet.
+TDR Setup allows
+-   setting TDR Display Start and Stop times (in nanoseconds).
+    This enables zooming to areas of interest.
+-   entering an estimated cable velocity factor value,
+    which is used to calculate distances from the reference plane
+    to marker points (perhaps a cable fault).
+    The valid range is 0.4 to 0.99.
+-   selecting Meters or Feet for distance display  
+![](media/TDR.gif)
 
 Marker Menu
 -----------
