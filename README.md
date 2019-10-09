@@ -1,5 +1,9 @@
-<p align=center><font size=+2>TAPR VNA Software<br>
-Instruction Manual</font><br>
+
+<p align=center>
+<font size=+2>
+TAPR VNA Software<br>
+Instruction Manual<br>
+</font>
 <br>
 <img src="media/image1.png"><br>
 <br>
