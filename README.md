@@ -26,7 +26,7 @@ October 7, 2019
     3.  [Software Distribution](#software-distribution)  
     4.  [Installed TAPR Files](#installed-vna-files)  
     5.  [Installation Pre-Requisites](#installation-pre-requisites)  
-    6.  [Connecting the VNA to your Computer](#connecting-the-vna-to-your-computer)  
+    6.  [Connecting nanoVNA to your Computer](#connecting-nanovna-to-your-computer)  
     7.  [Uninstall](#uninstall)  
 
 3.  [Fixture Calibration](#fixture-calibration)  
@@ -261,8 +261,8 @@ Hibernation or Suspension of Host Computer
 ------------------------------------------
 
 If the host computer (typically a laptop) hibernates or suspends,
-you will have to remove power from the VNA and exit TAPR software.
-Then reconnect power to the VNA and restart the TAPR application.
+you will have to remove power from nanoVNA and exit TAPR software.
+Then reconnect power to nanoVNA and restart the TAPR application.
 
 Calibration Modes are Single-threaded
 -------------------------------------
@@ -372,7 +372,7 @@ version from Microsoft (its about 23 MB in size). Many newer
 applications and some recent Microsoft service packs install the
 framework, so you may have it already.
 
-Connecting the VNA to your Computer
+Connecting nanoVNA to your Computer
 -----------------------------------
 
 After verifying TAPR program launch, quit it.  
@@ -405,8 +405,8 @@ properties. For example, the length of each interconnecting test cable
 affects the phase of all measurements (due to the propagation time
 delay specific to that particular cable). Therefore, each test setup
 requires a different set of calibration data to compensate for not
-only the test setup, but also propagation delay and other errors in
-the VNA device itself.  
+only the test setup, but also propagation delay and other errors internal to
+nanoVNA.
  TAPR software can perform these \"fixture calibrations\",  
 you can take and save one for each different
 measurement set up that you use. Each calibration can be saved with a
@@ -471,7 +471,7 @@ calibration frequencies closest to the actual measurement frequency,
 and uses that to compensate the measurement.
  
 If the \"Open,\" \"Short,\" or \"50-ohm\" loads are not accurate, then
-the compensation will be wrong. At 100 MHz, the VNA is fairly
+the compensation will be wrong. At 100 MHz, nanoVNA is fairly
 sensitive to the accuracy of these loads.
  
 Normally, there will be a number of different calibration data sets
@@ -684,11 +684,12 @@ and storing the S-parameters in a text file.
 Print -- prints the selected view (rectangular or polar) to the
 printer.
  
-Print Preview -- provides a preview of what the printed page will look
-like
+Print Preview -- previews printed page format
  
 Print Setup -- allows selecting the desired printer and setting the
-print parameters Set Plot Title -- allows setting / clearing a textual
+print parameters  
+
+Set Plot Title -- allows setting / clearing a textual
 title for the plot that appears underneath the scope display
  
 Store Forward Parameters -- store the measured reflection and
@@ -926,13 +927,13 @@ must be used to select an appropriate aperture size.
 Magnitude. The display resolutions selectable are: 10 dB / division 
 5 dB / division 2 dB / division 1 dB / division
  
-SWR display resolutions selectable are:
+SWR display resolutions selectable are:  
 SWR 1.0 to 11.0  
 SWR 1.0 to 6.0  
 SWR 1.0 to 3.0  
 SWR 1.0 to 2.0  
  
-Group Delay display resolutions selectable are:
+Group Delay display resolutions selectable are:  
 100 microseconds / division     
 10 microseconds / division   
 1 microsecond / division   
@@ -950,7 +951,8 @@ Group Delay Aperture = 16
 Group Delay Aperture = 64
  
 Right Scale Display selects the scale printed on the right side
-of the rectangular display. Display values automatically adjust to
+of the rectangular display.  
+Display values automatically adjust to
 the selected vertical scale factors.
  
 Phase SWR
@@ -983,9 +985,8 @@ Feet.
 Marker Menu
 -----------
 
-The Marker menu allows setting up to five marker frequencies, and
-enabling or disabling the display of marker numbers and their
-parametric values.
+The Marker menu allows setting up to five marker frequencies,  
+and enabling or disabling the display of marker numbers and their parametric values.
  
 Markers can also be set by *left-clicking* on the display at a
 frequency of interest. The first unused marker will be loaded with the
@@ -1082,26 +1083,24 @@ set until the program is terminated, or a new measurement set is
 stored. A new stored measurement set over-writes the existing
 measurements in storage.
  
-There are three options in the Storage menu: Store
- 
-Recall
- 
+There are three options in the Storage menu:  
+Store  
+Recall  
 Display Storage
  
-'Store' captures the complete raw measurement set (whether or not the
-traces are displayed) and stores it to memory.
+'Store' captures the complete raw measurement set  
+(whether or not the traces are displayed) and stores it to memory.
  
 'Recall' retrieves the measurement set from memory and over-writes the
-current active measurement set. It does not delete or alter the raw
-data in storage.
+current active measurement set.  
+It does not delete or alter the raw data in storage.
  
-'Display Storage' is a toggle that is checked when the contents of
-storage are being displayed.
+'Display Storage' is a toggle that is checked when storage contents are displayed.
  
 A common use of the storage function is to make a measurement, verify
-it's useful, then 'store' the data. Next, some change to the device
-under test is made and a new measurement is made. Enabling the Display
-Storage option allows comparing on-screen the two measurements.
+it's useful, then 'store' the data.  
+Next, some change to the device under test is made and a new measurement is made.  
+Enabling the Display Storage option allows comparing on-screen the two measurements.
  
 The markers are only attached to the active display set, MARKERS ARE
 NOT ATTACHED TO THE STORED DATA. This helps to distinguish which data
@@ -1151,7 +1150,7 @@ Controls
 
 TAPR window controls change start & stop frequencies, reference & transmit signal levels, and sweep functions.
 ![](media/TAPR.gif)  
- Those controls are not shown on the printed outputs.
+ Those controls are not shown on printed outputs.
 
 
 Frequency Controls
@@ -1191,8 +1190,8 @@ to `-30 db` at 1 db/division, making the trace visible.
  
 The Reference Level control can also be set to positive values. This
 is useful when measuring DUTs (such as amplifiers) with output
-magnitudes near or above `0 dB`. Note that VNA dynamic range
-extends only a few dB above `0 dB`.
+magnitudes near or above `0 dB`.  
+Note that VNA dynamic range extends only a few dB above `0 dB`.  
 _External attenuators should be used with DUT's having any amount of gain._
  
 The on-screen amplitude display values on the left-side of the display
@@ -1205,7 +1204,7 @@ The Transmit Level control should normally be left at 0 dBm.
 Decreasing the value of the control will usually degrade the dynamic
 range and accuracy of both the `S11` and `S21` measurements.
 However, reduce drive level to DUT's with gain can be useful. The
-control has about 50 dB of adjustment range, but the VNA dynamic range
+control has about 50 dB of adjustment range, but nanoVNA dynamic range
 consumes 40 dB of that range. Thus, `S21` magnitude measurements
 effectively support less than `10 dB` of level change. A much
 better approach is to attenuate Transmit signals to DUT's with
@@ -1248,7 +1247,7 @@ acquires data. These three buttons are:
 -   Free-run Sweep
 
 The Sweep Speed button determines the sweep dwell time for each
-measured sample, and if the VNA data are checked for measurement
+measured sample, and if nanoVNA data are checked for measurement
 glitches. If set to the Fast mode, the VNA sweeps as fast a possible,
 and does not check the reading data for measurement glitches. As the
 button is successively clicked, the sweep speed will be set to the
@@ -1268,7 +1267,7 @@ these checks are bypassed, sometimes resulting in momentary glitches
 in the measured data. However, the Fast mode sweeps much than any of
 the timed modes.
  
-The single sweep mode triggers the VNA one time, and holds the
+The single sweep mode triggers nanoVNA one time, and holds the
 measured data after that single sweep.
 
 The Free-run sweep button causes the VNA to trigger continuously
@@ -1314,8 +1313,7 @@ The following general steps are used to measure a device under test,
 1.  Make sure that detector calibration has been run  
     (you do not get a warning message on program startup).
 
-2.  Connect the cables and adaptor to be used to connect to the device
-    under test (DUT) to the VNA.
+2.  Connect cables and adapters from the device under test (DUT) to nanoVNA.
 
 3.  Either run a Fixture calibration on these cables and adaptors, or
     load a previously saved fixture calibration for these exact same
@@ -1463,9 +1461,9 @@ were performed in the 'Slow' mode.
     performed with the same cable and termination as the measurement, so
     the fixture and amplitude compensation should match (excepting
     sweep-by-sweep measurement errors, instrument temperature change,
-    etc.). __Note__: many cables connected to the VNA (through
-    a multitude of adaptors) may exhibit much poorer return loss than
-    the example shown here.
+    etc.).  
+     __Note__: many cables and adapters connected to nanoVNA
+    may exhibit much poorer return loss than shown here.
 
 ![](./media/image17.png)
 *1 meter cable terminated in 50-ohm load `without` fixture calibration applied.  
@@ -1786,7 +1784,7 @@ load during calibration<br> (or loaded from a calibration file) </td>
 Appendix 3 Software Installation, Registry
 ==========================================
 
-When you apply power to the VNA and first attach it to the computer
+When you apply power to nanoVNA and first attach it to the computer
 via its USB cable, its USB device ID may not be found. The New
 Hardware Detected wizard will be invoked and will ask if a disk or
 file is available for the new device. The file it is looking for is
@@ -1836,7 +1834,7 @@ Mathematically, it is defined at the negative of the rate of change
 
 *GroupDelay* = - *d*φ / *d*ω
  
-In the VNA, a measurement sweep consists of a number of individual
+In a VNA, a measurement sweep consists of a number of individual
 discrete data points taken at single spot frequencies. Thus, the group
 delay is calculated by looking at two adjacent frequency samples --
 the current sample, n and the next sample, n+1, being taken at
