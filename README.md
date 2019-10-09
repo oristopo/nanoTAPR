@@ -91,6 +91,7 @@
     1.  [Aperture Shortening](#aperture-shortening)  
 
 <div style="page-break-after: always;"></div>
+
 Overview
 ========
 
@@ -138,6 +139,7 @@ The nanoVNA places about a -10 dBm level signal (\~0.1 milliwatts)
 onto the CH0 connector during measurements.
 
 <div style="page-break-after: always;"></div>
+
 Temperature Limitation
 ----------------------
 
@@ -280,6 +282,7 @@ continue when the TAPR application regains focus. The progressbar may
 take awhile to update after the TAPR program regains focus.
 
 <div style="page-break-after: always;"></div>
+
 Software Installation
 =====================
 
@@ -401,6 +404,7 @@ You may delete it manually if you wish, but it's not required.
 See Appendix 3 for details.
 
 <div style="page-break-after: always;"></div>
+
 Fixture Calibration
 ===================
 
@@ -512,6 +516,7 @@ show the connection required to perform the individual calibration
 steps.
 
 <div style="page-break-after: always;"></div>
+
 Actual measurement
 ------------------
 
@@ -525,6 +530,7 @@ Fixture Calibration steps.
 ![](./media/image4.png)
 
 <div style="page-break-after: always;"></div>
+
 Fixture Calibration Setups
 --------------------------
 
@@ -549,6 +555,7 @@ sufficiently descriptive.
 ![](./media/image5.png)
 
 <div style="page-break-after: always;"></div>
+
 Short Fixture Calibration
 -------------------------
 
