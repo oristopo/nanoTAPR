@@ -320,42 +320,32 @@ you may need to install the Microsoft Windows© dotNET 1.1 run-time
 Supported Operating System Versions
 -----------------------------------
 
-The Vector network analyzer software should be able to run on the
-Windows operating systems as shown:
-```
-+-----------------------+-----------------------+-----------------------+
-|   Operating System    |     Support           |     Reason(s)         |
-+=======================+=======================+=======================+
-|   Windows 95 -- all   |   No                  |   Does not support    |
-|   editions            |                       |   USB.                |
-|                       |                       |                       |
-|                       |                       |   Does not support    |
-|                       |                       |   .NET framework      |
-|                       |                       |                       |
-|                       |                       |   Does not support    |
-|                       |                       |   current Windows     |
-|                       |                       |   Installer           |
-+-----------------------+-----------------------+-----------------------+
-| Windows 98 -- Gold    |   Maybe               |   Does not support    |
-|                       |                       |   USB version 1.1,    |
-|                       |                       |   only                |
-|                       |                       |                       |
-|                       |                       |   supports USB        |
-|                       |                       |   version 1.0         |
-+-----------------------+-----------------------+-----------------------+
-| Windows 98 -- SE      |   Yes                 |   Tested.             |
-|                       |                       |                       |
-| (Second Edition)      |                       |                       |
-+-----------------------+-----------------------+-----------------------+
-| Windows ME            |   Probably            |   Not tested yet.     |
-+-----------------------+-----------------------+-----------------------+
-| Windows NT            |   Probably            |   Not tested yet      |
-+-----------------------+-----------------------+-----------------------+
-| Windows 2000          |   Yes                 |   Tested.             |
-+-----------------------+-----------------------+-----------------------+
-| Windows XP            |   Yes                 |   Tested.             |
-+-----------------------+-----------------------+-----------------------+
-```
+While VNAR4.3 software should be able to run on the
+Windows operating systems as shown, support for nanoVNA should
+be expected for no older than Windows 7:
+
+<table><tr>
+<th>Operating System</th><th>Support</th><th>Reason(s)</th>
+</tr><tr>
+<td>Windows 95</td><td>No</td><td>Lacks USB support</td>
+</tr><tr>
+</td><td> Windows 98 -- Gold</td><td>Maybe</td><td>Supports only USB 1.0<br>not 1.1</td>
+</tr><tr>
+<td>Windows 98 SE<br>(Second Edition)</td><td>Yes</td><td>Tested</td>
+</tr><tr>
+<td>Windows ME</td><td>Probably</td><td>Not tested</td>
+</tr><tr>
+<td>Windows NT</td><td>Probably</td><td>Not tested</td>
+</tr><tr>
+<td>Windows 2000</td><td>Yes</td><td>Tested</td>
+</tr><tr>
+<td>Windows XP</td><td>Yes</td><td>Tested</td>
+</tr><tr>
+<td>Windows 7</td><td>nanoVNA</td><td>Tested</td>
+<td>Windows 8.1</td><td>nanoVNA</td><td>Tested</td>
+<td>Windows 10</td><td>nanoVNA</td><td>Tested</td>
+</tr></table>
+
 Software Distribution
 ---------------------
 
