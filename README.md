@@ -1696,7 +1696,10 @@ a point). Higher values of SWR produce circles of increasing radius
 centered on the chart center point. An SWR value of infinite is a
 circle lying at the outside periphery of the polar chart.
  
-This table relates SWR to input return loss magnitude: <table> <tr> <th> SWR </th><th> Return Loss (dB)</th>
+This table relates SWR to input return loss magnitude:
+
+<table> <tr>
+<th> SWR </th><th> Return Loss (dB)</th>
 </tr><tr>
 <td>1.00 </td><td> infinite</td>
 </tr><tr>
@@ -1831,7 +1834,7 @@ Rectangular display can show both `S11` and `S21` measurements and related calib
 <td> Ed -- Directivity Error compensation    </td>
 <td> A complex plot of the error due to finite directivity in the bridge </td>
 </tr><tr>
-</td><td> Raw Calibration Data -- S11 'Short' </td><td> Raw data taken from the shorted
+<td> Raw Calibration Data -- S11 'Short' </td><td> Raw data taken from the shorted
 load during calibration<br> (or loaded from a calibration file).                 </td>
 </tr><tr>
 <td> Raw Calibration Data -- S11 'Open'</td><td> Raw data taken from the open
