@@ -839,46 +839,28 @@ when the fixture calibration is run and loaded.
 Rectangular Display Mode
 ------------------------
 
-`S21` can be displayed only on the rectangular display. `S11` can be
-displayed on both the rectangular and polar displays. The traces that
-can be displayed on the Rectangular display are:
-```
-+-----------------------------------+-----------------------------------+
-|   S11 Magnitude                   | The magnitude, in dB., of the     |
-|                                   | input return loss of the          |
-|                                   |                                   |
-|                                   | Device Under Test (DUT).          |
-+===================================+===================================+
-|   S11 Phase                       | The phase angle, in degrees, of   |
-|                                   | the input return loss of          |
-|                                   |                                   |
-|                                   | the DUT, from +180 to --180.      |
-+-----------------------------------+-----------------------------------+
-|   S21 Magnitude                   | The magnitude, in dB. of the      |
-|                                   | forward transfer gain (or         |
-|                                   |                                   |
-|                                   | loss) of the DUT.                 |
-+-----------------------------------+-----------------------------------+
-|   S21 Phase                       | The phase, in degrees, of the     |
-|                                   | forward transfer gain (or         |
-|                                   |                                   |
-|                                   | loss) of the DUT.                 |
-+-----------------------------------+-----------------------------------+
-|   S21 Group Delay                 | The derived group delay of the    |
-|                                   | forward transfer gain (or         |
-|                                   |                                   |
-|                                   | loss) of the DUT.                 |
-+-----------------------------------+-----------------------------------+
-|   Raw Calibration Data            | Raw data taken from the through   |
-|                                   | VNA connection CH0 to CH1         |
-|   -- S21 'Through'                |                                   |
-|                                   |   (through the actual cables used |
-|                                   |   to connect to the DUT)          |
-+-----------------------------------+-----------------------------------+
-|   S11 Magnitude as SWR            | The value of S11 magnitude        |
-|                                   | converted into SWR.               |
-+-----------------------------------+-----------------------------------+
-```
+`S21` can be displayed only on the rectangular display.  
+`S11` can be displayed on both the rectangular and polar displays.  
+Traces supported by Rectangular display are:
+<table>
+<tr>
+<td>S11 Magnitude</td><td>Device Under Test (DUT) input return loss magnitude, in dB</td>
+</tr><tr>
+<td>S11 Phase</td><td>DUT input return loss phase angle, in degrees, from +180 to --180</td>
+</tr><tr>
+</td><td>S21 Magnitude</td><td>DUT forward transfer gain (or loss) magnitude, in dB</td>
+</tr><tr>
+</td><td>S21 Phase</td><td>DUT forward transfer phase, in degrees</td>
+</tr><tr>
+<td>S21 Group Delay</td><td>DUT forward transfer gain (or  loss) derived group delay</td>
+</tr><tr>
+<td>Raw Calibration Data<br><br>-- S21 'Through'</td><td>Raw data taken from the through
+VNA connection CH0 to CH1<br><br>
+(through cables actually connecting to the DUT) </td>
+</tr><tr>
+<td>S11 Magnitude as SWR</td><td>S11 magnitude value converted to SWR</td>
+</tr></table>
+
 Polar Display Mode
 ------------------
 
@@ -1209,11 +1191,11 @@ Exit the TAPR application before installing updates.
 Controls
 ========
 
-The TAPR application window has controls for changing
+TAPR's window has controls for changing
 start and stop frequencies, reference and transmit signal
 levels, and sweep functions.
 ![](media/TAPR.gif)  
- These controls are not shown on the printed outputs.
+ Those controls are not shown on the printed outputs.
 
 
 Frequency Controls
@@ -1896,18 +1878,15 @@ structures, and the keys are placed in different locations.
     device (VID 0483, PID 5740), in which case the next time it is
     plugged in, the new hardware detected wizard will run.
 
--   If you delete the Registry key, you should also delete the file
-    `ezusbw2k.PNF` located in the `WINDOWS\INF` directory.
-```
-+-----------+-----------------------------------------------------------+
-| Version   |  Registry Key Location                                    |
-+===========+===========================================================+
-| Win98, ME |  \HKEY_LOCAL_MACHINE\Enum\USB                             |
-+-----------+-----------------------------------------------------------+
-| WinNT,    |  \HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB    |
-| 2000, XP  |                                                           |
-+-----------+-----------------------------------------------------------+
-```
+<table>
+<tr>
+<th>Version</th><th>Registry Key Location</th>
+</tr><tr>
+<td>Win98, ME </td><td>\HKEY_LOCAL_MACHINE\Enum\USB</td>
+</tr><tr>
+</td><td>Win NT, 2000, XP</td><td>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB</td>
+</tr></table>
+
 Appendix 4 Group Delay and Aperture
 ===================================
 
