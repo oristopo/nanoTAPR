@@ -1,16 +1,13 @@
 
-<p align=center>
-<font size=+2>
-TAPR VNA Software<br>
-Instruction Manual<br>
-</font>
-<br>
-<img src="media/image1.png"><br>
-<br>
-preliminary for nanoVNA release 0.2.3 and VNAR4.4<br>
-<br>
-October 7, 2019<br>
-</p>
+->##TAPR VNA Software##<-
+->Instruction Manual##<-
+
+->![](media/image1.png)<-  
+
+->preliminary for nanoVNA release 0.2.3 and VNAR4.4<-
+
+->October 7, 2019<-
+
 
 [Previous version](https://github.com/erikkaashoek/Tapr-VNA/blob/master/Doc/Background/TAPR3_Instruction_Manual_Issue_7.pdf) for Ten-Tec VNA  
 
@@ -93,6 +90,7 @@ October 7, 2019<br>
 10. [Appendix 4 Group Delay and Aperture](#appendix-4-group-delay-and-aperture)  
     1.  [Aperture Shortening](#aperture-shortening)  
 
+<div style="page-break-after: always;"></div>
 Overview
 ========
 
@@ -139,6 +137,7 @@ Instrument Caution
 The nanoVNA places about a -10 dBm level signal (\~0.1 milliwatts)
 onto the CH0 connector during measurements.
 
+<div style="page-break-after: always;"></div>
 Temperature Limitation
 ----------------------
 
@@ -280,6 +279,7 @@ another Windows program has the *focus*, and will
 continue when the TAPR application regains focus. The progressbar may
 take awhile to update after the TAPR program regains focus.
 
+<div style="page-break-after: always;"></div>
 Software Installation
 =====================
 
@@ -400,6 +400,7 @@ uninstaller does not delete the Registry key.
 You may delete it manually if you wish, but it's not required.  
 See Appendix 3 for details.
 
+<div style="page-break-after: always;"></div>
 Fixture Calibration
 ===================
 
@@ -510,6 +511,7 @@ steps needed for fixture calibration. The diagrams in this section
 show the connection required to perform the individual calibration
 steps.
 
+<div style="page-break-after: always;"></div>
 Actual measurement
 ------------------
 
@@ -522,6 +524,7 @@ Fixture Calibration steps.
 
 ![](./media/image4.png)
 
+<div style="page-break-after: always;"></div>
 Fixture Calibration Setups
 --------------------------
 
@@ -545,6 +548,7 @@ sufficiently descriptive.
 
 ![](./media/image5.png)
 
+<div style="page-break-after: always;"></div>
 Short Fixture Calibration
 -------------------------
 
