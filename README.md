@@ -1,10 +1,10 @@
-**TAPR VNA Software Instruction Manual**
+->**TAPR VNA Software Instruction Manual**<-
 
-![](./media/image1.png)
+->![](./media/image1.png)<-
 
-preliminary for nanoVNA release 0.2.3 and VNAR4.4
+->preliminary for nanoVNA release 0.2.3 and VNAR4.4<-
  
-October 7, 2019
+->October 7, 2019<-
 
 [Previous version](https://github.com/erikkaashoek/Tapr-VNA/blob/master/Doc/Background/TAPR3_Instruction_Manual_Issue_7.pdf) for Ten-Tec VNA  
 
@@ -836,9 +836,9 @@ Traces supported by Rectangular display are:
 </tr><tr>
 <td>S11 as jX Ohms</td><td>S11 quadrature value converted to Ohms</td>
 </tr></table><table><tr>
-<td>Raw Calibration Data - S21thru</td><td>Raw data taken from the through
-VNA connection CH0 to CH1<br><br>
-(through cables actually connecting to the DUT)</td>
+<td>Raw Calibration Data - S21thru</td>
+<td>Raw data taken from the through VNA connection CH0 to CH1<br>
+    (through cables actually connecting to the DUT)</td>
 </tr></table>
 
 ### Polar Display Mode
