@@ -342,17 +342,16 @@ be expected for no older than Windows 7:
 <td>Windows XP</td><td>Yes</td><td>Tested</td>
 </tr><tr>
 <td>Windows 7</td><td>nanoVNA</td><td>Tested</td>
+</tr><tr>
 <td>Windows 8.1</td><td>nanoVNA</td><td>Tested</td>
+</tr><tr>
 <td>Windows 10</td><td>nanoVNA</td><td>Tested</td>
 </tr></table>
 
 Software Distribution
 ---------------------
 
-You must be logged on with *administrator* privileges if using Windows
-NT, 2000, or XP in order to install the software.
-
-Currently, the software distribution consists of the following
+The current software distribution consists of:
 <table>
 <tr><th>Filename</th><th>Function</th></tr>
 <tr><td>VNAR4.4.zip</td><td>Installer ZIP file</td></tr>
@@ -373,19 +372,16 @@ File locations can be changed...
 Installation Pre-Requisites
 ---------------------------
 
-The software requires that the host have a reasonably current Windows
-installer program, and that it have the .NET 1.1 framework run time
-package installed (version 1.0 is not sufficient). The installer will
-check for these prior to installing. The installer will attempt to
-link to the Microsoft web site providing a download menu if the
+VNAR4 software requires that the host have a reasonably current Windows
+.NET 1.1 framework run time package installed (version 1.0 is not sufficient).  
+[Here is link to the Microsoft web site](https://www.microsoft.com/en-us/download/details.aspx?id=26) providing a download menu if the
 pre-requisite is missing. Microsoft has many different programs on
 this web page; you need the one that is approximately 23 MB in size,
 and is called the "*redistributable*" (it is allowed to be
 redistributed by applications).
  
-Download and install as needed, the filename is
-`dotnetfx.exe`. The .NET framework redistributable is
-included on the CD-ROM, but we recommend downloading the latest
+Download and install as needed, the filename is `dotnetfx.exe`.
+We recommend downloading the latest
 version from Microsoft (its about 23 MB in size). Many newer
 applications and some recent Microsoft service packs install the
 framework, so you may have it already.
