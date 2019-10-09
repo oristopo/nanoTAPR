@@ -1,18 +1,15 @@
 
--> ## TAPR VNA Software <-
--> ## Instruction Manual <-
-
-<p align=center>
-<img src="media/image1.png">
-</p>  
-
-<p align=center>
+<table align=center>
+  <tr><th align=center>TAPR VNA Software</th></tr>
+  <tr><th align=center>Instruction Manual</th></tr>
+  <tr><td align=center><img align=center src="media/image1.png"></td></tr>
+  <tr><td align=center> &nbsp </td></tr>
+  <tr><td align=center> 
 preliminary for nanoVNA release 0.2.3 and VNAR4.4
-</p>  
-
-<p align=center>
-October 7, 2019
-</p>  
+</td></tr>
+  <tr><td align=center> &nbsp </td></tr>
+  <tr><td align=center> October 7, 2019 </td></tr>
+</table>
 
 
 [Previous version](https://github.com/erikkaashoek/Tapr-VNA/blob/master/Doc/Background/TAPR3_Instruction_Manual_Issue_7.pdf) for Ten-Tec VNA  
