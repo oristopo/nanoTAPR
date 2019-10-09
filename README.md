@@ -313,6 +313,8 @@ Additionally, you may need to install the Microsoft Windows© dotNET 1.1 run-tim
 [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
 
 
+<div style="page-break-after: always;"></div>
+
 Supported Windows Versions
 --------------------------
 
@@ -504,6 +506,8 @@ existing name as appropriate. The newly saved data set will inherit
 the `S11` raw and derived errors from the older dataset, but will use
 the new 'through' measurements. In fact, this can be done with any or
 all of the four measurements.
+
+<div style="page-break-after: always;"></div>
 
 Fixture Setup Diagrams
 ----------------------
@@ -718,8 +722,6 @@ transmission data as `S11` and `S21` to temporary storage
 Store Reverse Parameters -- store the measured reflection and
 transmission data as S22 and S12 to temporary storage
  
-<div style="page-break-after: always;"></div>
-
 Export S-Parameters -- exports the stored data in text format
 Rectangular Format -- Real and Imaginary components of the S-
 parameters normalized to 50 ohms
@@ -736,6 +738,8 @@ restore the state of the instrument from a previous measurement setup.
  
 Exit -- immediately terminates the TAPR application (and saves the
 current instrument configuration to the file: `last.cfg`.
+
+<div style="page-break-after: always;"></div>
 
 ### Exporting S-Parameters
 
@@ -865,6 +869,8 @@ Traces supported by Rectangular display are:
 <td>Raw data taken from the through VNA connection CH0 to CH1<br>
     (through cables actually connecting to the DUT)</td>
 </tr></table>
+
+<div style="page-break-after: always;"></div>
 
 ### Polar Display Mode
 
@@ -1270,6 +1276,8 @@ lengths and amplitude variations are not removed if the measurement is
 uncalibrated. For best accuracy, measurements should have fixture
 calibration applied.
 
+<div style="page-break-after: always;"></div>
+
 Sweep Controls
 --------------
 
@@ -1316,6 +1324,8 @@ One very useful setup is to use a small frequency grid, for example
 100 or 200 points, fast sweep mode, and recurrent sweep. This allows
 the display to update rapidly, and may be particularly useful when
 tuning a DUT such as a filter or antenna in real-time.
+
+<div style="page-break-after: always;"></div>
 
 Mouse Actions
 -------------
@@ -1425,6 +1435,8 @@ By the way, these plots are of a high-quality Bencher YA-1 low-pass-filter desig
 
 [Other example measurements](https://github.com/erikkaashoek/Tapr-VNA/tree/master/Doc/Measurement%20examples)  
 
+<div style="page-break-after: always;"></div>
+
 Some Cautions
 -------------
 
@@ -1522,6 +1534,8 @@ Polar scale is zoomed 2.5:1 to show more details.*
  
 ![](./media/image20.png)
 *Rectangular display of S11 for 1 meter cable terminated by 50-ohm load `with` fixture calibration applied.*  
+
+<div style="page-break-after: always;"></div>
 
 Appendix 1 Overview of S Parameters
 ===================================
@@ -1728,6 +1742,8 @@ This table relates SWR to input return loss magnitude: <table> <tr> <th> SWR </t
 </tr>
 </table>
 
+<div style="page-break-after: always;"></div>
+
 Appendix 2 Calibration Details
 ==============================
 
@@ -1803,27 +1819,30 @@ Values can be viewed (by the curious) from the **Trace** menu.
 Polar display is only for reflection measurements (S11)
 and related raw and derived calibration constants.
 Rectangular display can show both `S11` and `S21` measurements and related calibration constants.
+
 <table>
 <tr>
-</td><td> Et -- Tracking Error compensation       </td><td> A complex plot of amplitude
-and phase<br> for cables connecting CH0 to a DUT </td>
+<td> Et -- Tracking Error compensation </td>
+<td> A complex plot of amplitude and phase<br> for cables connecting CH0 to a DUT </td>
 </tr><tr>
-</td><td> Es -- Source Mismatch Error compensation</td>
-<td> A complex plot of error<br> due to imperfect source impedance termination</td><td>
+<td> Es -- Source Mismatch Error compensation</td>
+<td> A complex plot of error<br> due to imperfect source impedance termination</td>
 </tr><tr>
-</td><td> Ed -- Directivity Error compensation    </td>
+<td> Ed -- Directivity Error compensation    </td>
 <td> A complex plot of the error due to finite directivity in the bridge </td>
 </tr><tr>
 </td><td> Raw Calibration Data -- S11 'Short' </td><td> Raw data taken from the shorted
 load during calibration<br> (or loaded from a calibration file).                 </td>
 </tr><tr>
-</td><td> Raw Calibration Data -- S11 'Open'</td><td> Raw data taken from the open
+<td> Raw Calibration Data -- S11 'Open'</td><td> Raw data taken from the open
 load during calibration<br> (or loaded from a calibration file) </td>
 </tr><tr>
-</td><td> Raw Calibration Data -- S11  'Terminated' </td>
+<td> Raw Calibration Data -- S11  'Terminated' </td>
 <td> Raw data taken from the 50-ohm terminated load <br>(or loaded from a calibration file) </td>
 </tr>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 Appendix 3 Software Installation, Registry
 ==========================================
@@ -1868,6 +1887,8 @@ structures, and the keys are placed in different locations.
 </tr><tr>
 <td>Win NT, 2000, XP</td><td>\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USB</td>
 </tr></table>
+
+<div style="page-break-after: always;"></div>
 
 Appendix 4 Group Delay and Aperture
 ===================================
