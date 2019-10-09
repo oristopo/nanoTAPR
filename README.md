@@ -27,7 +27,7 @@
 
 2.  [Software Installation](#software-installation)  
     1.  [Initial Software installation](#initial-software-installation)   
-    2.  [Supported Operating System Versions](#supported-operating-system-versions)   
+    2.  [Supported Windows Versions](#supported-windows-versions)   
     3.  [Software Distribution](#software-distribution)  
     4.  [Installed TAPR Files](#installed-vna-files)  
     5.  [Installation Pre-Requisites](#installation-pre-requisites)  
@@ -230,6 +230,8 @@ uses SMA rather than BNC connectors for
 CH1 and CH0 ports \-- these connectors cause less
 discontinuity than other types.
  
+<div style="page-break-after: always;"></div>
+
 Proper calibration needs:
 -   a high-quality SHORT with minimal excess inductance,  
 -   a high quality OPEN with minimal excess capacitance, and  
@@ -312,18 +314,16 @@ Additionally, you may need to install the Microsoft Windows© dotNET 1.1 run-tim
 [https://dotnet.microsoft.com/download](https://dotnet.microsoft.com/download)
 
 
-Supported Operating System Versions
------------------------------------
+Supported Windows Versions
+--------------------------
 
 While VNAR4.3 software may run on Windows operating systems as shown,
 nanoVNA support is expected for no older than Windows 7:
 
 <table><tr>
-<th>Operating System</th><th>Support</th><th>Notes</th>
+<th>Windows</th><th>Support</th><th>Notes</th>
 </tr><tr>
-<td>Windows 95</td><td>No</td><td>Lacks USB support</td>
-</tr><tr>
-<td> Windows 98 -- Gold</td><td>Maybe</td><td>Supports only USB 1.0<br>not 1.1</td>
+<td> Windows 98 -- Gold</td><td>Maybe</td><td>Supports only USB 1.0, not 1.1</td>
 </tr><tr>
 <td>Windows 98 SE<br>(Second Edition)</td><td>Yes</td><td>Tested</td>
 </tr><tr>
@@ -354,14 +354,15 @@ The current software distribution consists of:
 Installed TAPR Files
 -------------------
 
-`VNAR4.4.zip` includes only `VNAR4.4.exe`  
-File locations can be changed...  
+`VNAR4.4.zip` includes only `VNAR4.4.exe`;  file locations can change...  
 
 <table>
 <tr><th>File name</th><th>Where found</th><th>Function</th></tr>
 <tr><td>VNAR4.4.exe</td><td>Inside VNAR4.4.zip</td><td>Host program</td></tr>
 <tr><td>Help.chm</td><td><a href="https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR3%20Help.chm">GitHub</a><br>Should be in folder with VNAR4.4.exe</td><td>Compiled help file</td></tr>
 </table>
+
+<div style="page-break-after: always;"></div>
 
 Installation Pre-Requisites
 ---------------------------
@@ -566,6 +567,8 @@ Open Fixture Calibration
 
 ![](./media/image7.png)
 
+<div style="page-break-after: always;"></div>
+
 50-ohm Terminated Fixture Calibration
 -------------------------------------
 
@@ -583,6 +586,8 @@ bullet must be short, low loss and impedance-matched to the cables in
 order to minimize these errors.
 
 ![](./media/image9.png)
+
+<div style="page-break-after: always;"></div>
 
 TAPR Software Menu
 ==================
