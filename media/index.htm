@@ -8,6 +8,9 @@ body {
    margin-right: 60px;
    margin-top: 400px;
 }
+th {
+   text-align:left;
+}
 </style>
 </head>
   <body>
@@ -18,9 +21,9 @@ body {
 <p align=center ><img src="image1.png" alt=""><br>
 <br>
 preliminary for nanoVNA release 0.2.3 and VNAR4.4<br>
-October 7, 2019</p>
+October 10, 2019</p>
 <p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p><p> &nbsp </p>
-<p><a href="https://github.com/erikkaashoek/Tapr-VNA/blob/master/Doc/Background/TAPR3_Instruction_Manual_Issue_7.pdf">Previous version</a> for Ten-Tec VNA</p>
+<p><a href="https://www.tapr.org/~n5eg/index_files/vna_library/">Previous versions</a> for <a href="https://www.eham.net/reviews/detail/5436">Ten-Tec VNA</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -98,7 +101,7 @@ c.  <a href="#time-domain-reflection-mode">Time Domain Reflection Mode</a></li>
       <li><a href="#common-display-results">Common Display Results</a></li>
     </ol>
   </li>
-  <li><a href="#appendix-1-overview-of-s-parameters">Appendix 1 Overview of S Parameters</a>
+  <li><a href="#appendix-1">Appendix 1: S Parameter Basics</a>
     <ol>
       <li><a href="#polar-display">Polar Display</a></li>
       <li><a href="#rectangular-display">Rectangular Display</a></li>
@@ -106,7 +109,7 @@ c.  <a href="#time-domain-reflection-mode">Time Domain Reflection Mode</a></li>
       <li><a href="#swr">SWR</a></li>
     </ol>
   </li>
-  <li><a href="#appendix-2-calibration-details">Appendix 2 Calibration Details</a>
+  <li><a href="#appendix-2">Appendix 2: Calibration Details</a>
     <ol>
       <li><a href="#detector-calibration">Detector Calibration</a></li>
       <li><a href="#s21-compensation">S21 Compensation</a></li>
@@ -115,9 +118,9 @@ c.  <a href="#time-domain-reflection-mode">Time Domain Reflection Mode</a></li>
     </ol>
   </li>
   <li>
-    <p><a href="#appendix-3-software-installation-registry">Appendix 3 Software Installation, Registry</a></p>
+    <p><a href="#appendix-3">Appendix 3: Software Installation, Registry</a></p>
   </li>
-  <li><a href="#appendix-4-group-delay-and-aperture">Appendix 4 Group Delay and Aperture</a>
+  <li><a href="#appendix-4">Appendix 4: Group Delay and Aperture</a>
     <ol>
       <li><a href="#aperture-shortening">Aperture Shortening</a></li>
     </ol>
@@ -139,7 +142,7 @@ This manual applies to nanoVNA firmware release 0.2.3.</p>
   <li>S-parameters</li>
   <li>forward and reflected magnitude, gain and phase</li>
   <li>polar and rectangular plots
-… consider reading <strong>Appendix 1 Overview of S Parameters</strong> before continuing here.</li>
+... consider reading <strong>Appendix 1 Overview of S Parameters</strong> before continuing here.</li>
 </ul>
 
 <p>A VNA performs measurements on one-port or two-port networks.<br>
@@ -362,8 +365,8 @@ verify that zip file was not corrupted during download.</p>
       <li>Recommended: Install the most recent dotNET 1.1 framework via
 the Internet from Microsoft's website. This will be
 approximately 23 MB in size, and is referred to as the
-redistributable file. You need to download the file for “General
-Users”. It will be named <code class="highlighter-rouge">dotnetfx.exe</code>. This will
+redistributable file. You need to download the file for "General
+Users". It will be named <code class="highlighter-rouge">dotnetfx.exe</code>. This will
 assure that you get the most current version with recent service
 patches. The URL at the time this manual was written is:</li>
     </ul>
@@ -411,7 +414,7 @@ nanoVNA support is expected for no older than Windows 7:</p>
 
 <h2 id="installed-tapr-files">Installed TAPR Files</h2>
 
-<p><code class="highlighter-rouge">VNAR4.4.zip</code> includes only <code class="highlighter-rouge">VNAR4.4.exe</code>;  file locations can change…</p>
+<p><code class="highlighter-rouge">VNAR4.4.zip</code> includes only <code class="highlighter-rouge">VNAR4.4.exe</code>;  file locations can change...</p>
 
 <table>
 <tbody><tr><th>File name</th><th>Where found</th><th>Function</th></tr>
@@ -428,7 +431,7 @@ nanoVNA support is expected for no older than Windows 7:</p>
 <a href="https://www.microsoft.com/en-us/download/details.aspx?id=26">Here is link to the Microsoft web site</a> providing a download menu if the
 pre-requisite is missing. Microsoft has many different programs on
 this web page; you need the one that is approximately 23 MB in size,
-and is called the “<em>redistributable</em>” (it is allowed to be
+and is called the "<em>redistributable</em>" (it is allowed to be
 redistributed by applications).</p>
 
 <p>Download and install as needed, the filename is <code class="highlighter-rouge">dotnetfx.exe</code>.
@@ -439,24 +442,23 @@ framework, so you may have it already.</p>
 
 <h2 id="connecting-nanovna-to-your-computer">Connecting nanoVNA to your Computer</h2>
 
-<p>After verifying TAPR program launch, quit it.<br>
+<p>After verifying TAPR program launch, <b><i>quit</i></b> it.<br>
 Connect nanoVNA to your computer using a USB cable and power on.
-This may provoke Windows “New Hardware Detected Wizard”.r
+This may provoke Windows "New Hardware Detected Wizard".r
 The wizard finds nanoVNA device and attempts to associate a device driver.
 When prompted, let the wizard search to find the driver
 (since it may have been installed for STM DFU utility).</p>
 
-<p>After Windows has installed a driver and with nanoVNA connected and powered on,
-relaunch VNAR4.  If launched before nanoVNA connection, VNAR4 may not detect it.</p>
+<p>After Windows has installed a driver and with nanoVNA connected and powered on, relaunch VNAR4.<br>
+If launched before nanoVNA connection, VNAR4 may not detect it.</p>
+
+Once connected to VNAR4, nanoVNA display no longer updates for stimulus or RF connection changes.<br>
+Display changes will reflect data scanned prior to VNAR4 control.
 
 <h2 id="uninstall">Uninstall</h2>
 
-<p>To uninstall this TAPR application,
-use the control panel <code class="highlighter-rouge">add new software</code> selection,
-and use it to uninstall the application. The
-uninstaller does not delete the Registry key.
-You may delete it manually if you wish, but it's not required.<br>
-See Appendix 3 for details.</p>
+<p>To uninstall this TAPR VNA application, simply delete VNAR4 .exe and .zip files.
+See <a href="#appendix-3">Appendix 3</a> for details.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -515,9 +517,9 @@ run:</p>
 to perform the calibration. After each step is completed, and green
 check mark will appear next to that step. Follow the steps in order,
 and connect the SHORT, OPEN, TERMINATION, and THROUGH fixture setup as
-described by each step prior to starting that step. After all the
-steps have been completed and each has a check mark present, click the
-'SAVE' button.</p>
+described by each step prior to starting that step.
+After all the steps have been completed and each has a check mark present,
+click the 'SAVE' button.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -594,7 +596,7 @@ complete the fixture calibration. Typically all the cables,
 connectors, and adaptors are left in place, and only the DUT is
 removed during the Fixture Calibration steps.</p>
 
-<p>Once all four steps are completed, click the “Save Cal Results…”
+<p>Once all four steps are completed, click the "Save Cal Results..."
 button. This will allow you to choose a file name and location. Be
 sure to use a description filename, as you are likely to have many
 different fixture calibration files.</p>
@@ -651,7 +653,7 @@ item is explained in the following sections.</p>
 
 <p>Rectangular Format Polar Format</p>
 
-<p>Save Configuration … Load Configuration … Exit</p>
+<p>Save Configuration ... Load Configuration ... Exit</p>
 
 <p>Rectangular Polar</p>
 
@@ -931,28 +933,11 @@ Traces supported by Rectangular display are:</p>
 <p><code class="highlighter-rouge">S11</code> (as a polar complex number) is always displayed on the Polar display.
 <code class="highlighter-rouge">S21</code> <em>cannot</em> be displayed on the polar display.
 Raw calibration data (from a calibration file that is loaded)
-as well as error parameters derived from calibration data can be displayed.
-Normally, error compensation and raw error data are for informational purposes only
-and are not displayed.</p>
+as well as error parameters derived from calibration data can be displayed.<br>
+Error compensation and raw data are only for informational purposes
+and normally not displayed.</p>
 
-<p>Traces that can be added to Polar mode display are:</p>
-<table>
-<tbody><tr>
-<td>Et -- Tracking Error compensation</td><td>complex plot of amplitude and phase<br>
-                                              for cable from nanoVNA CH0 to the DUT</td>
-</tr><tr>
-<td>Es -- Source Mismatch Error compensation</td><td>complex error plot for imperfect source impedance termination</td>
-</tr><tr>
-<td>Ed -- Directivity Error compensation</td><td>complex error plot due to finite directivity in the bridge</td>
-</tr></tbody></table>
-<table><tbody><tr>
-<td>Raw Calibration Data - S11short</td><td>for shorted CH0 during calibration<br>(or loaded from a calibration file)</td>
-</tr><tr>
-<td>Raw Calibration Data - S11open</td><td>for unterminated CH0 during calibration<br>(or loaded from a calibration file)</td>
-</tr><tr>
-<td>Raw Calibration Data - S11term</td><td>for CH0 terminated by "known" 50-ohm load<br>during calibration (or loaded from a calibration file).</td>
-</tr></tbody></table>
-
+<p>Traces that can be added to Polar mode display are <a href="#fixture-calibration-data-set">here</a></p>
 <div style="page-break-after: always;"></div>
 
 <h3 id="time-domain-reflection-mode">Time Domain Reflection Mode</h3>
@@ -986,7 +971,7 @@ between those two consecutive times.</p>
 <h2 id="device-under-test">Device Under Test</h2>
 
 <p>The reflection and forward measurements are made with respect to the
-Device Under Test (DUT). The reference plane location is established
+Device Under Test (DUT).<br>The reference plane location is established
 when the fixture calibration is run and loaded.</p>
 
 <h2 id="vertical-scale-menu">Vertical Scale Menu</h2>
@@ -996,21 +981,21 @@ scale units per division for magnitude (in dB / division), the maximum
 SWR display (minimum is always 1.0), the group delay (seconds per
 division), and the aperture size of the group delay computation.</p>
 
-<p>For more information see <strong>Appendix 4 Group Delay and Aperture</strong>
-for more details on how group delay is derived and how the data can be
-smoothed (or distorted) by changing the aperture size.</p>
+<p>See <a href="#appendix-4">Appendix 4</a>
+for details on how group delay is derived<br>and how data can be
+smoothed (or distorted) by aperture size changes.</p>
 
-<p>Note that for small frequency spans, the noise of the group delay
-measurements is magnified significantly due to the small difference
-frequency between adjacent samples. For best results, use the largest
-aperture window, and the largest number of gridpoints in order to
-reduce the measurement noise for narrow sweeps. However, large
-apertures may smooth the data beyond the range of interest, so care
-must be used to select an appropriate aperture size.</p>
+<p>Note that small frequency spans significantly magnify group delay
+measurement noise, due to small difference
+frequencies between adjacent samples.
+Larger aperture windows and grid point counts
+reduce measurement noise for narrow sweeps. However, large
+apertures may smooth data beyond the range of interest,
+so carefully select an appropriate aperture size.</p>
 
 <div style="page-break-after: always;"></div>
 
-<p>Magnitude. The display resolutions selectable are:<br>
+<p>Magnitude Display resolutions selections are:<br>
 10 dB / div <code class="highlighter-rouge">5 dB / div</code> 2 dB / div <code class="highlighter-rouge">1 dB / div</code> 0.5 dB / div</p>
 
 <p>SWR Scale selections are:<br>
@@ -1050,7 +1035,7 @@ with a reflection coefficient of 1.0 lying on the chart periphery.
 Increasing zoom keeps the 50 + j0 point the centered 
 and displays impedances near 50 + j0 with more resolution.
 A zoom factor of 2.0 places reflection coefficient values of 0.5 on the chart periphery.
-There are four display zoom settings:
+<br>There are four display zoom settings:<br>
 Zoom = 1.0 / 1.5 / 2.0 / 2.5<br>
 
 <p>TDR Setup allows</p>
@@ -1164,33 +1149,34 @@ negligible except for very long cables.</p>
 <p>The Storage menu allows storing the current measurement set into
 temporary memory. This temporary memory will retain that measurement
 set until the program is terminated, or a new measurement set is
-stored. A new stored measurement set over-writes the existing
-measurements in storage.</p>
+stored.<br>
+Setting a new stored measurement over-writes existing measurements in storage.</p>
 
-<p>There are three options in the Storage menu:<br>
-Store<br>
-Recall<br>
-Display Storage</p>
+<p>Storage menu has three options:<br>
+<dl>
+<dt><b>Store</b>
+<dd> captures the complete raw measurement set<br>
+(whether or not the traces are displayed) and stores it to memory.
 
-<p>'Store' captures the complete raw measurement set<br>
-(whether or not the traces are displayed) and stores it to memory.</p>
-
-<p>'Recall' retrieves the measurement set from memory and over-writes the
+<dt><b>Recall</b>
+<dd> retrieves the measurement set from memory and over-writes the
 current active measurement set.<br>
-It does not delete or alter the raw data in storage.</p>
+It does not delete or alter the raw data in storage.
 
-<p>'Display Storage' is a toggle that is checked when storage contents are displayed.</p>
+<dt><b>Display Storage</b>
+<dd>a toggle that is checked when storage contents are displayed.
+</dl>
 
 <p>A common use of the storage function is to make a measurement, verify
 it's useful, then 'store' the data.<br>
 Next, some change to the device under test is made and a new measurement is made.<br>
 Enabling the Display Storage option allows comparing on-screen the two measurements.</p>
 
-<p>The markers are only attached to the active display set, MARKERS ARE
+<p>Markers are only attached to the active display set. MARKERS ARE
 NOT ATTACHED TO THE STORED DATA. This helps to distinguish which data
-on screen are active and which are storage. If you need to use markers
-on the stored data, that data should be retrieved to the active set
-using the 'recall' menu item.</p>
+on screen are active and which are storage.
+<br>To use markers on stored data,
+retrieve that data to the active set using the <b>Recall</b> menu item.</p>
 
 <h2 id="integration-menu">Integration Menu</h2>
 
@@ -1222,7 +1208,7 @@ address of the TAPR software update website. This will display a
 page showing the current TAPR software available. You can
 compare your build number with the latest build available number shown
 on the web page. Be sure to REFRESH your web browser display.<br>
-If you wish, you may download the update from here (right-click, and Save as …)</p>
+If you wish, you may download the update from here (right-click, and Save as ...)</p>
 
 <p>Exit the TAPR application before installing updates.</p>
 
@@ -1441,7 +1427,7 @@ about <code class="highlighter-rouge">60 dB</code> loss at 50 MHz, degrading a b
 loss of the filter is about 10-15 dB in the filter passband (200 KHZ
 to 40 MHZ) and is <code class="highlighter-rouge">0 dB</code> in the stopband (above 40 MHz).</p>
 
-<p>This type of filter is called a <em>“reflective filter”</em> since it
+<p>This type of filter is called a <em>"reflective filter"</em> since it
 generates a stopband by reflecting the input signal back.</p>
 
 <p>On the next screen, the <code class="highlighter-rouge">S11</code> (RED) trace has been turned off and only
@@ -1614,9 +1600,9 @@ may exhibit much poorer return loss than shown here.
 
 <div style="page-break-after: always;"></div>
 
-<h1 id="appendix-1-overview-of-s-parameters">Appendix 1 Overview of S Parameters</h1>
+<h1 id="appendix-1">Appendix 1: S Parameter Basics</h1>
 
-<p>This overview briefly covers the basics of reflection and transmission
+<p>This overview briefly covers reflection and transmission
 measurements using S-parameters, and visualization of them on
 rectangular and polar displays.</p>
 
@@ -1827,7 +1813,7 @@ circle lying at the outside periphery of the polar chart.</p>
 
 <div style="page-break-after: always;"></div>
 
-<h1 id="appendix-2-calibration-details">Appendix 2 Calibration Details</h1>
+<h1 id="appendix-2">Appendix 2: Calibration Details</h1>
 
 <h2 id="detector-calibration">Detector Calibration</h2>
 
@@ -1894,70 +1880,71 @@ reflection measurements.</p>
 
 <h2 id="fixture-calibration-data-set">Fixture Calibration Data Set</h2>
 
-<p>The following are included in fixture calibration data sets.
-Values can be viewed (by the curious) from the <strong>Trace</strong> menu.
+<p>The following are included in fixture calibration data sets.<br>
+Values can be viewed (by the curious) from the <a href="#polar-display-mode">Trace menu</a>.<br>
 Polar display is only for reflection measurements (S11)
-and related raw and derived calibration constants.
-Rectangular display can show both <code class="highlighter-rouge">S11</code> and <code class="highlighter-rouge">S21</code> measurements and related calibration constants.</p>
+and related raw and derived calibration constants.<br>
+Rectangular display can show both <code class="highlighter-rouge">S11</code> and
+<code class="highlighter-rouge">S21</code> measurements and related calibration constants.</p>
 
-<table>
-<tbody><tr>
-<td> Et -- Tracking Error compensation </td>
-<td> A complex plot of amplitude and phase<br> for cables connecting CH0 to a DUT </td>
+<table style="width:70%">
+<tr><th style="width:30%">Error Compensation</th><th>Complex plot</th></tr>
+<tr>
+<td>Et - Tracking</td>
+<td>amplitude and phase<br>for cable from nanoVNA CH0 to the DUT</td>
 </tr><tr>
-<td> Es -- Source Mismatch Error compensation</td>
-<td> A complex plot of error<br> due to imperfect source impedance termination</td>
+<td>Es - Source Mismatch</td><td>error from imperfect source impedance termination</td>
 </tr><tr>
-<td> Ed -- Directivity Error compensation    </td>
-<td> A complex plot of the error due to finite directivity in the bridge </td>
+<td>Ed - Directivity</td><td>due to finite bridge directivity</td>
+</tr></table>
+<table style="width:70%">
+<tr><th style="width:30%">Raw Calibration Data</th><th>Data source during calibration<br>(or loaded from a calibration file)</th>
 </tr><tr>
-<td> Raw Calibration Data -- S11 'Short' </td><td> Raw data taken from the shorted
-load during calibration<br> (or loaded from a calibration file).                 </td>
+<td>S11short</td><td>shorted CH0 during calibration</td>
 </tr><tr>
-<td> Raw Calibration Data -- S11 'Open'</td><td> Raw data taken from the open
-load during calibration<br> (or loaded from a calibration file) </td>
+<td>S11open</td><td>unterminated CH0</td>
 </tr><tr>
-<td> Raw Calibration Data -- S11  'Terminated' </td>
-<td> Raw data taken from the 50-ohm terminated load <br>(or loaded from a calibration file) </td>
+<td>S11term</td><td>CH0 terminated by "known" 50-ohm load</td>
 </tr>
-</tbody></table>
+</table>
 
 <div style="page-break-after: always;"></div>
 
-<h1 id="appendix-3-software-installation-registry">Appendix 3 Software Installation, Registry</h1>
+<h1 id="appendix-3">Appendix 3: Software Installation, Registry</h1>
 
-<p>When you apply power to nanoVNA and first attach it to the computer
-via its USB cable, its USB device ID may not be found. The New
-Hardware Detected wizard will be invoked and will ask if a disk or
-file is available for the new device. The file it is looking for is
-usbw2k.inf. This is installed in the INF directory by the installer.
-So, you should allow windows to search for the file by itself (the
+<p>
+This TAPR VNA application should work with the same driver as other nanoVNA software.<br>
+When you first apply power to nanoVNA and attach it to a Windows PC
+via its USB cable, its USB device ID may not be found.
+The New Hardware Detected wizard will be invoked and will ask if a disk or
+file is available for the new device.
 <em>recommended</em> option presented). The correct device type is:</p>
 
-<p>STMicroelectronics Virtual COM Port</p>
+<p><a href="https://www.st.com/en/development-tools/stsw-stm32102.html">STMicroelectronics Virtual COM Port Driver</a></p>
+
+
 
 <p>The wizard creates a registry key associating that USB vendor
-and product ID to a device driver.
+and product ID to a device driver.<br>
 When this USB device is subsequently plugged into that USB host port,
 it avoids going through the selection process again.</p>
 
 <p>nanoVNA uses the following USB IDs: Vendor_ID: 0483 Product_ID: 5740</p>
 
-<p>The software installation makes a registry entry in order to associate
+<p>The Wizard makes a registry entry in order to associate
 the device with the driver needed to communicate with it (usbser.sys).
 This registry can be removed (but need not be removed)
 if TAPR software is uninstalled.
 Registry keys are normally left in place, but if for some reason you
-would like to delete after a software uninstall, it can be deleted
-with Regedit.</p>
+want, it can be deleted using Regedit.</p>
 
 <p>Different versions of windows have different Registry directory
 structures, and the keys are placed in different locations.</p>
 
 <ul>
   <li>You can delete the Registry key associated with this particular USB
-device (VID 0483, PID 5740), in which case the next time it is
-plugged in, the new hardware detected wizard will run.</li>
+device (VID 0483, PID 5740),<br>
+in which case the next time it is plugged in, the new hardware detected wizard will run.</li>
 </ul>
 
 <table>
@@ -1971,9 +1958,9 @@ plugged in, the new hardware detected wizard will run.</li>
 
 <div style="page-break-after: always;"></div>
 
-<h1 id="appendix-4-group-delay-and-aperture">Appendix 4 Group Delay and Aperture</h1>
+<h1 id="appendix-4">Appendix 4: Group Delay and Aperture</h1>
 
-<p>Group Delay is an equivalent time delay through a device or network.
+<p>Group Delay is an equivalent time delay through a device or network.<br>
 Mathematically, it is defined at the negative of the rate of change
 (the slope) of phase φ vs. frequency ω:</p>
 
