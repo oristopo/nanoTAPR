@@ -8,8 +8,9 @@ body {
    margin-right: 60px;
    margin-top: 400px;
 }
-th {
+th,td {
    text-align:left;
+   padding-left: 15px;
 }
 </style>
 </head>
@@ -357,7 +358,7 @@ verify that zip file was not corrupted during download.</p>
   </li>
   <li>
     <p>Launch <font color="highlighter-rouge">VNAR4.4.exe</font><br>
-<img src="gsplash.gif" alt=""></p>
+<img src="splash.gif" alt=""></p>
   </li>
   <li>
     <p>If alerted that dotNET 1.1 runtime is not found:</p>
@@ -422,8 +423,8 @@ nanoVNA support is expected for no older than Windows 7:</p>
 
 <h2 id="installation-pre-requisites">Installation Pre-Requisites</h2>
 
-<p>VNAR4 software requires that hosts have a reasonably current <a href="#initial-software-installation">Windows
-.NET 1.1 framework run time package installed</a> (version 1.0 is not sufficient).<br>
+<p>VNAR4 software expects a reasonably current <a href="#initial-software-installation">Windows
+.NET 1.1 framework run time package</a> (version 1.0 is not sufficient).<br>
 
 <h2 id="connecting-nanovna-to-your-computer">Connecting nanoVNA to your Computer</h2>
 
@@ -537,13 +538,13 @@ Fixture Calibration Data set is loaded.</p>
 <h2 id="partial-changes-to-fixture-calibration-data">Partial Changes to Fixture Calibration Data</h2>
 
 <p>It's possible to partially update the Fixture calibration data. For
-example, assume that the cable from the DUT to nanoVNA CH1
-connector is changed. This does not affect the <font color="highlighter-rouge">S11</font> measurement, but
-will change the <font color="highlighter-rouge">S21</font> measurement. In this case, a previously saved
+example, changing the cable from the DUT to nanoVNA CH1
+connector may not appreciably affect <font color="highlighter-rouge">S11</font> measurement, but
+generally changes <font color="highlighter-rouge">S21</font> measurement. In this case, a previously saved
 calibration dataset can be loaded, and just the one measurement
-('Through') run, then the dataset saved with a new name or with the
-existing name as appropriate. The newly saved data set will inherit
-the <font color="highlighter-rouge">S11</font> raw and derived errors from the older dataset, but will use
+('Through') run, then the dataset saved with new name or
+existing name as appropriate. The newly saved data set inherits
+<font color="highlighter-rouge">S11</font> raw and derived errors from the older dataset, but will use
 the new 'through' measurements. In fact, this can be done with any or
 all of the four measurements.</p>
 
@@ -551,20 +552,20 @@ all of the four measurements.</p>
 
 <h2 id="fixture-setup-diagrams">Fixture Setup Diagrams</h2>
 
-<p>The following three diagrams show how the fixture needs to be setup
-during the fixture calibration process, and during the actual
-measurement using the fixture. The following dialog box shows the four
-steps needed for fixture calibration. The diagrams in this section
-show the connection required to perform the individual calibration
+<p>The following three diagrams show how a fixture needs to be setup
+during the fixture calibration process and during actual
+measurements using it. The following dialog box shows four
+steps needed for fixture calibration. Diagrams in this section
+show connections required to perform individual calibration
 steps.</p>
 
 <h2 id="actual-measurement">Actual measurement</h2>
 
-<p>The cables, connectors, and adaptors connecting both the CH0 and
+<p>The cables, connectors, and adaptors connecting both CH0 and
 CH1 connectors to the DUT are part of the test fixture. These
-exact same cables connectors, and adaptors must be left in place
-during the Fixture calibration steps, while the DUT itself is removed
-and replaced with various loads and connector barrels during the
+same cables connectors and adaptors must be left in place
+during Fixture calibration steps, while the DUT itself is removed
+and replaced with various loads and connector barrels during
 Fixture Calibration steps.</p>
 
 <p><img src="image4.png" alt=""></p>
@@ -573,23 +574,21 @@ Fixture Calibration steps.</p>
 
 <h2 id="fixture-calibration-setups">Fixture Calibration Setups</h2>
 
-<p>Only the cables, connectors, and adaptors connecting the CH0 to
+<p>Only the cables, connectors, and adaptors connecting CH0 to
 the calibration loads are part of the text fixture during the first
 three fixture calibration steps. The fourth step also uses the cables,
 connectors, and adaptors in the CH1 connection as well in order to
-complete the fixture calibration. Typically all the cables,
+complete the fixture calibration. Typically all cables,
 connectors, and adaptors are left in place, and only the DUT is
-removed during the Fixture Calibration steps.</p>
+removed during Fixture Calibration steps.</p>
 
 <p>Once all four steps are completed, click the "Save Cal Results..."
-button. This will allow you to choose a file name and location. Be
-sure to use a description filename, as you are likely to have many
-different fixture calibration files.</p>
+button. This allows choosin a file name and location. Use descriptive filenames,
+as many different fixture calibration files are likely.</p>
 
-<p>Filenames are allowed to be long and may contain embedded spaces. The
-software will automatically append a <font color="highlighter-rouge">.cal</font> suffix to your name.
-Filenames are not limited to an 8.3 format, which would not be
-sufficiently descriptive.</p>
+<p>Filenames can be long and may contain embedded spaces. The
+software automatically appends <font color="highlighter-rouge">.cal</font> to names.
+Filenames are not limited to 8.3 format, which is insufficiently descriptive.</p>
 
 <p><img src="image5.png" alt=""></p>
 
@@ -609,13 +608,13 @@ sufficiently descriptive.</p>
 
 <h2 id="through-fixture-calibration">Through Fixture Calibration</h2>
 
-<p>The cables, connectors, and adaptors connecting both the CH0 and
-the CH1 connectors to the DUT are part of the test fixture.
+<p>Cables, connectors, and adaptors connecting both CH0 and
+CH1 connectors to the DUT are part of the test fixture.
 Additionally, the bullet connector is part of the calibration test
-fixture even though it will not be present in the actual measurement.
-This represents a source of uncompensated error. Thus the connector
-bullet must be short, low loss and impedance-matched to the cables in
-order to minimize these errors.</p>
+fixture even though not present in actual measurements.
+This represents a source of uncompensated error. Thus that connector
+bullet must be short, low loss and impedance-matched to cables in
+order to minimize errors.</p>
 
 <p><img src="image9.png" alt=""></p>
 
@@ -828,7 +827,7 @@ can work.</p>
 
 <p>3)  Time Domain Reflection</p>
 
-<p>The Rectangular display can display <font color="highlighter-rouge">S11</font> magnitude and phase, and S21
+<p>The Rectangular display can display <font color="highlighter-rouge">S11</font> magnitude and phase, and <font color="highlighter-rouge">S21</font>
 magnitude, phase, and group delay. It can also show <font color="highlighter-rouge">S21</font> ('Through')
 calibration parameters. Magnitude is plotted as dB vs. frequency,
 phase is plotted as degrees vs. frequency, and group delay is plotted
@@ -880,7 +879,7 @@ description of how the calibration routines work.</p>
 Polar display only displays reflection measurements (S11) and related
 raw and derived calibration constants. The rectangular display can
 show both <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> measurements, and the calibration constants
-related to S21.</p>
+related to <font color="highlighter-rouge">S21</font>.</p>
 
 <h3 id="rectangular-display-mode">Rectangular Display Mode</h3>
 
@@ -932,7 +931,8 @@ Transform of a reflection measurement. Because the TDR mode requires a
 specific custom frequency grid, it ignores the Start and Stop
 settings. When switching to the TDR mode, a new Frequency Grid is
 created. Thus, a new sweep is required. Click the sweep button. A
-<font color="highlighter-rouge">TDR interpretation of existing </font>S11<font color="highlighter-rouge"> sweep data is not meaningful</font> 
+TDR interpretation of existing
+<font color="highlighter-rouge">S11</font> sweep data is not meaningful 
 and should be ignored, instead re-acquire the
 reflection measurement after you have selected the TDR mode. The
 'Apply Calibration' checkbox sets the reference plane for the TDR
@@ -1032,7 +1032,7 @@ which is used to calculate distances from the reference plane
 to marker points (perhaps a cable fault).
 The valid range is 0.4 to 0.99.</li>
   <li>selecting Meters or Feet for distance display<br>
-<img src="gTDR.gif" alt=""></li>
+<img src="TDR.gif" alt=""></li>
 </ul>
 
 <div style="page-break-after: always;"></div>
@@ -1195,77 +1195,73 @@ If you wish, you may download the update from here (right-click, and Save as ...
 <h1 id="controls">Controls</h1>
 
 <p>TAPR window controls change start &amp; stop frequencies, reference &amp; transmit signal levels, and sweep functions.
-<img src="gTAPR.gif" alt=""><br>
+<img src="TAPR.gif" alt=""><br>
  Those controls are not shown on printed outputs.</p>
 
 <h2 id="frequency-controls">Frequency Controls</h2>
 
-<p>The frequency controls set the START and STOP frequencies of a sweep.
-The arrows increment or decrement the frequencies. The control can be
-set to a specific value by double-clicking the control, which will open a
-numeric entry dialog box allowing the desired frequency to be typed
-directly.</p>
+<p>Frequency controls set sweep START and STOP frequencies.
+Arrows increment or decrement frequencies. Controls can be
+set to specific values by double-clicking, which opens
+numeric entry dialog boxes for directly typing in desired frequencies.</p>
 
-<p>Both START and STOP controls display an underscore character
-underneath one of the digits. This digit is the one that will be
-incremented or decremented by the up or down arrows. The left and
-right arrow allow changing which digit position is selected. The
-controls will not increment above 120,000,000 Hz, nor below 200,000
+<p>START and STOP controls display underscore characters
+beneath a digit. This digit will be
+incremented or decremented by up or down arrows. Left and
+right arrows change selected digit position.
+Controls will increment neither above 120,000,000 Hz, nor below 200,000
 Hz.</p>
 
-<p>The STOP frequency must be greater than the START frequency by the
-size of the frequency grid. If the grid size is 400 points, for
-example, STOP must be at least 400 Hertz greater than START.</p>
+<p>A STOP frequency must be greater than START frequency by the
+frequency grid size. For exampe, if grid size is 400 points,
+then STOP must be at least 400 Hertz greater than START.</p>
 
 <h2 id="level-controls">Level Controls</h2>
 
-<p>The Reference Level control adjusts how the magnitude data are
-displayed on the display screen. The value in the control specifies
-the magnitude level of the top line of the display screen. When it is
-set to 0 dB, the top line of the display is 0 dB. Changing the
-Reference Level allows you to optimize the trace location.</p>
+<p>Reference Level adjusts how magnitude data are
+displayed on screen. The control value specifies
+the magnitude level at the top line of the display screen. When
+set to 0 dB, the display top line is 0 dB. Changing
+Reference Level optimizes trace locations.</p>
 
-<p>For example, if the DUT has an attenuation of approximately <font color="highlighter-rouge">22 dB</font>,
-then it could not be displayed at a scale of 1 dB / division, because
-it would be off the bottom of the screen. Setting the Reference Level
-control to <font color="highlighter-rouge">-20 dB</font> would allow the screen to show the range of <font color="highlighter-rouge">-20 db</font>
+<p>For example, if a DUT attenuates approximately <font color="highlighter-rouge">22 dB</font>,
+that will not display at a scale of 1 dB / division,
+because off the screen bottom. Reference Level set
+to <font color="highlighter-rouge">-20 dB</font> displays a range from <font color="highlighter-rouge">-20 db</font>
 to <font color="highlighter-rouge">-30 db</font> at 1 db/division, making the trace visible.</p>
 
-<p>The Reference Level control can also be set to positive values. This
-is useful when measuring DUTs (such as amplifiers) with output
+<p>Reference Level set to positive values is useful when measuring DUTs (such as amplifiers) with output
 magnitudes near or above <font color="highlighter-rouge">0 dB</font>.<br>
 Note that VNA dynamic range extends only a few dB above <font color="highlighter-rouge">0 dB</font>.<br>
-<em>External attenuators should be used with DUT's having any amount of gain.</em></p>
+<em>External attenuators should be used with DUTs having any amount of gain.</em></p>
 
-<p>The on-screen amplitude display values on the left-side of the display
-screen automatically adjust when you change the value of the reference
-level. It is sometimes useful to set the reference level to a small
-positive number when measuring a low-loss DUT to make sure the markers
-and marker numbers display properly.</p>
+<p>On-screen amplitude values displayed left-side
+automatically adjust when reference
+levels change. Small positive reference levels help make visible
+markers and marker numbers when measuring low-loss DUTs.</p>
 
 <div style="page-break-after: always;"></div>
 
-<p>The Transmit Level control should normally be left at 0 dBm.
-Decreasing the value of the control will usually degrade the dynamic
-range and accuracy of both the <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> measurements.
-However, reduce drive level to DUT's with gain can be useful. The
-control has about 50 dB of adjustment range, but nanoVNA dynamic range
+<p>Transmit Level should normally be left at 0 dBm.
+Lower values usually degrade dynamic
+range and accuracy of both <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> measurements.
+However, reduced drive level to DUTs with gain may be useful.
+The control has about 50 dB of adjustment range, but nanoVNA dynamic range
 consumes 40 dB of that range. Thus, <font color="highlighter-rouge">S21</font> magnitude measurements
-effectively support less than <font color="highlighter-rouge">10 dB</font> of level change. A much
-better approach is to attenuate Transmit signals to DUTs with
-attenuators. Additionally,
-reducing Transmit level seriously degrads <font color="highlighter-rouge">S11</font> measurements.</p>
+effectively support less than <font color="highlighter-rouge">10 dB</font> of level change.
+Attenuating CH0 stimulation to DUTs using attenuators is better.
+</p>
 
 <p>Magnitude values displayed automatically track changes in
 Transmit Level. By the way, one valid use for the Transmit Level
 control is to adjust output level when using the VNA as a
-signal generator and measured values are of no concern. In this
-case, the control can change transmit output
+signal generator and measured values are of no concern.
+In this case, the control can change transmit output
 signal level over a 10 dB range.</p>
 
 <h2 id="apply-calibration">Apply Calibration</h2>
 
-<p>The apply calibration check box is grayed-out unless a fixture
+<p>The apply calibration check box is <font color="gray">grayed-out</font> unless a fixture
 calibration data set has been loaded (see calibration menu). Checking
 the Apply Calibration box will compensate all readings by the
 corrections contained in the loaded fixture calibration set.
@@ -1286,15 +1282,9 @@ calibration applied.</p>
 acquires data. These three buttons are:</p>
 
 <ul>
-  <li>
-    <p>Sweep Speed</p>
-  </li>
-  <li>
-    <p>Single Sweep</p>
-  </li>
-  <li>
-    <p>Free-run Sweep</p>
-  </li>
+  <li> Sweep Speed
+  <li> Single Sweep
+  <li> Free-run Sweep
 </ul>
 
 <p>The Sweep Speed button determines the sweep dwell time for each
@@ -1326,7 +1316,7 @@ measured data after that single sweep.</p>
 <p>The Free-run sweep button causes the VNA to trigger continuously
 (recurrently), so that the sweep updates as rapidly as possible.
 Pressing the Free-run sweep button a second time stops the recurrent
-sweeping. The frequency grid button is grayed-out when the VNA is
+sweeping. The frequency grid button is <font color="highlighter-rouge">grayed-out</font> when the VNA is
 sweeping, since the number of points cannot be changed during a sweep.</p>
 
 <p>One very useful setup is to use a small frequency grid, for example
@@ -1399,7 +1389,7 @@ single data set.</p>
 <p><img src="image10.jpeg" alt=""></p>
 
 <p>This screen shows GREEN - the <font color="highlighter-rouge">S21</font> transfer magnitude (forward
-gain/loss). The screen in set for 10 dB / division. RED is the S11
+gain/loss). The screen in set for 10 dB / division. RED is the <font color="red">S11</font>
 return loss of the filter, again at 10 dB / division. The filter has
 about <font color="highlighter-rouge">60 dB</font> loss at 50 MHz, degrading a bit at 100 MHz. The return
 loss of the filter is about 10-15 dB in the filter passband (200 KHZ
@@ -1571,10 +1561,10 @@ Polar scale is zoomed 2.5:1 to show more details.</em></p>
 may exhibit much poorer return loss than shown here.
 
 <p><img src="image19.png" alt="">
-<em>Rectangular display of S11 for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
+<em>Rectangular display of <font color="highlighter-rouge">S11</font> for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
 
 <p><img src="image20.png" alt="">
-<em>Rectangular display of S11 for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
+<em>Rectangular display of <font color="highlighter-rouge">S11</font> for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
 
@@ -1594,38 +1584,38 @@ these 4 values describe the behavior of the two port device. To
 characterize a device, the S-parameters are usually measured at a
 number of different frequencies.</p>
 
-<p>In the diagram below, <font color="highlighter-rouge">a1</font> in the voltage input to port one, and <font color="highlighter-rouge">a2</font> is
-the voltage input to port two; <font color="highlighter-rouge">b1</font> is the voltage out of port one,
-while <font color="highlighter-rouge">b2</font> is the voltage out of port two. S-parameters are defined
+<p>In the diagram below, <b>a1</b> in the voltage input to port one, and <b>a2</b> is
+the voltage input to port two; <b>b1</b> is the voltage out of port one,
+while <b>b2</b> is the voltage out of port two. S-parameters are defined
 as voltage ratios. <font color="highlighter-rouge">S11</font> (input return) is the ratio
-b1/a1. <font color="highlighter-rouge">S21</font> (the transfer gain) is the ratio of <font color="highlighter-rouge">b2/a1</font>. The voltage
-exiting port one of the block is the sum of the input return loss time
+<b>b1/a1</b>. <font color="highlighter-rouge">S21</font> (transfer gain) is the ratio of <b>b2/a1</b>. The voltage
+exiting port one of the block is the sum of the input return loss times
 the input voltage plus the reverse gain times the voltage injected
-into port two of the block. The S-parameters are defined in the
-following two equations:</p>
+into port two of the block.
+S-parameters are defined in the following two equations:</p>
 
-<h4 id="b1--a1--s11--a2--s12">b1 = a1 * S11 + a2 * S12</h4>
-<h4 id="b2--a1--s21--a2--s22">b2 = a1 * S21 + a2 * S22</h4>
+<h4>b1 = a1 * S11 + a2 * S12</h4>
+<h4>b2 = a1 * S21 + a2 * S22</h4>
 
-<p><img src="gSparam.gif" alt=""></p>
+<p><img src="Sparam.gif" alt=""></p>
 
 <p>A VNA is really a transmission-reflection test set.
-It applies stimulus <font color="highlighter-rouge">a1</font> to port one of the device while
-measuring <font color="highlighter-rouge">b1</font> and <font color="highlighter-rouge">b2</font>, then calculates <font color="highlighter-rouge">S11</font>
-(because <font color="highlighter-rouge">a2</font> is zero).</p>
+It applies stimulus <b>a1</b> to port one of the device while
+measuring <b>b1</b> and <b>b2</b>, then calculates <font color="highlighter-rouge">S11</font>
+(because <b>a2</b> is zero).</p>
 
 <ul>
-  <li>port 2 of the block receives no stimulus (<font color="highlighter-rouge">a2</font> = 0).
+  <li>port 2 of the block receives no stimulus (<b>a2</b> = 0).
 To derive values for <font color="highlighter-rouge">S12</font> and <font color="highlighter-rouge">S22</font>,
 swap ports in the test fixture
-so that VNA stimulus becomes <font color="highlighter-rouge">a2</font>.</li>
+so that VNA stimulus becomes <b>a2</b>.</li>
 </ul>
 
 <p><font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> are generally both complex numbers - in other words,
 devices reflect energy back to the input for any spot frequency
 with reflection magnitude and phase both generally non-zero.
 Similarly, two-port devices typically change both amplitude
-and phase of <font color="highlighter-rouge">b2</font> from <font color="highlighter-rouge">a1</font>.
+and phase of <b>b2</b> from <b>a1</b>.
 The VNA measures and displays input reflection loss
 and forward transmission gain as complex numbers.</p>
 
@@ -1633,112 +1623,95 @@ and forward transmission gain as complex numbers.</p>
 
 <h2 id="polar-display">Polar Display</h2>
 
-<p>Since reflection ratio <font color="highlighter-rouge">S11</font> is always less than or equal to unity
-for passive networks, the value can be displayed in magnitude/phase
-format on a polar chart. In general, we expect the forward gain to be
-composed of both gain and loss values, so it may exceed unity. This
-makes displaying it on a polar chart difficult, since the outside
-circle of the polar chart constitutes a magnitude value of unity. Note
-that the polar chart does not have any concept of frequency. All
-different spot frequencies are displayed on the polar chart. The
-software connects the dots in order to show a line. But it's not
-always easy to determine what position on the line is at which
-frequency. The polar chart makes it easy to see what the real and
-reactive components of the input impedance are at any point. Thus, the
-polar chart makes the visualization of the important characteristics
-of <font color="highlighter-rouge">S11</font> very easy.</p>
+<p>
+Polar chart help visualize input impedance real and reactive components.
+Since reflection ratios <font color="highlighter-rouge">S11</font> are always <= 1.0
+for passive networks, those values can be displayed in imaginary vs real format on a polar charts.
+On the other hand, two port network forward gains typically include both loss and gain values,
+exceeding unity. That confounds polar charts, where
+polar chart circumference typically represents unity magnitude.
+Note that polar charts have no concept of frequency;
+<font color="highlighter-rouge">S11</font> samples for any spot frequency may display anywhere on polar charts.
+VNAR4 software connects sample dots in lines;
+subsequently extracting frequency information along those lines wants <a href="#"marker-menu">markers</a>.
+</p>
 
-<p>The polar value of <font color="highlighter-rouge">S11</font> is plotted directly on the polar chart, with
-the <font color="highlighter-rouge">S11</font> vector beginning at the center of the chart, the length of the
-vector being the magnitude of the return loss, and the direction of
-the vector being the phase angle of S11.</p>
-
-<p>The left side of the chart corresponds to a direction of +180 or -180
-degrees, and is the low-impedance area of the chart. The right side of
-the chart corresponds to a direction of 0 degrees, and is the
-high-impedance area of the chart.</p>
+<p><font color="highlighter-rouge">S11</font> polar values are directly plotted,
+with <font color="highlighter-rouge">S11</font> vectors originating at chart center,
+vector lengths being return loss magnitudes, and
+vector directions being <font color="highlighter-rouge">S11</font> phase angles.
+The chart left side corresponds to +/-180 degrees and lower impedances,
+while the right side corresponds to 0 degrees and higher impedances.</p>
 
 <h2 id="rectangular-display">Rectangular Display</h2>
 
-<p>It is also possible to display the <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> values on a rectangular
-display. In this case, the magnitude of the return loss is displayed
-vs. frequency. This makes it easy to read how large the return loss is
-at any given frequency, but it's difficult to understand how reactive
-or resistive the input impedance really is. In contrast, we don't
-usually care too much about the transfer impedance of a network, but
-we do care about its gain vs. frequency, and its phase delay vs.
-frequency. The rectangular chart makes the visualization of the
-important characteristics of <font color="highlighter-rouge">S21</font> very easy.</p>
+<p>Rectangular display works for both <font color="highlighter-rouge">S11</font> and
+<font color="highlighter-rouge">S21</font> values.
+In this case, return loss amplitudes are displayed vs. frequency.
+While reading return loss at any frequency is simpler,
+sorting complex impedance may be harder. In contrast,
+two-port networks' transfer impedances are typicallly of less
+interest than their gains and phase delays vs. frequency.<br>
+Rectangular chart help visualize those
+<font color="highlighter-rouge">S21</font> parameters.</p>
 
-<p>The magnitude of the return loss of the transfer gain/loss of the
-network is expressed in dB on the right side of the rectangular chart.
-The phase of the return loss or the phase of the transfer gain is
-plotted as degrees vs. frequency. The top line of the rectangular
-chart is +180 degrees, while the bottom line is - 180 degrees. The
-rectangular chart 'wraps around' from the bottom to the top because a
-phase angle of -180 degrees is the exactly the same as a phase angle
-of +180 degrees. Thus the top line and the bottom line of the
-rectangular chart represent precisely the same phase value.</p>
+<p>Network transfer gain/loss amplitude is labelled in dB on rectangular charts' right side.
+Return loss or transfer gain phase is plotted in degrees vs. Hertz.
+Rectangular chart top and bottom are +180 and -180 degrees, respectively,
+'wrapping around' from bottom to top because +/-180 degrees are identical.
+Rectangular chart top and bottom <b><i>both</i></b> represent 180 degrees.</p>
 
-<p>This causes a confusing display when the phase value is 180 degrees,
-but varies a few tenths of a degree above and below the value 180.0.
-It would normally be a straight line, but the rectangular display will
-show it as a trace that varies wildly up and down the screen, first
-close to the top line, then alternatively at the bottom line, and then
-back again at the top line.</p>
+<p>
+Phase values varying slightly above and below 180.0 degrees
+provoke confusing rectangular displays, since
+what might nominally be nearly straight traces can
+instead varying wildly up and down,
+alternately near top and bottom lines.</p>
 
 <div style="page-break-after: always;"></div>
 
 <h2 id="group-delay">Group Delay</h2>
 
-<p>Sometimes it's desirable to know the time delay properties of a
-network. The group delay of a network is the negative of rate of
-change of phase with respect to frequency. Group delay is sometimes
-useful in determining the electrical length of a network such as a
-cable or stub. The electrical length of a cable usually differs from
-the physical length due to the velocity factor of the cable.</p>
+<p>Network time delay properties can be of interest.
+Network group delay is the negative of rate of change of phase vs frequency.
+Group delay helps determine network electrical length, e.g. for cables or stubs.
+Electrical length differs from physical length by velocity factor.</p>
 
-<p>Thus, the group delay computation, along with a physical measurement
-of the cable length allows computing the velocity factor of a cable.</p>
+<p>Group delay calculation, along with spatial length measurement,
+allows computing cable velocity factor.
+Cable phase velocity is the time delay for light traveling a cable length
+divided by cable's electrical time delay.
+Light travels 11.8 inches per nanosecond (very close to 1 nanosecond per foot).
+Ten feet of free space delays light 120/11.8 = 10.17 nanoseconds.
+For 10 feet of cable with measured electical delay of 15 nanoseconds,
+its velocity factor would be:</p>
 
-<p>The phase velocity of a cable is simply the time delay of the speed of
-light traveling the length of the cable divided by the actual time
-delay of the cable. Suppose a 10 foot piece of cable has a measured
-delay of 15 nanoseconds. The speed of light is 11.8 inches per
-nanosecond (very close to 1 nanosecond per foot).
-Ten feet of free space would have a light speed delay of
-120/11.8 = 10.17 nanoseconds. Thus the velocity factor of this cable
-would be:</p>
-
-<p><font color="highlighter-rouge">10.17 nanoseconds (free space delay)</font> 15 nanoseconds (measured delay)</p>
-
-<p>or a value of 0.68.</p>
+<p><font color="highlighter-rouge">10.17 nsec</font> (free space delay) /
+<font color="highlighter-rouge">15 nsec</font> (measured delay) =  0.68 velocity factor.
 
 <div style="page-break-after: always;"></div>
 
 <h2 id="swr">SWR</h2>
 
-<p>The SWR of a network at any specific frequency is a description of how
-well the network input looks like a 50 ohm non-reactive load when the
-output of that network is terminated in 50 ohms. An SWR of 1.0 means
-that the network has exactly a 50-ohm input impedance. SWR is directly
-related to the <em>magnitude</em> of input return, ignoring
-input reflection phase, so it is a real number.
+<p>Network SWR at any specific frequency describes of how
+nearly that network input matches a 50 ohm non-reactive load when
+that network's output is terminated in 50 ohms. An SWR of 1.0 means
+that the network has exactly 50-ohm input impedance. SWR is a real number directly
+related to input return <em>magnitude</em>, ignoring input reflection phase.
 <font color="highlighter-rouge">S11</font> is a complex number representing both magnitude and
-phase angle of input return loss.</p>
+phase angle of input return.</p>
 
-<p>An SWR of 2.0 means that the input impedance is either 25 ohms
-resistive, 100 ohms resistive, or some complex value ranging between
-those two impedances, and containing non-zero reactance. The value of
-SWR does not tell us which of these cases the network looks like,
-whereas <font color="highlighter-rouge">S11</font> does.</p>
+<p>An SWR of 2.0 means that an input impedance is either 25 ohms resistive, 100 ohms resistive,
+or some complex value with either of those magnitudes containing non-zero reactance.
+SWR cannot distinguish among those networks cases for non-unity values,
+while <font color="highlighter-rouge">S11</font> can.</p>
 
-<p>On the polar chart, each constant value of SWR describes any impedance
-lying on a circle centered on the center of the polar chart. The
-center of the polar chart is 50+j0 ohms, an SWR of 1.0 (the circle is
-a point). Higher values of SWR produce circles of increasing radius
-centered on the chart center point. An SWR value of infinite is a
-circle lying at the outside periphery of the polar chart.</p>
+<p>Each constant SWR value describes any impedance
+lying on a circle centered in polar charts.
+The polar chart center is 50+j0 ohms, with SWR of 1.0 (its circle is a point).
+All other SWR values are pointless.
+Higher SWR values correspond to circles of increasing radius centered on the chart,
+with the circle at polar chart periphery representing infinite SWR.</p>
 
 <p>This table relates SWR to input return loss magnitude:</p>
 
@@ -1795,43 +1768,43 @@ circle lying at the outside periphery of the polar chart.</p>
 
 <h2 id="detector-calibration">Detector Calibration</h2>
 
-<p>The detector calibration routine applies a range of signals from
+<p>Detector calibration applies a range of signals from
 approximately 0 dBm down to -90 dBm to each magnitude detector
-(transmission and reflection). It does this repeatedly over the range
-200 KHz to 120 MHz. The calibration software models each detector
+(transmission and reflection) repeatedly over the range
+200 KHz to 120 MHz. Calibration software models each detector
 response function (voltage vs. level) at each frequency. The model
-consists of a linear portion and noise floor portion. The software
+consists of linear and noise floor portions. Software
 models the linear portion by generating a linear least-squares
-regression estimator for amplitude measurements, and a correlation
-coefficient. Then it generates an empirical exponential estimator for
-the noise floor that allows a smooth curve to be fit to the complete
-linear + noise floor response.</p>
+regression estimator for amplitude measurements and a correlation
+coefficient. It then generates an empirical exponential noise floor estimator
+that fits a smooth curve for a complete linear + noise floor response.</p>
 
 <p>The detector calibration routine similarly characterizes both phase
-detectors. The phase calibration process is a bit more complex than
-the amplitude calibration process. It uses a fixed length of cable and
-a varying frequency to develop a linear frequency-dependent phase
-excitation to the detectors. Then it finds the proper voltage levels
-that are output by the phase detectors corresponding to - 180, 0, and
+detectors. Phase calibration is a bit more complex than
+amplitude calibration. It uses a fixed length of cable and
+varies frequency to develop linear frequency-dependent phase
+excitation to the detectors.
+It then finds phase detector voltage levels corresponding to - 180, 0, and
 +180 degrees (the positive peak, midpoint, and negative peak voltages
-respectively). The phase detectors have a periodic error component,
+respectively). Phase detectors have periodic error components,
 and the detector calibration routine uses a linear delay model to
 build a table to correct those periodic errors.</p>
 
-<p>All the various data sets are then saved in the file
+<p>All those data sets are then saved in
 <font color="highlighter-rouge">detector.ica</font> in the TAPR program startup directory.</p>
 
 <h2 id="s21-compensation">S21 Compensation</h2>
 
-<p>The Fixture calibration routine measures the received signal through a
-small bullet or barrel connector. It measures the received magnitude
-and phase at 1024 points across the range 200 KHz to 120 MHZ and
-stores all the data in a table in the Fixture calibration file (which
-you name during the Fixture calibration save operation). The
-calibration compensation routine divides the <font color="highlighter-rouge">S21</font> actual measurement by
-the nearest 'Through' calibration constant (which is a complex number)
-at each different measurement frequency when the 'Apply Calibration'
-box is enabled.</p>
+<p>Fixture calibration measures received signals through a
+small bullet or barrel connector. It measures received magnitude
+and phase at 1024 points from 200 KHz to 120 MHZ and
+stores those data in a table in the Fixture calibration file (which
+is named during the Fixture calibration save operation).
+When the 'Apply Calibration' box is enabled,
+the calibration compensation routine divides actual <font color="highlighter-rouge">S21</font> measurements
+by the nearest 'Through' calibration constant (which is a complex number)
+at each measurement frequency.
+</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -1840,7 +1813,7 @@ box is enabled.</p>
 <p>The calibration compensation for <font color="highlighter-rouge">S11</font> derives three parameters of a
 virtual S- parameter error matrix computationally inserted between the
 VNA CH0 connector and the DUT. With three measurements and three
-unknowns, the values of the virtual S-parameter error matrix can be resolved.
+unknowns, values of virtual S-parameter error matrix can be resolved.
 These three parameters are:</p>
 
 <p>Et - the tracking error. This is (S21error * S12error) product of
@@ -1858,7 +1831,7 @@ reflection measurements.</p>
 
 <h2 id="fixture-calibration-data-set">Fixture Calibration Data Set</h2>
 
-<p>The following are included in fixture calibration data sets.<br>
+<p>Fixture calibration data sets include the following.<br>
 Values can be viewed (by the curious) from the <a href="#polar-display-mode">Trace menu</a>.<br>
 Polar display is only for reflection measurements (S11)
 and related raw and derived calibration constants.<br>
@@ -1981,30 +1954,25 @@ should be used with appropriate caution.</p>
 
 <h2 id="aperture-shortening">Aperture Shortening</h2>
 
-<p>In TAPR software, the aperture window concept runs into another
-difficulty and that is calculating aperture windows for samples
-near start and stop frequencies. In the case of
-the start frequency, there are no samples below the current
-measurement frequency f<sub>n</sub> thus TAPR does not have a value of phase
-taken at a frequency less than f<sub>n</sub>. In the case of an aperture window
-of 64, the software <em>shortens</em> the effective aperture window by using
-f<sub>n</sub> and f<sub>n+32</sub> (rather than f<sub>n-32</sub> and f<sub>n+32</sub>). Thus the effective
-aperture is 32 (not 64). The same shortening happens at the stop
-frequency because there are no samples taken at a frequency greater
-than f<sub>n</sub>.</p>
+<p>TAPR software's aperture window concept has
+difficulty for samples near limit (start and stop) frequencies.
+Lacking samples below a first measurement at start frequency f<sub>n</sub>,
+TAPR lacks phase value samples for frequencies < f<sub>n</sub>.
+For aperture windows of 64, software <em>shortens</em> effective aperture windows
+by using f<sub>n</sub> to f<sub>n+32</sub> (rather than f<sub>n-32</sub> to f<sub>n+32</sub>).
+Effective apertures are thus 32 (not 64) and skewed.
+The same shortening and skew happens at stop frequencies (no samples for > f<sub>n</sub>).</p>
 
-<p>The software similarly shortens aperture windows for frequency
-samples between the start frequency and the mid point of the aperture,
-but by a lesser amount for each higher frequency sample. Once the
-32<sup>nd</sup> frequency sample above the start frequency is reached, all
-points necessary for a 64-point aperture are present, and the aperture
-window is no longer shortened. Similarly, the aperture window remains
-at 64 through the 32<sup>nd</sup> frequency below the stop frequency is
-reached, when the window must then be shortened.</p>
+<p>Software similarly shortens aperture windows for
+samples nearer than half aperture windows to limit frequencies,
+by a lesser amount for each sample farther from limits. Once the
+32<sup>nd</sup> frequency sample distant from a limit frequency is reached,
+all samples necessary for 64-point apertures are present,
+and aperture windows are no longer shortened.</p>
 
-<p>For aperture sizes of 4 and 16, worst case shortening is to an
-effective aperture size of 2 and 8 samples, respectively, near
-start and stop frequencies.</p>
+<p>For aperture sizes of 4 and 16, worst case shortening is to
+effective aperture sizes of 2 and 8 samples, respectively,
+near limit frequencies.</p>
       
 </font>
 </body></html>
