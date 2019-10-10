@@ -40,13 +40,13 @@ October 10, 2019</p>
       <li><a href="#instrument-limitations">Instrument Limitations</a></li>
       <li><a href="#relative-measurements">Relative Measurements</a></li>
       <li><a href="#calibration-standards">Calibration Standards</a></li>
-      <li><a href="#hibernation-or-suspension-of-host-computer">Hibernation or Suspension of Host Computer</a></li>
       <li><a href="#calibration-modes-are-single-threaded">Calibration Modes are Single-threaded</a></li>
     </ol>
   </li>
   <li><a href="#software-installation">Software Installation</a>
     <ol>
       <li><a href="#initial-software-installation">Initial Software installation</a></li>
+      <li><a href="#hibernation-or-suspension-of-host-computer">PC Hibernation / Suspension</a></li>
       <li><a href="#supported-windows-versions">Supported Windows Versions</a></li>
       <li><a href="#software-distribution">Software Distribution</a></li>
       <li><a href="#installed-tapr-files">Installed TAPR Files</a></li>
@@ -75,9 +75,6 @@ a.  <a href="#exporting-s-parameters">Exporting S-Parameters</a></li>
       <li><a href="#view-menu">View Menu</a></li>
       <li><a href="#calibration-menu">Calibration Menu</a></li>
       <li><a href="#trace-menu">Trace Menu</a><br>
-a.  <a href="#rectangular-display-mode">Rectangular Display Mode</a><br>
-b.  <a href="#polar-display-mode">Polar Display Mode</a><br>
-c.  <a href="#time-domain-reflection-mode">Time Domain Reflection Mode</a></li>
       <li><a href="#device-under-test">Device Under Test</a></li>
       <li><a href="#vertical-scale-menu">Vertical Scale Menu</a></li>
       <li><a href="#marker-menu">Marker Menu</a></li>
@@ -324,12 +321,6 @@ for this purpose.</p>
   </li>
 </ul>
 
-<h2 id="hibernation-or-suspension-of-host-computer">Hibernation or Suspension of Host Computer</h2>
-
-<p>If the host computer (typically a laptop) hibernates or suspends,
-you will have to remove power from nanoVNA and exit TAPR software.
-Then reconnect power to nanoVNA and restart the TAPR application.</p>
-
 <h2 id="calibration-modes-are-single-threaded">Calibration Modes are Single-threaded</h2>
 
 <p>This TAPR software is multi-threaded, meaning that other Windows
@@ -346,31 +337,35 @@ take awhile to update after the TAPR program regains focus.</p>
 
 <h2 id="initial-software-installation">Initial Software installation</h2>
 
-<p>TAPR software is installed from <a href="https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR4.4.zip">the Internet</a>.
-Additionally, you may need to install the Microsoft Windows© dotNET 1.1 run-time</p>
-Many applications and Microsoft service packs install the framework, so you may have it already.</p>
+<p>Install TAPR software <a href="https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR4.4.zip">GitHub</a>.
+TAPR requires Microsoft Windows© dotNET 1.1 run-time,
+but other applications and Microsoft service packs
+may have it already installed it.</p>
 
 <ul>
   <li>
-    <p>Double-click on the downloaded <font color="highlighter-rouge">VNAR4.4.zip</font>, which should
-open to reveal <font color="highlighter-rouge">VNAR4.4.exe</font>.<br> If it does not,
-verify that zip file was not corrupted during download.</p>
+    <p>Double-click on the downloaded <font color="highlighter-rouge">VNAR4.4.zip</font>,<br>
+ which should open to reveal <font color="highlighter-rouge">VNAR4.4.exe</font>.<br>
+If that fails, the zip file was probably corrupted during download.</p>
   </li>
   <li>
     <p>Launch <font color="highlighter-rouge">VNAR4.4.exe</font><br>
 <img src="splash.gif" alt=""></p>
   </li>
-  <li>
-    <p>If alerted that dotNET 1.1 runtime is not found:</p>
-
+  <li>If alerted that dotNET 1.1 runtime is not found:
     <ul>
-      <li>from Microsoft's website, install their dotNET 1.1 framework.<br>
-          Approximately 23 MB in size, it is referred to as the <b>Redistributable Package</b>.<br>
-	   That URL at the time of this manual revision is:</li>
-<p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=26">https://www.microsoft.com/en-us/download/details.aspx?id=26</a></p>
+      <li>Install Microsoft's dotNET 1.1 framework from their website.<br>
+          It is referred to as a <b>Redistributable Package</b>.<br>
+	   Its URL at the time of this manual revision is:<br>
+<a href="https://www.microsoft.com/en-us/download/details.aspx?id=26">https://www.microsoft.com/en-us/download/details.aspx?id=26</a>
     </ul>
   </li>
 </ul>
+
+<h3 id="hibernation-or-suspension-of-host-computer">Hibernation or Suspension of Host Computer</h3>
+
+<p>If the host computer (typically a laptop) hibernates or suspends,
+exit TAPR, then restart.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -401,6 +396,8 @@ nanoVNA support is expected for no older than Windows 7:</p>
 <td>Windows 10</td><td>nanoVNA</td><td>Tested</td>
 </tr></tbody></table>
 
+<div style="page-break-after: always;"></div>
+
 <h2 id="software-distribution">Software Distribution</h2>
 
 <p>The current software distribution consists of:</p>
@@ -418,8 +415,6 @@ nanoVNA support is expected for no older than Windows 7:</p>
 <tr><td>VNAR4.4.exe</td><td>Inside VNAR4.4.zip</td><td>Host program</td></tr>
 <tr><td>Help.chm</td><td><a href="https://github.com/erikkaashoek/Tapr-VNA/raw/master/VNAR3%20Help.chm">GitHub</a><br>Should be in folder with VNAR4.4.exe</td><td>Compiled help file</td></tr>
 </tbody></table>
-
-<div style="page-break-after: always;"></div>
 
 <h2 id="installation-pre-requisites">Installation Pre-Requisites</h2>
 
@@ -583,7 +578,7 @@ connectors, and adaptors are left in place, and only the DUT is
 removed during Fixture Calibration steps.</p>
 
 <p>Once all four steps are completed, click the "Save Cal Results..."
-button. This allows choosin a file name and location. Use descriptive filenames,
+button to choose a file name and location. Use descriptive filenames,
 as many different fixture calibration files are likely.</p>
 
 <p>Filenames can be long and may contain embedded spaces. The
@@ -730,52 +725,48 @@ Delay Aperture = 4 Group Delay Aperture = 16
 
 <h2 id="file-menu">File Menu</h2>
 
-<p>The File menu allows printing the measurements in graphical format,
-and storing the S-parameters in a text file.</p>
+<p>Use File to print measurements in graphical format
+and store S-parameters in text files.</p>
 
-<p>Print - prints the selected view (rectangular or polar) to the
-printer.</p>
+<p>Print - selected view (rectangular or polar)</p>
 
-<p>Print Preview - previews printed page format</p>
+<p>Print Preview - preview printed page format</p>
 
-<p>Print Setup - allows selecting the desired printer and setting the
-print parameters</p>
+<p>Print Setup - select printer and set parameters</p>
 
-<p>Set Plot Title - allows setting / clearing a textual
-title for the plot that appears underneath the scope display</p>
+<p>Set Plot Title - set / clear text appearing beneath plots</p>
 
-<p>Store Forward Parameters - store the measured reflection and
+<p>Store Forward Parameters - store measured reflection and
 transmission data as <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> to temporary storage</p>
 
-<p>Store Reverse Parameters - store the measured reflection and
+<p>Store Reverse Parameters - store measured reflection and
 transmission data as S22 and S12 to temporary storage</p>
 
-<p>Export S-Parameters - exports the stored data in text format
-Rectangular Format - Real and Imaginary components of the S-
-parameters normalized to 50 ohms</p>
+<p>Export S-Parameters - exports stored data in text format
+Rectangular Format - S-parameters Real and Imaginary components normalized to 50 ohms</p>
 
-<p>Polar Format - Magnitude, in dB, and Phase in degrees of the S-
-parameters normalized to 50 ohms</p>
+<p>Polar Format - Magnitude in dB and Phase in degrees of S-parameters normalized to 50 ohms</p>
 
-<p>Save Configuration - Saves the complete state of the instrument
-settings and display traces to a file (except stored S-parameters).
+<p>Save Configuration - Saves to file complete instrument
+settings and display trace state (except stored S-parameters).
 The filename can be selected and should be very descriptive.</p>
 
-<p>Load Configuration - Loads a previously saved configuration file to
-restore the state of the instrument from a previous measurement setup.</p>
+<p>Load Configuration - Load a previously saved configuration file to
+restore instrument state from a previous measurement setup.</p>
 
-<p>Exit - immediately terminates the TAPR application (and saves the
-current instrument configuration to the file: <font color="highlighter-rouge">last.cfg</font>.</p>
+<p>Exit - immediately terminate the TAPR application (and save the
+current instrument configuration to: <font color="highlighter-rouge">last.cfg</font>.</p>
 
 <div style="page-break-after: always;"></div>
 
 <h3 id="exporting-s-parameters">Exporting S-Parameters</h3>
 
-<p>The VNA is a reflection-transmission test set. It can only measure
-half of an S- parameter data set (S11 and <font color="highlighter-rouge">S21</font> in the forward
-direction) at one time. The DUT must be physically reversed in the
-test setup in order to measure the other direction (S12 and S22 in the
-reverse direction).</p>
+<p>The VNA is a reflection-transmission test set. It measures
+half of an S-parameter data set (<font color="highlighter-rouge">S11</font> and
+<font color="highlighter-rouge">S21</font> in the forward direction) at one time.
+Physically reverse the DUT in the test setup to measure the other half
+(<font color="highlighter-rouge">S12</font> and
+<font color="highlighter-rouge">S22</font> in the reverse direction).</p>
 
 <p>To measure and export a complete 4 parameter set:</p>
 
@@ -819,34 +810,30 @@ can work.</p>
 
 <h2 id="view-menu">View Menu</h2>
 
-<p>The View menu allows selecting the display view:</p>
-
-<p>1)  Rectangular</p>
-
-<p>2)  Polar</p>
-
-<p>3)  Time Domain Reflection</p>
-
-<p>The Rectangular display can display <font color="highlighter-rouge">S11</font> magnitude and phase, and <font color="highlighter-rouge">S21</font>
+Use View to select the display view:<dl>
+<dt><b>Rectangular</b>
+<dd>can display <font color="highlighter-rouge">S11</font> magnitude and phase, and <font color="highlighter-rouge">S21</font>
 magnitude, phase, and group delay. It can also show <font color="highlighter-rouge">S21</font> ('Through')
 calibration parameters. Magnitude is plotted as dB vs. frequency,
 phase is plotted as degrees vs. frequency, and group delay is plotted
 as time vs. frequency. The display units (dB/div, and seconds/div) can
-be selected in the VertScale menu.</p>
+be selected in the VertScale menu.</dd>
 
-<p>The Polar display can display <font color="highlighter-rouge">S11</font> (reflection measurement) and the
+<dt><b>Polar</b>
+<dd>can display <font color="highlighter-rouge">S11</font> (reflection measurement) and the
 calibration data associated with reflections measurements. The Polar
-display does not show <font color="highlighter-rouge">S21</font> measurements.</p>
+display does not show <font color="highlighter-rouge">S21</font> measurements.</dd>
 
-<p>The Time Domain Reflection (TDR) mode performs a reflection
+<dt><b>Time Domain Reflection</b>
+<dd>(TDR) mode performs a reflection
 measurement then converts from a frequency measurement into the real
-part of the time domain response. It displays the TDR response versus
-time. It is useful for testing cables for faults. The TDR markers will
-calculate the distance from the reference plane to the point indicated
-by the marker. The TDR resolution is 4.1 nanoseconds. This limits the
-resolution of the cable fault to about 1.3 feet (or about 0.4 meters).
-The TDR mode ignores the Start and Stop frequencies, it needs to setup
-a custom grid.</p>
+part of the time domain response. It displays reflection response versus
+time. It is useful for testing cables for faults. TDR markers
+calculate distance from the reference plane to the point indicated
+by the marker. TDR resolution is 4.1 nanoseconds, limiting
+cable fault resolution to about 1.3 feet (or about 0.4 meters).
+TDR mode ignores Start and Stop frequencies; it needs to setup
+a custom grid.</dd>
 
 <h2 id="calibration-menu">Calibration Menu</h2>
 
@@ -875,20 +862,16 @@ description of how the calibration routines work.</p>
 
 <h2 id="trace-menu">Trace Menu</h2>
 
-<p>The Trace menu allows selecting which measurements are displayed. The
-Polar display only displays reflection measurements (S11) and related
-raw and derived calibration constants. The rectangular display can
-show both <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> measurements, and the calibration constants
-related to <font color="highlighter-rouge">S21</font>.</p>
+<p>Use the Trace menu to select how measurements are displayed.
 
-<h3 id="rectangular-display-mode">Rectangular Display Mode</h3>
+<h3><a href="#rectangular-display">Rectangular Display</a> Mode</h3>
 
 <p><font color="highlighter-rouge">S21</font> can be displayed only on the rectangular display.<br>
 <font color="highlighter-rouge">S11</font> can be displayed on both the rectangular and polar displays.<br>
 Traces supported by Rectangular display are:</p>
-<table>
-<tbody><tr>
-<td>S11 Magnitude</td><td>Device Under Test (DUT) input return loss magnitude, in dB</td>
+<table style="width:70%">
+<tr>
+<td style="width:35%">S11 Magnitude</td><td>Device Under Test (DUT) input return loss magnitude, in dB</td>
 </tr><tr>
 <td>S11 Phase</td><td>DUT input return loss phase angle, in degrees, from +180 to --180</td>
 </tr><tr>
@@ -903,16 +886,17 @@ Traces supported by Rectangular display are:</p>
 <td>S11 as R Ohms</td><td>S11 real value converted to Ohms</td>
 </tr><tr>
 <td>S11 as jX Ohms</td><td>S11 quadrature value converted to Ohms</td>
-</tr></tbody></table>
-<table><tbody><tr>
-<td>Raw Calibration Data - S21thru</td>
+</tr></table>
+<table style="width:70%">
+<table><tr>
+<td style="width:35%">Raw Calibration Data - S21thru</td>
 <td>Raw data taken from the through VNA connection CH0 to CH1<br>
     (through cables actually connecting to the DUT)</td>
-</tr></tbody></table>
+</tr></table>
 
 <div style="page-break-after: always;"></div>
 
-<h3 id="polar-display-mode">Polar Display Mode</h3>
+<h3><a href="#polar-display">Polar Display</a> Mode</h3>
 
 <p><font color="highlighter-rouge">S11</font> (as a polar complex number) is always displayed on the Polar display.
 <font color="highlighter-rouge">S21</font> <em>cannot</em> be displayed on the polar display.
@@ -961,10 +945,10 @@ when the fixture calibration is run and loaded.</p>
 
 <h2 id="vertical-scale-menu">Vertical Scale Menu</h2>
 
-<p>The Vertical Scale menu allows independently selecting the vertical
-scale units per division for magnitude (in dB / division), the maximum
-SWR display (minimum is always 1.0), the group delay (seconds per
-division), and the aperture size of the group delay computation.</p>
+<p>Use Vertical Scale to independently select vertical
+scale units per division for magnitude (in dB / division), maximum
+SWR display (minimum is always 1.0), group delay (seconds per
+division), and aperture size of the group delay computation.</p>
 
 <p>See <a href="#appendix-4">Appendix 4</a>
 for details on how group delay is derived<br>and how data can be
@@ -1023,7 +1007,7 @@ A zoom factor of 2.0 places reflection coefficient values of 0.5 on the chart pe
 <br>There are four display zoom settings:<br>
 Zoom = 1.0 / 1.5 / 2.0 / 2.5<br>
 
-<p>TDR Setup allows</p>
+<p>Use TDR Setup for</p>
 <ul>
   <li>setting TDR Display Start and Stop times (in nanoseconds).
 This enables zooming to areas of interest.</li>
@@ -1093,7 +1077,7 @@ are displayed only if corresponding trace displays are enabled.</p>
 
 <h2 id="frequency-grid-menu">Frequency Grid Menu</h2>
 
-<p>The FreqGrid menu allows selecting a Frequency Grid point count,
+<p>Use FreqGrid to select Frequency Grid point count,
 the number of measurements made from Start to Stop Frequency.
 Allowed values are:</p>
 <table>
@@ -1107,24 +1091,24 @@ Allowed values are:</p>
 <td>1020 Points</td><td>Finest frequency display, but slowest measurement data acquisition</td>
 </tr></tbody></table>
 
-<p>The instrument defaults to 200 points at startup. More points allows
-greater resolution in the display, fewer points shortens the
-measurement time period. The current setting of the number of points
-also affects the exportation of an S- parameter text file, which will
-have the same number of individual frequency records as the number of
-points in the grid. The calibration runs are fixed in size at 1024
-frequency points. When the 'Apply Calibration' box is checked, each
-point in the current frequency grid is interpolated to the nearest
-calibration frequency point, and the calibration results from that
-nearest point is applied to the measurement. Calibration points are
-about 117 KHz apart, so the nearest one is no farther than 59 KHz
-away. Unless the fixture has resonances (which is very bad anyway) the
-error due to interpolation for any size of frequency grid will be
+<p>The instrument defaults to 200 points at startup. More points increase
+display resolution, fewer points reduce
+measurement time period. The current FreqGrid setting
+also affectsS-parameter text file exportation, which will
+have FreqGrid individual frequency records.
+Calibration runs are fixed in size at 1024 frequency points.
+When the 'Apply Calibration' box is checked,
+points in the current frequency grid are interpolated to nearest
+calibration frequency points, and calibration results from
+nearest points are applied to measurements. Calibration points are
+about 117 KHz apart, so the nearest is no farther than 59 KHz.
+Unless the fixture has resonances (which is very bad anyway),
+interpolation error for any frequency grid size will be
 negligible except for very long cables.</p>
 
 <h2 id="storage-menu">Storage Menu</h2>
 
-<p>The Storage menu allows storing the current measurement set into
+<p>Use Storage menu to store the current measurement set into
 temporary memory. This temporary memory will retain that measurement
 set until the program is terminated, or a new measurement set is
 stored.<br>
@@ -1148,7 +1132,7 @@ It does not delete or alter the raw data in storage.
 <p>A common use of the storage function is to make a measurement, verify
 it's useful, then 'store' the data.<br>
 Next, some change to the device under test is made and a new measurement is made.<br>
-Enabling the Display Storage option allows comparing on-screen the two measurements.</p>
+Use Display Storage to compare on-screen the two measurements.</p>
 
 <p>Markers are only attached to the active display set. MARKERS ARE
 NOT ATTACHED TO THE STORED DATA. This helps to distinguish which data
@@ -1158,21 +1142,19 @@ retrieve that data to the active set using the <b>Recall</b> menu item.</p>
 
 <h2 id="integration-menu">Integration Menu</h2>
 
-<p>The Integration menu allows multiple sweeps of the instrument to be
-averaged together. The value of 1x mean no integration. The value of
-2x means that the readings will average the previous sweep with the
-current sweep. Values of 4x, 8x, and 16x uise exponential integration
-to average the results. This means for example, that at 16x, the scope
-display will be equal to 15/16 of the old display value plus 1/16 of
-the new value. When the Integration selection is changed, the
-integrator is RESET. This means that the next sweep will display the
-raw values from a single sweep. Subsequent sweeps will integrate.
-Changing the Frequency Grid size will also reset the integrator.</p>
+<p>Use Integration for averaging together multiple nanoVNA sweeps.
+1x mean no integration.
+2x averages the previous and current sweep.
+4x, 8x, and 16x use exponential integration to average results.
+For example, at 16x, the display weights 15/16 of previous with 1/16 of
+new value. The integrator is RESET for selection changes
+and returns raw values from the next sweep.
+Subsequent sweeps will integrate.
+Changing the Frequency Grid size also resets the integrator.</p>
 
-<p>Resetting the integrator prevents a large offset from taking a long
-time to clear out of the integrated value, and can be useful when
-making changes to the unit under test and it is not desired to wait to
-see the initial results.</p>
+<p>Resetting the integrator prevents large offsets from taking long
+times to clear integrated values and avoids waits to
+see initial results from changes.</p>
 
 <h2 id="help--software-updates">Help &amp; Software Updates</h2>
 
@@ -1320,8 +1302,8 @@ sweeping. The frequency grid button is <font color="highlighter-rouge">grayed-ou
 sweeping, since the number of points cannot be changed during a sweep.</p>
 
 <p>One very useful setup is to use a small frequency grid, for example
-100 or 200 points, fast sweep mode, and recurrent sweep. This allows
-the display to update rapidly, and may be particularly useful when
+100 or 200 points, fast sweep mode, and recurrent sweep. This speeds
+display updates and may be particularly useful when
 tuning a DUT such as a filter or antenna in real-time.</p>
 
 <div style="page-break-after: always;"></div>
@@ -1510,10 +1492,10 @@ amplitude compensation should match (excepting sweep-by-sweep
 measurement errors, instrument temperature change, etc.).</li>
 </ul>
 
-<p><img src="image13.png" alt="">
+<p><img src="image13.png" alt=""><br>
 <em>3 meter cable terminated in 'Short' <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
 
-<p><img src="image14.png" alt="">
+<p><img src="image14.png" alt=""><br>
 <em>3 meter cable terminated in 'Short' <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
@@ -1527,10 +1509,10 @@ compensation should match (excepting sweep-by-sweep measurement
 errors, instrument temperature change, etc.).</li>
 </ul>
 
-<p><img src="image15.png" alt="">
+<p><img src="image15.png" alt=""><br>
 <em>3 meter cable terminated in ''Open' <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
 
-<p><img src="image16.png" alt="">
+<p><img src="image16.png" alt=""><br>
 <em>3 meter cable terminated in ''Open' <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
@@ -1547,11 +1529,11 @@ etc.).
 </li>
 </ul>
 
-<p><img src="image17.png" alt="">
+<p><img src="image17.png" alt=""><br>
 <em>1 meter cable terminated in 50-ohm load <font color="highlighter-rouge">without</font> fixture calibration applied.<br>
 Polar scale is zoomed 2.5:1 to show more details.</em></p>
 
-<p><img src="image18.png" alt="">
+<p><img src="image18.png" alt=""><br>
 <em>1 meter cable terminated in 50-ohm load <font color="highlighter-rouge">with</font> fixture calibration applied. <br>
 Polar scale is zoomed 2.5:1 to show more details.</em></p>
 
@@ -1560,10 +1542,10 @@ Polar scale is zoomed 2.5:1 to show more details.</em></p>
  <strong>Note</strong>: many cables and adapters connected to nanoVNA
 may exhibit much poorer return loss than shown here.
 
-<p><img src="image19.png" alt="">
+<p><img src="image19.png" alt=""><br>
 <em>Rectangular display of <font color="highlighter-rouge">S11</font> for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
 
-<p><img src="image20.png" alt="">
+<p><img src="image20.png" alt=""><br>
 <em>Rectangular display of <font color="highlighter-rouge">S11</font> for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
@@ -1647,11 +1629,10 @@ while the right side corresponds to 0 degrees and higher impedances.</p>
 
 <p>Rectangular display works for both <font color="highlighter-rouge">S11</font> and
 <font color="highlighter-rouge">S21</font> values.
-In this case, return loss amplitudes are displayed vs. frequency.
-While reading return loss at any frequency is simpler,
-sorting complex impedance may be harder. In contrast,
-two-port networks' transfer impedances are typicallly of less
-interest than their gains and phase delays vs. frequency.<br>
+Return loss amplitudes are simply displayed vs. frequency,
+but sorting complex impedance gets harder. 
+Two-port networks' transfer complex impedances are less
+interesting than their gains and phase delays vs. frequency.
 Rectangular chart help visualize those
 <font color="highlighter-rouge">S21</font> parameters.</p>
 
@@ -1672,19 +1653,16 @@ alternately near top and bottom lines.</p>
 
 <h2 id="group-delay">Group Delay</h2>
 
-<p>Network time delay properties can be of interest.
-Network group delay is the negative of rate of change of phase vs frequency.
-Group delay helps determine network electrical length, e.g. for cables or stubs.
-Electrical length differs from physical length by velocity factor.</p>
+<p>Network time delays are of interest.
+Network group delay is the negative of rate of change of phase vs frequency
+and helps determine network electrical length for cables or stubs.</p>
 
-<p>Group delay calculation, along with spatial length measurement,
-allows computing cable velocity factor.
-Cable phase velocity is the time delay for light traveling a cable length
+<p>Group delay and spatial length measurement determine velocity factor.
+Cable phase velocity is elapsed time for light traveling a cable length
 divided by cable's electrical time delay.
-Light travels 11.8 inches per nanosecond (very close to 1 nanosecond per foot).
-Ten feet of free space delays light 120/11.8 = 10.17 nanoseconds.
-For 10 feet of cable with measured electical delay of 15 nanoseconds,
-its velocity factor would be:</p>
+Light travels 11.8 inches per nanosecond (nearly 1 nanosecond per foot).
+10 feet of free space delays light 120/11.8 ~ 10.17 nanoseconds.
+The velocity factor for 10 feet of cable with 15 nanoseconds electrical delay is:</p>
 
 <p><font color="highlighter-rouge">10.17 nsec</font> (free space delay) /
 <font color="highlighter-rouge">15 nsec</font> (measured delay) =  0.68 velocity factor.
@@ -1932,11 +1910,11 @@ phase, or from actual noise in measurements.</p>
 <p>One way to reduce displayed noise is to average group
 delay readings over more samples. This delay reading is less
 noisy, but it may miss some important rapid changes in phase
-response. TAPR allows selecting how large this averaging
-function is. The number of samples averaged is known as
+response. TAPR allows selecting the sample averaging
+count. The count of samples averaged is known as
 measurement <em>aperture</em> size.</p>
 
-<p>An aperture size of 1 means that there is no averaging, and
+<p>An aperture size of 1 disables averaging, and
 measurements are taken between adjacent frequency samples. The
 aperture frequency window is thus f<sub>n+1</sub> - f<sub>n</sub>.</p>
 
