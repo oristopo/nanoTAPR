@@ -262,7 +262,7 @@ MHz. The instrument is capable of operating higher, but
 accuracy is degraded above 300 MHz.</p>
   </li>
   <li>
-    <p>The phase detectors are accurate only down to about <font color="DA6600">20 dB</font> above the
+    <p>The phase detectors are accurate only down to about <font color="0086A6">20 dB</font> above the
 noise floor. Thus, the phase component of an <font color="green">S21</font> measurement with
 more than about <font color="0086A6">60 dB</font> attenuation is not valid. The phase component
 of <font color="red">S11</font> measurements is only valid to about <font color="0086A6">40 dB</font> return loss.</p>
@@ -464,6 +464,10 @@ to later identify each fixture exactly!</p>
 <p>Before starting Fixture calibration, have available<br>
 'SHORT', 'OPEN', '50-ohm TERMINATION', and a connector bullet (or barrel).
 'OPEN' is just the open end of an SMA cable with nothing connected.</p>
+<p align=center>
+<img src="Cal.gif" alt="Calibration window">
+</p>
+<div style="page-break-after: always;"></div>
 
 <h2 id="fixture-calibration-data">Fixture Calibration Data</h2>
 
@@ -525,6 +529,8 @@ but the extension is always <font color="0086A6">.cal</font>.
 The "Apply Fixture Calibration" checkbox is <font color="gray">grayed-out</font>
 until a valid Fixture Calibration Data set is loaded.</p>
 
+<div style="page-break-after: always;"></div>
+
 <h2 id="partial-changes-to-fixture-calibration-data">Partial Changes to Fixture Calibration Data</h2>
 
 <p>It's possible to partially update the Fixture calibration data.
@@ -538,8 +544,6 @@ The newly saved data set inherits
 <font color="red">S11</font> raw and derived errors from the loaded dataset,
 but uses the new 'through' measurements. In fact, this can be done for any or
 all four measurements.</p>
-
-<div style="page-break-after: always;"></div>
 
 <h2 id="fixture-setup-diagrams">Fixture Setup Diagrams</h2>
 
