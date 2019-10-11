@@ -1541,23 +1541,22 @@ may exhibit much poorer return loss than shown here.
 
 <div style="page-break-after: always;"></div>
 
-<h1 id="appendix-1">Appendix 1: S Parameter Basics</h1>
+<h1 id="appendix-1">Appendix 1: S-Parameter Basics</h1>
 
 <p>This overview briefly covers reflection and transmission
-measurements using S-parameters, and visualization of them on
-rectangular and polar displays.</p>
+measurements using S-parameters and plotting them on
+Rectangular and Polar Displays.</p>
 
-<p>A linear two port device can be characterized by the behavior of the
-voltage returned to voltage injected at the ports. The S-parameter
-model provides all the linear characteristics of a two port device at
-discrete spot frequencies. S- parameters describe input return,
-forward gain, reverse gain, and output return each as a
-complex number at a single frequency. For each discrete frequency,
-these 4 values describe the behavior of the two port device. To
-characterize a device, the S-parameters are usually measured at a
-number of different frequencies.</p>
+<p>Linear two port devices are characterized by ratios of
+signals returned for signals injected at their ports. The S-parameter
+model provides all linear characteristics for two port devices at
+discrete spot frequencies, specifically input return,
+forward gain, reverse gain, and output return as four
+complex numbers for each spot frequency.
+To characterize devices, S-parameters are usually measured for
+ranges of spot frequencies.</p>
 
-<p>In the diagram below, <b>a1</b> in the voltage input to port one, and <b>a2</b> is
+<p>In the diagram below, <b>a1</b> is the voltage input to port one, and <b>a2</b> is
 the voltage input to port two; <b>b1</b> is the voltage out of port one,
 while <b>b2</b> is the voltage out of port two. S-parameters are defined
 as voltage ratios. <font color="red">S11</font> (input return) is the ratio
@@ -1572,24 +1571,24 @@ S-parameters are defined in the following two equations:</p>
 
 <p><img src="Sparam.gif" alt=""></p>
 
-<p>A VNA is really a transmission-reflection test set.
-It applies stimulus <b>a1</b> to port one of the device while
-measuring <b>b1</b> and <b>b2</b>, then calculates <font color="red">S11</font>
+<p>VNAs are essentially transmission-reflection test sets.
+They apply stimulus <b>a1</b> to port one of devices while
+measuring <b>b1</b> and <b>b2</b>, then calculate <font color="red">S11</font>
 (because <b>a2</b> is zero).</p>
 
 <ul>
   <li>port 2 of the block receives no stimulus (<b>a2</b> = 0).
 To derive values for <font color="green">S12</font> and <font color="red">S22</font>,
-swap ports in the test fixture
-so that VNA stimulus becomes <b>a2</b>.</li>
+swap ports in the test fixture so that VNA stimulus becomes <b>a2</b>.</li>
 </ul>
 
-<p><font color="red">S11</font> and <font color="green">S21</font> are generally both complex numbers - in other words,
+<p><font color="red">S11</font> and <font color="green">S21</font>
+are generally both complex numbers - in other words,
 devices reflect energy back to the input for any spot frequency
 with reflection magnitude and phase both generally non-zero.
 Similarly, two-port devices typically change both amplitude
 and phase of <b>b2</b> from <b>a1</b>.
-The VNA measures and displays input reflection loss
+A VNA measures and displays input reflection loss
 and forward transmission gain as complex numbers.</p>
 
 <div style="page-break-after: always;"></div>
@@ -1599,7 +1598,7 @@ and forward transmission gain as complex numbers.</p>
 <p>
 Polar chart help visualize input impedance real and reactive components.
 Since reflection ratios <font color="red">S11</font> are always <= 1.0
-for passive networks, those values can be displayed in imaginary vs real format on a polar charts.
+for passive networks, those values can be displayed in reactive vs real format on a polar charts.
 On the other hand, two port network forward gains typically include both loss and gain values,
 exceeding unity. That confounds polar charts, where
 polar chart circumference typically represents unity magnitude.
@@ -1620,14 +1619,13 @@ while the right side corresponds to 0 degrees and higher impedances.</p>
 
 <p>Rectangular display works for both <font color="red">S11</font> and
 <font color="green">S21</font> values.
-Return loss amplitudes are simply displayed vs. frequency,
+Return losses are simply displayed vs. frequency,
 but sorting complex impedance gets harder. 
 Two-port networks' transfer complex impedances are less
-interesting than their gains and phase delays vs. frequency.
-Rectangular chart help visualize those
-<font color="green">S21</font> parameters.</p>
+interesting than their gains and phase delays vs. frequency,
+Rectangular display directly plots those <font color="green">S21</font> parameters.</p>
 
-<p>Network transfer gain/loss amplitude is labelled in dB on rectangular charts' right side.
+<p>Network transfer gain/loss ratio is labelled in dB on rectangular charts' right side.
 Return loss or transfer gain phase is plotted in degrees vs. Hertz.
 Rectangular chart top and bottom are +180 and -180 degrees, respectively,
 'wrapping around' from bottom to top because +/-180 degrees are identical.
@@ -1644,7 +1642,7 @@ alternately near top and bottom lines.</p>
 
 <h2 id="group-delay">Group Delay</h2>
 
-<p>Network time delays are of interest.
+<p>Network time delays are interesting, e.g. for TDR.
 Network group delay is the negative of rate of change of phase vs frequency
 and helps determine network electrical length for cables or stubs.</p>
 
