@@ -37,8 +37,9 @@ October 10, 2019</p>
       <li><a href="#hardware-version-differences">Hardware Version Differences</a></li>
       <li><a href="#instrument-caution">Instrument Caution</a></li>
       <li><a href="#temperature-limitation">Temperature Limitation</a></li>
-      <li><a href="#instrument-limitations">Instrument Limitations</a></li>
+      <li><a href="#basic-performance">Basic Performance</a></li>
       <li><a href="#relative-measurements">Relative Measurements</a></li>
+      <li><a href="#instrument-limitations">Instrument Limitations</a></li>
       <li><a href="#calibration-standards">Calibration Standards</a></li>
       <li><a href="#calibration-modes-are-single-threaded">Calibration Modes are Single-threaded</a></li>
     </ol>
@@ -200,6 +201,25 @@ Key nanoVNA temperature dependence is stimulus performance approaching 300/900 M
   <li>Display 2/4 traces, 4 markers, 5 stored configurations</li>
 </ul>
 
+<h2 id="relative-measurements">Relative Measurements</h2>
+
+<p>nanoVNA measures neither signal magnitudes nor phase delays absolutely.
+All measurements are calculated relative to other measurements. In most
+cases, this other measurement will be an instrument or fixture
+calibration. Measurement accuracies thus directly
+depend on reference calibrations.</p>
+
+<p>Return measurements are extremely sensitive to fixture configurations.
+Great care must be used making <font color="highlighter-rouge">S11</font> measurements to obtain
+reasonably accurate data. For example, a single 50-ohm
+connector adaptor less than 1 inch long introduces measurable
+phase delay in return signals. Properly set up,
+nanoVNA can resolve connector adaptor lengths.  Practically,
+calibrations should include connector adaptors as used in
+actual measurements.</p>
+
+<div style="page-break-after: always;"></div>
+
 <h2 id="instrument-limitations">Instrument Limitations</h2>
 
 <ul>
@@ -249,22 +269,6 @@ of <font color="highlighter-rouge">S11</font> measurements is only valid to abou
   </li>
 </ul>
 
-<h2 id="relative-measurements">Relative Measurements</h2>
-
-<p>nanoVNA measures neither signal magnitudes nor phase delays absolutely.
-All measurements are calculated relative to other measurements. In most
-cases, this other measurement will be an instrument or fixture
-calibration. Measurement accuracies thus directly
-depend on reference calibrations.</p>
-
-<p>Return measurements are extremely sensitive to fixture configurations.
-Great care must be used making <font color="highlighter-rouge">S11</font> measurements to obtain
-reasonably accurate data. For example, a single 50-ohm
-connector adaptor less than 1 inch long introduces measurable
-phase delay in return signals. Properly set up,
-nanoVNA can resolve connector adaptor lengths.  Practically,
-calibrations should include connector adaptors as used in
-actual measurements.</p>
 
 <div style="page-break-after: always;"></div>
 
