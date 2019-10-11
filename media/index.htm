@@ -501,8 +501,6 @@ connecting SHORT, (OPEN,) TERMINATION, and THROUGH as
 described for each step before clicking that step.
 After completing all steps, with all check marks present, click the 'SAVE' button.</p>
 
-<div style="page-break-after: always;"></div>
-
 <p>Interconnecting cables and connectors are left in place because all contribute
 measurement error; calibration removes both any time delay and
 amplitude changes they cause.</p>
@@ -941,26 +939,14 @@ between those two consecutive times.</p>
 Device Under Test (DUT).<br>The reference plane location is established
 when the fixture calibration is run and loaded.</p>
 
+<div style="page-break-after: always;"></div>
+
 <h2 id="vertical-scale-menu">Vertical Scale Menu</h2>
 
 <p>Use Vertical Scale to independently select vertical
 scale units per division for magnitude (in dB / division), maximum
 SWR display (minimum is always 1.0), group delay (seconds per
 division), and aperture size of the group delay computation.</p>
-
-<p>See <a href="#appendix-4">Appendix 4</a>
-for details on how group delay is derived<br>and how data can be
-smoothed (or distorted) by aperture size changes.</p>
-
-<p>Note that small frequency spans significantly magnify group delay
-measurement noise, due to small difference
-frequencies between adjacent samples.
-Larger aperture windows and grid point counts
-reduce measurement noise for narrow sweeps. However, large
-apertures may smooth data beyond the range of interest,
-so carefully select an appropriate aperture size.</p>
-
-<div style="page-break-after: always;"></div>
 
 <p>Magnitude Display resolutions selections are:<br>
 10 dB / div <font color="0086A6">5 dB / div</font> 2 dB / div <font color="0086A6">1 dB / div</font> 0.5 dB / div</p>
@@ -980,6 +966,15 @@ SWR 1.0 to 2.0</p>
 Phase / SWR / Delay / Ohms<br>
 [rectangular] Right Scale Display values adjust to selected vertical scale factors.</p>
 
+<p>Polar Zoom Factor applies a zoom factor to polar displays.
+The default value is 1.0, representing normal Smith Chart display,
+with a reflection coefficient of 1.0 lying on the chart periphery.
+Increasing zoom keeps the 50 + j0 point the centered 
+and displays impedances near 50 + j0 with more resolution.
+A zoom factor of 2.0 places reflection coefficient values of 0.5 on the chart periphery.
+<br>There are four display zoom settings:<br>
+Zoom = 1.0 / 1.5 / 2.0 / 2.5</p>
+
 <p>Group Delay Time Scale selections are:<br>
 1 millisecond / div   <br>
 100 microsec / div   <br>
@@ -990,22 +985,25 @@ Phase / SWR / Delay / Ohms<br>
 1 nanosec / div <br>
 100 picosec / div</p>
 
+<div style="page-break-after: always;"></div>
+
 <p>Group Delay Aperture</p>
 <ul>
   <li>the number of adjacent frequency bins over which group delay is measured. <br>
 Group Delay Aperture = 1 / 4 / 16 / 64<br>
 </ul>
 
-<p>Polar Zoom Factor applies a zoom factor to polar displays.
-The default value is 1.0, representing normal Smith Chart display,
-with a reflection coefficient of 1.0 lying on the chart periphery.
-Increasing zoom keeps the 50 + j0 point the centered 
-and displays impedances near 50 + j0 with more resolution.
-A zoom factor of 2.0 places reflection coefficient values of 0.5 on the chart periphery.
-<br>There are four display zoom settings:<br>
-Zoom = 1.0 / 1.5 / 2.0 / 2.5<br>
+<p>See <a href="#appendix-4">Appendix 4</a>
+for details on how group delay is derived<br>and how data can be
+smoothed (or distorted) by aperture size changes.</p>
 
-<div style="page-break-after: always;"></div>
+<p>Note that small frequency spans significantly magnify group delay
+measurement noise, due to small difference
+frequencies between adjacent samples.
+Larger aperture windows and grid point counts
+reduce measurement noise for narrow sweeps. However, large
+apertures may smooth data beyond the range of interest,
+so carefully select an appropriate aperture size.</p>
 
 <p>Use TDR Setup for</p>
 <ul>
@@ -1104,19 +1102,18 @@ Allowed values are:</p>
 <td>1020 Points</td><td>Finest frequency display, but slowest measurement data acquisition</td>
 </tr></tbody></table>
 
-<p>The instrument defaults to 200 points at startup. More points increase
-display resolution, fewer points reduce
-measurement time period. The current FreqGrid setting
-also affectsS-parameter text file exportation, which will
-have FreqGrid individual frequency records.
+<p>The instrument defaults to 200 points at startup.<br>
+More points increase display resolution,<br>
+fewer points reduce measurement time period.<br>
+Current FreqGrid setting also affects S-parameter text file exportation,<br>
+which have FreqGrid individual frequency records.</p><p>
 Calibration runs are fixed in size at 1024 frequency points.
-When the 'Apply Calibration' box is checked,
-points in the current frequency grid are interpolated to nearest
-calibration frequency points, and calibration results from
-nearest points are applied to measurements. Calibration points are
-about 117 KHz apart, so the nearest is no farther than 59 KHz.
-Unless the fixture has resonances (which is very bad anyway),
-interpolation error for any frequency grid size will be
+Checking 'Apply Calibration' <br>interpolates
+grid frequency points to nearest calibration frequency points,<br>
+with nearest calibration point results applied to measurements.<br>
+With calibration points about 117 KHz apart, nearest is closer than 59 KHz.<br>
+Unless fixtures have resonances (which is very bad anyway),<br>
+interpolation errors for any frequency grid size will be
 negligible except for very long cables.</p>
 
 <h2 id="storage-menu">Storage Menu</h2>
@@ -1137,6 +1134,8 @@ Setting a new stored measurement over-writes existing measurements in storage.</
 <dd> retrieves the measurement set from memory and over-writes the
 current active measurement set.<br>
 It does not delete or alter the raw data in storage.
+
+<div style="page-break-after: always;"></div>
 
 <dt><b>Display Storage</b>
 <dd>a toggle that is checked when storage contents are displayed.
