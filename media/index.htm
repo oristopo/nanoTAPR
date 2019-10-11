@@ -88,8 +88,8 @@ a.  <a href="#exporting-s-parameters">Exporting S-Parameters</a></li>
   <li><a href="#controls">Controls</a>
     <ol>
       <li><a href="#frequency-controls">Frequency Controls</a></li>
-      <li><a href="#level-controls">Level Controls</a></li>
       <li><a href="#apply-calibration">Apply Calibration</a></li>
+      <li><a href="#level-controls">Level Controls</a></li>
       <li><a href="#sweep-controls">Sweep Controls</a></li>
       <li><a href="#mouse-actions">Mouse Actions</a></li>
     </ol>
@@ -890,8 +890,6 @@ Traces supported by Rectangular display are:</p>
     (through cables actually connecting to the DUT)</td>
 </tr></table>
 
-<div style="page-break-after: always;"></div>
-
 <h3><a href="#polar-display">Polar Display</a> Mode</h3>
 
 <p><font color="highlighter-rouge">S11</font> (as a polar complex number) is always displayed on the Polar display.
@@ -1002,6 +1000,8 @@ and displays impedances near 50 + j0 with more resolution.
 A zoom factor of 2.0 places reflection coefficient values of 0.5 on the chart periphery.
 <br>There are four display zoom settings:<br>
 Zoom = 1.0 / 1.5 / 2.0 / 2.5<br>
+
+<div style="page-break-after: always;"></div>
 
 <p>Use TDR Setup for</p>
 <ul>
@@ -1194,6 +1194,23 @@ Hz.</p>
 frequency grid size. For exampe, if grid size is 400 points,
 then STOP must be at least 400 Hertz greater than START.</p>
 
+<h2 id="apply-calibration">Apply Calibration</h2>
+
+<p>The apply calibration check box is <font color="gray">grayed-out</font> unless a fixture
+calibration data set has been loaded (see calibration menu). Checking
+the Apply Calibration box will compensate all readings by the
+corrections contained in the loaded fixture calibration set.
+Un-checking the box disables the reading corrections.</p>
+
+<p>Measurements without any fixture calibration are not accurate, since
+there are uncompensated errors in cable length, fixture attenuation,
+etc. Further, some VNA instrument errors such as PC board trace
+lengths and amplitude variations are not removed if the measurement is
+uncalibrated. For best accuracy, measurements should have fixture
+calibration applied.</p>
+
+<div style="page-break-after: always;"></div>
+
 <h2 id="level-controls">Level Controls</h2>
 
 <p>Reference Level adjusts how magnitude data are
@@ -1236,21 +1253,6 @@ control is to adjust output level when using the VNA as a
 signal generator and measured values are of no concern.
 In this case, the control can change transmit output
 signal level over a 10 dB range.</p>
-
-<h2 id="apply-calibration">Apply Calibration</h2>
-
-<p>The apply calibration check box is <font color="gray">grayed-out</font> unless a fixture
-calibration data set has been loaded (see calibration menu). Checking
-the Apply Calibration box will compensate all readings by the
-corrections contained in the loaded fixture calibration set.
-Un-checking the box disables the reading corrections.</p>
-
-<p>Measurements without any fixture calibration are not accurate, since
-there are uncompensated errors in cable length, fixture attenuation,
-etc. Further, some VNA instrument errors such as PC board trace
-lengths and amplitude variations are not removed if the measurement is
-uncalibrated. For best accuracy, measurements should have fixture
-calibration applied.</p>
 
 <div style="page-break-after: always;"></div>
 
