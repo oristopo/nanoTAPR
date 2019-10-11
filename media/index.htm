@@ -152,17 +152,17 @@ and network output is connected to nanoVNA CH1 (RX) connector.</p>
 
 <ul>
   <li>
-    <p><font color="highlighter-rouge">S21</font> Magnitude - gain or loss from two-port network input to output.</p>
+    <p><font color="green">S21</font> Magnitude - gain or loss from two-port network input to output.</p>
   </li>
   <li>
-    <p><font color="highlighter-rouge">S21</font> Phase - transfer phase from two-port network input to output.</p>
+    <p><font color="blue">S21</font> Phase - transfer phase from two-port network input to output.</p>
   </li>
   <li>
-    <p><font color="highlighter-rouge">S11</font> Magnitude - return from network input port
+    <p><font color="red">S11</font> Magnitude - return from network input port
 referenced to the signal sent to that port.</p>
   </li>
   <li>
-    <p><font color="highlighter-rouge">S11</font> Phase - the phase angle of return from network input
+    <p><font color="AA00AA">S11</font> Phase - the phase angle of return from network input
 port referenced to the signal sent to that network.</p>
   </li>
 </ul>
@@ -210,7 +210,7 @@ calibration. Measurement accuracies thus directly
 depend on reference calibrations.</p>
 
 <p>Return measurements are extremely sensitive to fixture configurations.
-Great care must be used making <font color="highlighter-rouge">S11</font> measurements to obtain
+Great care must be used making <font color="red">S11</font> measurements to obtain
 reasonably accurate data. For example, a single 50-ohm
 connector adaptor less than 1 inch long introduces measurable
 phase delay in return signals. Properly set up,
@@ -262,10 +262,10 @@ MHz. The instrument is capable of operating higher, but
 accuracy is degraded above 300 MHz.</p>
   </li>
   <li>
-    <p>The phase detectors are accurate only down to about <font color="highlighter-rouge">20 dB</font> above the
-noise floor. Thus, the phase component of an <font color="highlighter-rouge">S21</font> measurement with
-more than about <font color="highlighter-rouge">60 dB</font> attenuation is not valid. The phase component
-of <font color="highlighter-rouge">S11</font> measurements is only valid to about <font color="highlighter-rouge">40 dB</font> return loss.</p>
+    <p>The phase detectors are accurate only down to about <font color="DA6600">20 dB</font> above the
+noise floor. Thus, the phase component of an <font color="green">S21</font> measurement with
+more than about <font color="0086A6">60 dB</font> attenuation is not valid. The phase component
+of <font color="red">S11</font> measurements is only valid to about <font color="0086A6">40 dB</font> return loss.</p>
   </li>
 </ul>
 
@@ -312,7 +312,7 @@ best termination, but an open connector is adequate for many
 purposes.</p>
   </li>
   <li>
-    <p>A <font color="highlighter-rouge">40 dB</font> attenuator is needed when running the detector calibration
+    <p>A <font color="0086A6">40 dB</font> attenuator is needed when running the detector calibration
 routine (described in section 3); a high-quality, accurate
 attenuator (or a combination of 2 SMA attenuators) should be used
 for this purpose.</p>
@@ -346,12 +346,12 @@ may have it already installed it.</p>
 
 <ul>
   <li>
-    <p>Double-click on the downloaded <font color="highlighter-rouge">VNAR4.4.zip</font>,<br>
- which should open to reveal <font color="highlighter-rouge">VNAR4.4.exe</font>.<br>
+    <p>Double-click on the downloaded <font color="0086A6">VNAR4.4.zip</font>,<br>
+ which should open to reveal <font color="0086A6">VNAR4.4.exe</font>.<br>
 If that fails, the zip file was probably corrupted during download.</p>
   </li>
   <li>
-    <p>Launch <font color="highlighter-rouge">VNAR4.4.exe</font><br>
+    <p>Launch <font color="0086A6">VNAR4.4.exe</font><br>
 <img src="splash.gif" alt=""></p>
   </li>
   <li>If alerted that dotNET 1.1 runtime is not found:
@@ -410,7 +410,7 @@ nanoVNA support is expected for no older than Windows 7:</p>
 
 <h2 id="installed-tapr-files">Installed TAPR Files</h2>
 
-<p><font color="highlighter-rouge">VNAR4.4.zip</font> includes only <font color="highlighter-rouge">VNAR4.4.exe</font>;  file locations can change...</p>
+<p><font color="0086A6">VNAR4.4.zip</font> includes only <font color="0086A6">VNAR4.4.exe</font>;  file locations can change...</p>
 
 <table>
 <tbody><tr><th>File name</th><th>Where found</th><th>Function</th></tr>
@@ -448,8 +448,8 @@ See <a href="#appendix-3">Appendix 3</a> for details.</p>
 <h1 id="fixture-calibration">Fixture Calibration</h1>
 
 <p>Test fixtures (test setups) consist of connectors, cables, adaptors
-and other things that affect <font color="highlighter-rouge">S21</font>
-and <font color="highlighter-rouge">S11</font> measurements.
+and other things that affect <font color="green">S21</font>
+and <font color="red">S11</font> measurements.
 Test fixtures have different physical properties.
 For example, each interconnecting test cable length
 affects the phase of all measurements (due to propagation time
@@ -488,10 +488,10 @@ measurements - 'Open', 'Short', 'Terminated', and 'Through'.</p>
 </ol>
 
 <li>Error compensation parameters are computed, and the data set is
-    saved with a descriptive filename using the extension <font color="highlighter-rouge">.cal</font>.</p>
+    saved with a descriptive filename using the extension <font color="0086A6">.cal</font>.</p>
 
 <p>The Fixture Calibration dialog box lists the 4 individual steps needed
-to perform calibration. <font color="highlighter-rouge">A green
+to perform calibration. <font color="green">A green
 check mark</font> appears next to each completed step. Follow steps in order,
 connecting SHORT, (OPEN,) TERMINATION, and THROUGH as
 described for each step before clicking that step.
@@ -521,7 +521,7 @@ sensitive to load inaccuracies.</p>
 <p>Normally, many different calibration data sets are eventually
 taken and stored, one for each test setup. These can have any valid
 windows filename, and descriptive filename are helpful,
-but the extension is always <font color="highlighter-rouge">.cal</font>.
+but the extension is always <font color="0086A6">.cal</font>.
 The "Apply Fixture Calibration" checkbox is <font color="gray">grayed-out</font>
 until a valid Fixture Calibration Data set is loaded.</p>
 
@@ -529,13 +529,13 @@ until a valid Fixture Calibration Data set is loaded.</p>
 
 <p>It's possible to partially update the Fixture calibration data.
 For example, changing the cable from a DUT to nanoVNA CH1
-connector may not appreciably affect <font color="highlighter-rouge">S11</font> measurement, but
-generally changes <font color="highlighter-rouge">S21</font> measurement.
+connector may not appreciably affect <font color="red">S11</font> measurement, but
+generally changes <font color="green">S21</font> measurement.
 In this case, load a previously saved calibration dataset
 and run just the one measurement ('Through') ,
 then save the dataset with new or existing name as appropriate.
 The newly saved data set inherits
-<font color="highlighter-rouge">S11</font> raw and derived errors from the loaded dataset,
+<font color="red">S11</font> raw and derived errors from the loaded dataset,
 but uses the new 'through' measurements. In fact, this can be done for any or
 all four measurements.</p>
 
@@ -578,7 +578,7 @@ button to choose a file name and location. Use descriptive filenames,
 as many different fixture calibration files are likely.</p>
 
 <p>Filenames can be long and may contain embedded spaces. The
-software automatically appends <font color="highlighter-rouge">.cal</font> to names.
+software automatically appends <font color="0086A6">.cal</font> to names.
 Filenames are not limited to 8.3 format, which is insufficiently descriptive.</p>
 
 <p><img src="image5.png" alt=""></p>
@@ -642,38 +642,38 @@ item is explained in the following sections.</p>
 
 <p>Trace</p>
 
-<p><font color="highlighter-rouge">S11</font> Magnitude (rectangular) <font color="highlighter-rouge">S11</font> Phase (rectangular) <font color="highlighter-rouge">S21</font> Magnitude
-(rectangular) <font color="highlighter-rouge">S21</font> Phase (rectangular)</p>
+<p><font color="red">S11</font> Magnitude (rectangular) <font color="AA00AA">S11</font> Phase (rectangular) <font color="green">S21</font> Magnitude
+(rectangular) <font color="blue">S21</font> Phase (rectangular)</p>
 
-<p><font color="highlighter-rouge">S21</font> Group Delay (rectangular)</p>
+<p><font color="green">S21</font> Group Delay (rectangular)</p>
 
-<p><font color="highlighter-rouge">S11</font> Magnitude as SWR (rectangular)</p>
+<p><font color="FF0044">S11</font> Magnitude as SWR (rectangular)</p>
 
-<p>Raw Calibration Data <font color="highlighter-rouge">S21</font> - Through (rectangular) Et - Tracking Error
+<p>Raw Calibration Data <font color="green">S21</font> - Through (rectangular) Et - Tracking Error
 (Polar)</p>
 
 <p>Es - Source Mismatch Error (Polar) Ed - Directivity Error (Polar)</p>
 
-<p>Raw Calibration Data <font color="highlighter-rouge">S11</font> - Short (polar) Raw Calibration Data <font color="highlighter-rouge">S11</font> -
+<p>Raw Calibration Data <font color="red">S11</font> - Short (polar) Raw Calibration Data <font color="red">S11</font> -
 Open (polar)</p>
 
-<p>Raw Calibration Data <font color="highlighter-rouge">S11</font> - Terminated (polar)</p>
+<p>Raw Calibration Data <font color="red">S11</font> - Terminated (polar)</p>
 
 <p>Vertical Scale</p>
 
-<p>10 dB / division 5 dB / division 2 dB / division <font color="highlighter-rouge">1 dB / division</font></p>
+<p>10 dB / division 5 dB / division 2 dB / division <font color="0086A6">1 dB / division</font></p>
 
 <p>SWR 1.0 to 11.0</p>
 
 <p>SWR 1.0 to 6.0</p>
 
-<p>SWR 1.0 to 3.0 <font color="highlighter-rouge">SWR 1.0 to 2.0</font></p>
+<p>SWR 1.0 to 3.0 <font color="0086A6">SWR 1.0 to 2.0</font></p>
 
 <p>10 microseconds / division 1 microsecond / division 100 nanoseconds /
 division 10 nanoseconds / division 1 nanosecond / division
-<font color="highlighter-rouge">100 picoseconds / division</font> Group Delay Aperture = 1 Group
+<font color="0086A6">100 picoseconds / division</font> Group Delay Aperture = 1 Group
 Delay Aperture = 4 Group Delay Aperture = 16
-<font color="highlighter-rouge">Group Delay Aperture = 64</font> Right Scale display</p>
+<font color="0086A6">Group Delay Aperture = 64</font> Right Scale display</p>
 
 <p>Phase SWR</p>
 
@@ -733,7 +733,7 @@ and store S-parameters in text files.</p>
 <p>Set Plot Title - set / clear text appearing beneath plots</p>
 
 <p>Store Forward Parameters - store measured reflection and
-transmission data as <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> to temporary storage</p>
+transmission data as <font color="red">S11</font> and <font color="green">S21</font> to temporary storage</p>
 
 <p>Store Reverse Parameters - store measured reflection and
 transmission data as S22 and S12 to temporary storage</p>
@@ -751,18 +751,18 @@ The filename can be selected and should be very descriptive.</p>
 restore instrument state from a previous measurement setup.</p>
 
 <p>Exit - immediately terminate the TAPR application (and save the
-current instrument configuration to: <font color="highlighter-rouge">last.cfg</font>.</p>
+current instrument configuration to: <font color="0086A6">last.cfg</font>.</p>
 
 <div style="page-break-after: always;"></div>
 
 <h3 id="exporting-s-parameters">Exporting S-Parameters</h3>
 
 <p>The VNA is a reflection-transmission test set. It measures
-half of an S-parameter data set (<font color="highlighter-rouge">S11</font> and
-<font color="highlighter-rouge">S21</font> in the forward direction) at one time.
+half of an S-parameter data set (<font color="red">S11</font> and
+<font color="green">S21</font> in the forward direction) at one time.
 Physically reverse the DUT in the test setup to measure the other half
-(<font color="highlighter-rouge">S12</font> and
-<font color="highlighter-rouge">S22</font> in the reverse direction).</p>
+(<font color="0086A6">S12</font> and
+<font color="red">S22</font> in the reverse direction).</p>
 
 <p>To measure and export a complete 4 parameter set:</p>
 
@@ -808,17 +808,17 @@ can work.</p>
 
 Use View to select the display view:<dl>
 <dt><b>Rectangular</b>
-<dd>can display <font color="highlighter-rouge">S11</font> magnitude and phase, and <font color="highlighter-rouge">S21</font>
-magnitude, phase, and group delay. It can also show <font color="highlighter-rouge">S21</font> ('Through')
+<dd>can display <font color="red">S11</font> magnitude and phase, and <font color="green">S21</font>
+magnitude, phase, and group delay. It can also show <font color="green">S21</font> ('Through')
 calibration parameters. Magnitude is plotted as dB vs. frequency,
 phase is plotted as degrees vs. frequency, and group delay is plotted
 as time vs. frequency. The display units (dB/div, and seconds/div) can
 be selected in the VertScale menu.</dd>
 
 <dt><b>Polar</b>
-<dd>can display <font color="highlighter-rouge">S11</font> (reflection measurement) and the
+<dd>can display <font color="red">S11</font> (reflection measurement) and the
 calibration data associated with reflections measurements. The Polar
-display does not show <font color="highlighter-rouge">S21</font> measurements.</dd>
+display does not show <font color="green">S21</font> measurements.</dd>
 
 <dt><b>Time Domain Reflection</b>
 <dd>(TDR) mode performs a reflection
@@ -862,8 +862,8 @@ description of how the calibration routines work.</p>
 
 <h3><a href="#rectangular-display">Rectangular Display</a> Mode</h3>
 
-<p><font color="highlighter-rouge">S21</font> can be displayed only on the rectangular display.<br>
-<font color="highlighter-rouge">S11</font> can be displayed on both the rectangular and polar displays.<br>
+<p><font color="green">S21</font> displays only on Rectangular display.<br>
+<font color="red">S11</font> displays on both Rectangular and Polar displays.<br>
 Traces supported by Rectangular display are:</p>
 <table style="width:70%">
 <tr>
@@ -892,8 +892,8 @@ Traces supported by Rectangular display are:</p>
 
 <h3><a href="#polar-display">Polar Display</a> Mode</h3>
 
-<p><font color="highlighter-rouge">S11</font> (as a polar complex number) is always displayed on the Polar display.
-<font color="highlighter-rouge">S21</font> <em>cannot</em> be displayed on the polar display.
+<p><font color="red">S11</font> (as a polar complex number) is always displayed on the Polar display.
+<font color="green">S21</font> <em>cannot</em> be displayed on the polar display.
 Raw calibration data (from a calibration file that is loaded)
 as well as error parameters derived from calibration data can be displayed.<br>
 Error compensation and raw data are only for informational purposes
@@ -910,7 +910,7 @@ specific custom frequency grid, it ignores the Start and Stop
 settings. When switching to the TDR mode, a new Frequency Grid is
 created. Thus, a new sweep is required. Click the sweep button. A
 TDR interpretation of existing
-<font color="highlighter-rouge">S11</font> sweep data is not meaningful 
+<font color="red">S11</font> sweep data is not meaningful 
 and should be ignored, instead re-acquire the
 reflection measurement after you have selected the TDR mode. The
 'Apply Calibration' checkbox sets the reference plane for the TDR
@@ -959,7 +959,7 @@ so carefully select an appropriate aperture size.</p>
 <div style="page-break-after: always;"></div>
 
 <p>Magnitude Display resolutions selections are:<br>
-10 dB / div <font color="highlighter-rouge">5 dB / div</font> 2 dB / div <font color="highlighter-rouge">1 dB / div</font> 0.5 dB / div</p>
+10 dB / div <font color="0086A6">5 dB / div</font> 2 dB / div <font color="0086A6">1 dB / div</font> 0.5 dB / div</p>
 
 <p>SWR Scale selections are:<br>
 SWR 1.0 to 11.0<br>
@@ -1024,32 +1024,45 @@ control display of associated parameters.</p>
 
 <p>A marker value of 0 disables it.</p>
 
-<p><em>Left-clicking</em> the display at a frequency of interest
-sets the first unused marker at that frequency.
-Moving the mouse pointer before releasing the left button
-<em>drags</em> a marker across the screen.
-Holding the left button clicked on an existing
-marker enables that marker to be dragged,
-instead of setting a new marker
-(but you must very accuratley point the mouse - especially at
-high display resolutions). When all five are in use,
-left-clicks do not create new markers but can drag exiting ones.
-Screen parameters update in real-time as markers are dragged.</p>
+<h3 id="mouse-actions">Mouse Actions</h3>
 
-<p>The frequency of interest is readily apparent on the rectangular
-display, but not so on the polar display. You will however be able to
-see the marker move as you drag the mouse left and right. If marker
-parameters are enabled, you will be able to see a reading indicating
-the marker frequency while in the polar display mode. The marker may
-appear to move backwards compared to the mouse movement if the polar
-display is showing <font color="highlighter-rouge">S11</font> in the lower (capacitive) half of the display.</p>
+<p>Mouse left and right buttons perform several different actions.</p>
+
+<p>Clicking <strong>left mouse button</strong> in Rectangular
+Display drops the first unused marker at the pointer frequency,
+which marker can be dragged left and right until the left button is released.
+Screen parameters update in real-time as markers are dragged.
+Existing markers can be grabbed and dragged,
+but it takes very precise aim and is pretty difficult to do in practice.
+It's usually easier to launch the Marker menu, disable
+that particular marker (by entering a value of zero) and then dropping
+and dragging a new marker. Alternatively, markers can
+be set coarsely by mouse, then adjusted precisely by menu.</p>
+
+When all five are in use,
+left-clicks do not create new markers but can drag exiting ones.
+
+<p>Clicking <strong>Right mouse button</strong> pops up screen
+coordinates and electrical parameters for the pointer location
+(unrelated to traces).
+This works in both rectangular and polar modes.
+That popup remains until the pointer
+moves some pixels, then disappears.</p>
+
+<p>Rectangular display frequencies are readily apparent,
+but not so much for Polar display. However, with marker
+parameters enabled, marker frequency displays in Polar display mode
+and updates in real time while being dragged.
+Markers move opposite to mouse movements
+when <font color="red">S11</font> trace is
+in the lower (capacitive) Polar display half.</p>
 
 <p>Vertical (up/down) mouse movements do not change marker frequency.<br>
-Marker parameters are color-coded to match corresponding trace colors displayed.<br>
+Marker parameters are color-coded to match corresponding trace colors.<br>
 Parametric values
 <font color="red">S11</font>,
-<font color="highlighter-rouge">S21</font>, and
-<font color="blue">SWR</font>
+<font color="green">S21</font>, and
+<font color="FF0088">SWR</font>
 are displayed only if corresponding trace displays are enabled.</p>
 
 <dl>
@@ -1219,15 +1232,15 @@ the magnitude level at the top line of the display screen. When
 set to 0 dB, the display top line is 0 dB. Changing
 Reference Level optimizes trace locations.</p>
 
-<p>For example, if a DUT attenuates approximately <font color="highlighter-rouge">22 dB</font>,
+<p>For example, if a DUT attenuates approximately <font color="0086A6">22 dB</font>,
 that will not display at a scale of 1 dB / division,
 because off the screen bottom. Reference Level set
-to <font color="highlighter-rouge">-20 dB</font> displays a range from <font color="highlighter-rouge">-20 db</font>
-to <font color="highlighter-rouge">-30 db</font> at 1 db/division, making the trace visible.</p>
+to <font color="0086A6">-20 dB</font> displays a range from <font color="0086A6">-20 db</font>
+to <font color="0086A6">-30 db</font> at 1 db/division, making the trace visible.</p>
 
 <p>Reference Level set to positive values is useful when measuring DUTs (such as amplifiers) with output
-magnitudes near or above <font color="highlighter-rouge">0 dB</font>.<br>
-Note that VNA dynamic range extends only a few dB above <font color="highlighter-rouge">0 dB</font>.<br>
+magnitudes near or above <font color="0086A6">0 dB</font>.<br>
+Note that VNA dynamic range extends only a few dB above <font color="0086A6">0 dB</font>.<br>
 <em>External attenuators should be used with DUTs having any amount of gain.</em></p>
 
 <p>On-screen amplitude values displayed left-side
@@ -1235,15 +1248,13 @@ automatically adjust when reference
 levels change. Small positive reference levels help make visible
 markers and marker numbers when measuring low-loss DUTs.</p>
 
-<div style="page-break-after: always;"></div>
-
 <p>Transmit Level should normally be left at 0 dBm.
 Lower values usually degrade dynamic
-range and accuracy of both <font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> measurements.
+range and accuracy of both <font color="red">S11</font> and <font color="green">S21</font> measurements.
 However, reduced drive level to DUTs with gain may be useful.
 The control has about 50 dB of adjustment range, but nanoVNA dynamic range
-consumes 40 dB of that range. Thus, <font color="highlighter-rouge">S21</font> magnitude measurements
-effectively support less than <font color="highlighter-rouge">10 dB</font> of level change.
+consumes 40 dB of that range. Thus, <font color="green">S21</font> magnitude measurements
+effectively support less than <font color="0086A6">10 dB</font> of level change.
 Attenuating CH0 stimulation to DUTs using attenuators is better.
 </p>
 
@@ -1296,7 +1307,7 @@ measured data after that single sweep.</p>
 <p>The Free-run sweep button causes the VNA to trigger continuously
 (recurrently), so that the sweep updates as rapidly as possible.
 Pressing the Free-run sweep button a second time stops the recurrent
-sweeping. The frequency grid button is <font color="highlighter-rouge">grayed-out</font> when the VNA is
+sweeping. The frequency grid button is <font color="gray">grayed-out</font> when the VNA is
 sweeping, since the number of points cannot be changed during a sweep.</p>
 
 <p>One very useful setup is to use a small frequency grid, for example
@@ -1305,29 +1316,6 @@ display updates and may be particularly useful when
 tuning a DUT such as a filter or antenna in real-time.</p>
 
 <div style="page-break-after: always;"></div>
-
-<h2 id="mouse-actions">Mouse Actions</h2>
-
-<p>The mouse left and right buttons can be used to perform several
-different actions on the screen display.</p>
-
-<p>The <strong>Left mouse button</strong> can be clicked while in the rectangular
-display mode to drop a marker at the frequency where the mouse points
-horizontally. If the left button is held down, the marker can be
-dragged left and right. The marker freezes when the left button is
-released. An existing marker can be grabbed with the left mouse and
-dragged, but it takes very precise aim, and is pretty difficult to do
-in practice. It's usually easier to bring up the Marker menu, disable
-that particular marker (by entering a value of zero) and then droping
-and draging a new marker with the mouse. Alternatively, the cursor can
-be set coarsely with the mouse, and then the Marker Menu used to set
-the frequency precisely.</p>
-
-<p>The <strong>Right mouse button</strong> provides a reading of the screen
-coordinates exactly where the mouse is pointing (whether or not there
-are any traces near the mouse). This works in both rectangular and
-polar modes. The popup window will stay in place until the mouse is
-moved a few pixels at which point it will disappear.</p>
 
 <div style="page-break-after: always;"></div>
 
@@ -1368,25 +1356,25 @@ single data set.</p>
 
 <p><img src="image10.jpeg" alt=""></p>
 
-<p>This screen shows GREEN - the <font color="highlighter-rouge">S21</font> transfer magnitude (forward
+<p>This screen shows GREEN - the <font color="green">S21</font> transfer magnitude (forward
 gain/loss). The screen in set for 10 dB / division. RED is the <font color="red">S11</font>
 return loss of the filter, again at 10 dB / division. The filter has
-about <font color="highlighter-rouge">60 dB</font> loss at 50 MHz, degrading a bit at 100 MHz. The return
+about <font color="0086A6">60 dB</font> loss at 50 MHz, degrading a bit at 100 MHz. The return
 loss of the filter is about 10-15 dB in the filter passband (200 KHZ
-to 40 MHZ) and is <font color="highlighter-rouge">0 dB</font> in the stopband (above 40 MHz).</p>
+to 40 MHZ) and is <font color="0086A6">0 dB</font> in the stopband (above 40 MHz).</p>
 
 <p>This type of filter is called a <em>"reflective filter"</em> since it
 generates a stopband by reflecting the input signal back.</p>
 
-<p>On the next screen, the <font color="highlighter-rouge">S11</font> (RED) trace has been turned off and only
-the <font color="highlighter-rouge">S21</font> (GREEN) trace is displayed. Five markers have been set, and
+<p>On the next screen, the <font color="red">S11</font> (RED) trace has been turned off and only
+the <font color="green">S21</font> (GREEN) trace is displayed. Five markers have been set, and
 the display of marker parameters has been enabled. Here we can see
-that the insertion loss of the filter is quite good, only about <font color="highlighter-rouge">0.1 dB</font>
-in the passband, and that the <font color="highlighter-rouge">-3 dB</font> frequency is about 39.85 MHz.</p>
+that the insertion loss of the filter is quite good, only about <font color="0086A6">0.1 dB</font>
+in the passband, and that the <font color="0086A6">-3 dB</font> frequency is about 39.85 MHz.</p>
 
 <p><img src="image11.jpeg" alt=""></p>
 
-<p>The last figure shows input return <font color="highlighter-rouge">S11</font> on a polar chart.
+<p>The last figure shows input return <font color="red">S11</font> on a polar chart.
 Four markers (which must be set in the rectangular display mode) are
 selected, and marker parameter display is again enabled. The markers
 show the input magnitude and phase as well as the equivalent input
@@ -1418,7 +1406,7 @@ Starting with version 1.4 the software models the coupler V/I tracking
 error and coupler directivity.<br>
  It compensates readings by subtracting
 the coupler directivity and applying a sinusoidal magnitude correction
-vs. detected phase angle to <font color="highlighter-rouge">S11</font> readings.</p>
+vs. detected phase angle to <font color="red">S11</font> readings.</p>
 
 <p><img src="image12.jpeg" alt=""></p>
 
@@ -1433,7 +1421,7 @@ vs. detected phase angle to <font color="highlighter-rouge">S11</font> readings.
 <ul>
   <li>
     <p>High quality variable attenuators may have several tenths of a dB
-loss at their <font color="highlighter-rouge">0 dB</font> setting. This must be taken into
+loss at their <font color="0086A6">0 dB</font> setting. This must be taken into
 account when characterizing filter insertion loss.</p>
   </li>
   <li>
@@ -1456,7 +1444,7 @@ To improve the measurement either:</p>
     <ul>
       <li>
         <p>Terminate the unit under test with a 50 ohm termination prior to
-<font color="highlighter-rouge">S11</font> measurements, or</p>
+<font color="red">S11</font> measurements, or</p>
       </li>
       <li>
         <p>Insert 10 dB attenuation between DUT output and VNA CH1 connector.
@@ -1491,10 +1479,10 @@ measurement errors, instrument temperature change, etc.).</li>
 </ul>
 
 <p><img src="image13.png" alt=""><br>
-<em>3 meter cable terminated in 'Short' <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
+<em>3 meter cable terminated in 'Short' <font color="0086A6">without</font> fixture calibration applied.</em></p>
 
 <p><img src="image14.png" alt=""><br>
-<em>3 meter cable terminated in 'Short' <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
+<em>3 meter cable terminated in 'Short' <font color="0086A6">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
 
@@ -1508,10 +1496,10 @@ errors, instrument temperature change, etc.).</li>
 </ul>
 
 <p><img src="image15.png" alt=""><br>
-<em>3 meter cable terminated in ''Open' <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
+<em>3 meter cable terminated in ''Open' <font color="0086A6">without</font> fixture calibration applied.</em></p>
 
 <p><img src="image16.png" alt=""><br>
-<em>3 meter cable terminated in ''Open' <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
+<em>3 meter cable terminated in ''Open' <font color="0086A6">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
 
@@ -1528,11 +1516,11 @@ etc.).
 </ul>
 
 <p><img src="image17.png" alt=""><br>
-<em>1 meter cable terminated in 50-ohm load <font color="highlighter-rouge">without</font> fixture calibration applied.<br>
+<em>1 meter cable terminated in 50-ohm load <font color="0086A6">without</font> fixture calibration applied.<br>
 Polar scale is zoomed 2.5:1 to show more details.</em></p>
 
 <p><img src="image18.png" alt=""><br>
-<em>1 meter cable terminated in 50-ohm load <font color="highlighter-rouge">with</font> fixture calibration applied. <br>
+<em>1 meter cable terminated in 50-ohm load <font color="0086A6">with</font> fixture calibration applied. <br>
 Polar scale is zoomed 2.5:1 to show more details.</em></p>
 
 <div style="page-break-after: always;"></div>
@@ -1541,10 +1529,10 @@ Polar scale is zoomed 2.5:1 to show more details.</em></p>
 may exhibit much poorer return loss than shown here.
 
 <p><img src="image19.png" alt=""><br>
-<em>Rectangular display of <font color="highlighter-rouge">S11</font> for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">without</font> fixture calibration applied.</em></p>
+<em>Rectangular display of <font color="red">S11</font> for 1 meter cable terminated by 50-ohm load <font color="0086A6">without</font> fixture calibration applied.</em></p>
 
 <p><img src="image20.png" alt=""><br>
-<em>Rectangular display of <font color="highlighter-rouge">S11</font> for 1 meter cable terminated by 50-ohm load <font color="highlighter-rouge">with</font> fixture calibration applied.</em></p>
+<em>Rectangular display of <font color="red">S11</font> for 1 meter cable terminated by 50-ohm load <font color="0086A6">with</font> fixture calibration applied.</em></p>
 
 <div style="page-break-after: always;"></div>
 
@@ -1567,8 +1555,8 @@ number of different frequencies.</p>
 <p>In the diagram below, <b>a1</b> in the voltage input to port one, and <b>a2</b> is
 the voltage input to port two; <b>b1</b> is the voltage out of port one,
 while <b>b2</b> is the voltage out of port two. S-parameters are defined
-as voltage ratios. <font color="highlighter-rouge">S11</font> (input return) is the ratio
-<b>b1/a1</b>. <font color="highlighter-rouge">S21</font> (transfer gain) is the ratio of <b>b2/a1</b>. The voltage
+as voltage ratios. <font color="red">S11</font> (input return) is the ratio
+<b>b1/a1</b>. <font color="green">S21</font> (transfer gain) is the ratio of <b>b2/a1</b>. The voltage
 exiting port one of the block is the sum of the input return loss times
 the input voltage plus the reverse gain times the voltage injected
 into port two of the block.
@@ -1581,17 +1569,17 @@ S-parameters are defined in the following two equations:</p>
 
 <p>A VNA is really a transmission-reflection test set.
 It applies stimulus <b>a1</b> to port one of the device while
-measuring <b>b1</b> and <b>b2</b>, then calculates <font color="highlighter-rouge">S11</font>
+measuring <b>b1</b> and <b>b2</b>, then calculates <font color="red">S11</font>
 (because <b>a2</b> is zero).</p>
 
 <ul>
   <li>port 2 of the block receives no stimulus (<b>a2</b> = 0).
-To derive values for <font color="highlighter-rouge">S12</font> and <font color="highlighter-rouge">S22</font>,
+To derive values for <font color="green">S12</font> and <font color="red">S22</font>,
 swap ports in the test fixture
 so that VNA stimulus becomes <b>a2</b>.</li>
 </ul>
 
-<p><font color="highlighter-rouge">S11</font> and <font color="highlighter-rouge">S21</font> are generally both complex numbers - in other words,
+<p><font color="red">S11</font> and <font color="green">S21</font> are generally both complex numbers - in other words,
 devices reflect energy back to the input for any spot frequency
 with reflection magnitude and phase both generally non-zero.
 Similarly, two-port devices typically change both amplitude
@@ -1605,34 +1593,34 @@ and forward transmission gain as complex numbers.</p>
 
 <p>
 Polar chart help visualize input impedance real and reactive components.
-Since reflection ratios <font color="highlighter-rouge">S11</font> are always <= 1.0
+Since reflection ratios <font color="red">S11</font> are always <= 1.0
 for passive networks, those values can be displayed in imaginary vs real format on a polar charts.
 On the other hand, two port network forward gains typically include both loss and gain values,
 exceeding unity. That confounds polar charts, where
 polar chart circumference typically represents unity magnitude.
 Note that polar charts have no concept of frequency;
-<font color="highlighter-rouge">S11</font> samples for any spot frequency may display anywhere on polar charts.
+<font color="red">S11</font> samples for any spot frequency may display anywhere on polar charts.
 VNAR4 software connects sample dots in lines;
 subsequently extracting frequency information along those lines wants <a href="#"marker-menu">markers</a>.
 </p>
 
-<p><font color="highlighter-rouge">S11</font> polar values are directly plotted,
-with <font color="highlighter-rouge">S11</font> vectors originating at chart center,
+<p><font color="red">S11</font> polar values are directly plotted,
+with <font color="red">S11</font> vectors originating at chart center,
 vector lengths being return loss magnitudes, and
-vector directions being <font color="highlighter-rouge">S11</font> phase angles.
+vector directions being <font color="red">S11</font> phase angles.
 The chart left side corresponds to +/-180 degrees and lower impedances,
 while the right side corresponds to 0 degrees and higher impedances.</p>
 
 <h2 id="rectangular-display">Rectangular Display</h2>
 
-<p>Rectangular display works for both <font color="highlighter-rouge">S11</font> and
-<font color="highlighter-rouge">S21</font> values.
+<p>Rectangular display works for both <font color="red">S11</font> and
+<font color="green">S21</font> values.
 Return loss amplitudes are simply displayed vs. frequency,
 but sorting complex impedance gets harder. 
 Two-port networks' transfer complex impedances are less
 interesting than their gains and phase delays vs. frequency.
 Rectangular chart help visualize those
-<font color="highlighter-rouge">S21</font> parameters.</p>
+<font color="green">S21</font> parameters.</p>
 
 <p>Network transfer gain/loss amplitude is labelled in dB on rectangular charts' right side.
 Return loss or transfer gain phase is plotted in degrees vs. Hertz.
@@ -1662,8 +1650,8 @@ Light travels 11.8 inches per nanosecond (nearly 1 nanosecond per foot).
 10 feet of free space delays light 120/11.8 ~ 10.17 nanoseconds.
 The velocity factor for 10 feet of cable with 15 nanoseconds electrical delay is:</p>
 
-<p><font color="highlighter-rouge">10.17 nsec</font> (free space delay) /
-<font color="highlighter-rouge">15 nsec</font> (measured delay) =  0.68 velocity factor.
+<p><font color="0086A6">10.17 nsec</font> (free space delay) /
+<font color="0086A6">15 nsec</font> (measured delay) =  0.68 velocity factor.
 
 <div style="page-break-after: always;"></div>
 
@@ -1674,13 +1662,13 @@ nearly that network input matches a 50 ohm non-reactive load when
 that network's output is terminated in 50 ohms. An SWR of 1.0 means
 that the network has exactly 50-ohm input impedance. SWR is a real number directly
 related to input return <em>magnitude</em>, ignoring input reflection phase.
-<font color="highlighter-rouge">S11</font> is a complex number representing both magnitude and
+<font color="red">S11</font> is a complex number representing both magnitude and
 phase angle of input return.</p>
 
 <p>An SWR of 2.0 means that an input impedance is either 25 ohms resistive, 100 ohms resistive,
 or some complex value with either of those magnitudes containing non-zero reactance.
 SWR cannot distinguish among those networks cases for non-unity values,
-while <font color="highlighter-rouge">S11</font> can.</p>
+while <font color="red">S11</font> can.</p>
 
 <p>Each constant SWR value describes any impedance
 lying on a circle centered in polar charts.
@@ -1767,7 +1755,7 @@ and the detector calibration routine uses a linear delay model to
 build a table to correct those periodic errors.</p>
 
 <p>All those data sets are then saved in
-<font color="highlighter-rouge">detector.ica</font> in the TAPR program startup directory.</p>
+<font color="0086A6">detector.ica</font> in the TAPR program startup directory.</p>
 
 <h2 id="s21-compensation">S21 Compensation</h2>
 
@@ -1777,7 +1765,7 @@ and phase at 1024 points from 200 KHz to 120 MHZ and
 stores those data in a table in the Fixture calibration file (which
 is named during the Fixture calibration save operation).
 When the 'Apply Calibration' box is enabled,
-the calibration compensation routine divides actual <font color="highlighter-rouge">S21</font> measurements
+the calibration compensation routine divides actual <font color="green">S21</font> measurements
 by the nearest 'Through' calibration constant (which is a complex number)
 at each measurement frequency.
 </p>
@@ -1786,7 +1774,7 @@ at each measurement frequency.
 
 <h2 id="s11-compensation">S11 Compensation</h2>
 
-<p>The calibration compensation for <font color="highlighter-rouge">S11</font> derives three parameters of a
+<p>The calibration compensation for <font color="red">S11</font> derives three parameters of a
 virtual S- parameter error matrix computationally inserted between the
 VNA CH0 connector and the DUT. With three measurements and three
 unknowns, values of virtual S-parameter error matrix can be resolved.
@@ -1801,7 +1789,7 @@ matrix.</p>
 <p>Es - source impedance mismatch. This is the S22error of the virtual
 error matrix.</p>
 
-<p>The virtual error matrix is removed from <font color="highlighter-rouge">S11</font> measurements (when
+<p>The virtual error matrix is removed from <font color="red">S11</font> measurements (when
 'Apply Calibration' is active) to compensate for these errors in
 reflection measurements.</p>
 
@@ -1811,8 +1799,8 @@ reflection measurements.</p>
 Values can be viewed (by the curious) from the <a href="#polar-display-mode">Trace menu</a>.<br>
 Polar display is only for reflection measurements (S11)
 and related raw and derived calibration constants.<br>
-Rectangular display can show both <font color="highlighter-rouge">S11</font> and
-<font color="highlighter-rouge">S21</font> measurements and related calibration constants.</p>
+Rectangular display can show both <font color="red">S11</font> and
+<font color="green">S21</font> measurements and related calibration constants.</p>
 
 <table style="width:70%">
 <tr><th style="width:30%">Error Compensation</th><th>Complex plot</th></tr>
