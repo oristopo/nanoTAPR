@@ -443,110 +443,104 @@ See <a href="#appendix-3">Appendix 3</a> for details.</p>
 
 <h1 id="fixture-calibration">Fixture Calibration</h1>
 
-<p>Each specific test fixture (test setup) consists of connectors,
-cables, adaptors, and other things that affect the <font color="highlighter-rouge">S21</font> and <font color="highlighter-rouge">S11</font>
-measurements. Each test fixture setup has different physical
-properties. For example, the length of each interconnecting test cable
-affects the phase of all measurements (due to the propagation time
-delay specific to that particular cable). Therefore, each test setup
-requires a different set of calibration data to compensate for not
-only the test setup, but also propagation delay and other errors internal to
-nanoVNA.
- TAPR software can perform these "fixture calibrations",<br>
-you can take and save one for each different
-measurement set up that you use. Each calibration can be saved with a
-different file name. Use as descriptive a filename as possible so that
-you can remember exactly what each fixture calibration refers to!</p>
+<p>Test fixtures (test setups) consist of connectors, cables, adaptors
+and other things that affect <font color="highlighter-rouge">S21</font>
+and <font color="highlighter-rouge">S11</font> measurements.
+Test fixtures have different physical properties.
+For example, each interconnecting test cable length
+affects the phase of all measurements (due to propagation time
+delays specific to each cable). Therefore, each test setup
+requires unique calibration data to compensate for test setup
+and errors internal to nanoVNA.
+ TAPR software supports "fixture calibrations",<br>
+and you make one unique for each measurement set up,
+saved with descriptive file names,
+to later identify each fixture exactly!</p>
 
-<p>Before the Fixture calibration is started, have a 'SHORT', 'OPEN',
-'50-ohm TERMINATION', and a Connector Bullet (or barrel) available. As
-discussed previously, OPEN is just the open end of an SMA cable with
-nothing connected.</p>
+<p>Before starting Fixture calibration, have available<br>
+'SHORT', 'OPEN', '50-ohm TERMINATION', and a connector bullet (or barrel).
+'OPEN' is just the open end of an SMA cable with nothing connected.</p>
 
 <h2 id="fixture-calibration-data">Fixture Calibration Data</h2>
 
-<p>A fixture calibration data set is built from four raw data
+<p>Fixture calibration data sets are built from four raw data
 measurements - 'Open', 'Short', 'Terminated', and 'Through'.</p>
 
-<p>Typically, the following procedure is used to make a calibration data
-run:</p>
+<p>The following procedure makes a typical calibration data set:</p>
+<ol>
+<li>  The cable from nanoVNA CH0 connector to the device under test
+    (DUT) is disconnected <em>at the DUT</em>, then terminated by a sequence
+    of precision loads:
+<ol compact>
+ <li><code>'Short' calibration with a zero-ohm load terminating the CH0 cable</code>
 
-<p>1)  The cable from nanoVNA CH0 connector to the device under test
-    (DUT) is disconnected <em>at the DUT</em>, and is terminated sequentially
-    in a series of precision loads:</p>
+ <li><code>'Open' calibration with unterminated CH0 cable</code>
 
-<div color="highlighter-rouge"><div color="highlight"><pre color="highlight"><code>1.  The 'Short' calibration is conducted with the zero-ohm load at
-    the end of the CH0 cable.
+ <li><code> 'Terminated' calibration with CH0 cable terminated by 50-ohm load</code>
 
-2.  The 'Open' calibration is conducted with the infinite-ohm load
-    at the end of the CH0 cable.
-
-3.  The 'Terminated' calibration is conducted with the 50-ohm load
-    at the end of the CH0 cable.
-</code></pre></div></div>
-
-<p>2)  Then the "Through" calibration is performed after putting a
+<li><code>"Through" calibration is performed with
     connector barrel or bullet (usually a double-female connector
-    adaptor) in place of the DUT.</p>
+    adaptor) connecting CH0 and CH1 cables</code>
+</ol>
 
-<p>3)  The error compensation parameters are computed, and the data set is
+<li>Error compensation parameters are computed, and the data set is
     saved with a descriptive filename using the extension <font color="highlighter-rouge">.cal</font>.</p>
 
 <p>The Fixture Calibration dialog box lists the 4 individual steps needed
-to perform the calibration. After each step is completed, and green
-check mark will appear next to that step. Follow the steps in order,
-and connect the SHORT, OPEN, TERMINATION, and THROUGH fixture setup as
-described by each step prior to starting that step.
-After all the steps have been completed and each has a check mark present,
-click the 'SAVE' button.</p>
+to perform calibration. <font color="highlighter-rouge">A green
+check mark</font> appears next to each completed step. Follow steps in order,
+connecting SHORT, (OPEN,) TERMINATION, and THROUGH as
+described for each step before clicking that step.
+After completing all steps, with all check marks present, click the 'SAVE' button.</p>
 
 <div style="page-break-after: always;"></div>
 
-<p>Both interconnecting cables are left in place because they are part of
-the measurement error; the calibration removes both the time delay and
-any amplitude change they and the connectors cause.</p>
+<p>Interconnecting cables and connectors are left in place because all contribute
+measurement error; calibration removes both any time delay and
+amplitude changes they cause.</p>
 
-<p>The calibration routine makes 1024 measurements, starting at 200 KHz,
-and stopping at 120 MHz; it linearly spaces the frequency samples
-about 117 KHz apart. It is assumed that the test fixture itself
-(without the DUT) does not contain any high-Q resonances. If it does,
-large uncertainty will be introduced into the measurements (whether or
-not calibrated). The DUT of course can have high-Q resonances, just
-not the fixturing or interconnecting cables. When applying
-calibration, the software linearly interpolates between the two
-calibration frequencies closest to the actual measurement frequency,
-and uses that to compensate the measurement.</p>
+<p>The calibration routine makes 1024 measurements evenly spaced from 200 KHz
+to 120 MHz, spaced
+about 117 KHz apart. The test fixture itself
+(without the DUT) is assumed to not have any high-Q resonances, which would
+introduc large uncertainties into measurements (whether or
+not calibrated). The DUT may of course have high-Q resonances, but
+NOT fixturing or interconnecting cables. When applying
+calibration, software linearly interpolates between corrections for those two
+calibration frequencies nearest actual measurement frequencies,
+to compensate measurements.</p>
 
-<p>If the "Open," "Short," or "50-ohm" loads are not accurate, then
-the compensation will be wrong. At 100 MHz, nanoVNA is fairly
-sensitive to the accuracy of these loads.</p>
+<p>"Open," "Short," or "50-ohm" inaccuracies confound
+measurement compensation. At 100 MHz, nanoVNA is fairly
+sensitive to load inaccuracies.</p>
 
-<p>Normally, there will be a number of different calibration data sets
+<p>Normally, many different calibration data sets are eventually
 taken and stored, one for each test setup. These can have any valid
-windows filename (so it's helpful to be descriptive and verbose with
-the filename), but the extension is always <font color="highlighter-rouge">.cal</font>. The "Apply Fixture
-Calibration" checkbox is <font color="gray">grayed-out</font> until a valid
-Fixture Calibration Data set is loaded.</p>
+windows filename, and descriptive filename are helpful,
+but the extension is always <font color="highlighter-rouge">.cal</font>.
+The "Apply Fixture Calibration" checkbox is <font color="gray">grayed-out</font>
+until a valid Fixture Calibration Data set is loaded.</p>
 
 <h2 id="partial-changes-to-fixture-calibration-data">Partial Changes to Fixture Calibration Data</h2>
 
-<p>It's possible to partially update the Fixture calibration data. For
-example, changing the cable from the DUT to nanoVNA CH1
+<p>It's possible to partially update the Fixture calibration data.
+For example, changing the cable from a DUT to nanoVNA CH1
 connector may not appreciably affect <font color="highlighter-rouge">S11</font> measurement, but
-generally changes <font color="highlighter-rouge">S21</font> measurement. In this case, a previously saved
-calibration dataset can be loaded, and just the one measurement
-('Through') run, then the dataset saved with new name or
-existing name as appropriate. The newly saved data set inherits
-<font color="highlighter-rouge">S11</font> raw and derived errors from the older dataset, but will use
-the new 'through' measurements. In fact, this can be done with any or
-all of the four measurements.</p>
+generally changes <font color="highlighter-rouge">S21</font> measurement.
+In this case, load a previously saved calibration dataset
+and run just the one measurement ('Through') ,
+then save the dataset with new or existing name as appropriate.
+The newly saved data set inherits
+<font color="highlighter-rouge">S11</font> raw and derived errors from the loaded dataset,
+but uses the new 'through' measurements. In fact, this can be done for any or
+all four measurements.</p>
 
 <div style="page-break-after: always;"></div>
 
 <h2 id="fixture-setup-diagrams">Fixture Setup Diagrams</h2>
 
-<p>The following three diagrams show how a fixture needs to be setup
-during the fixture calibration process and during actual
+<p>The following three diagrams show fixture setup
+during fixture calibration process and during actual
 measurements using it. The following dialog box shows four
 steps needed for fixture calibration. Diagrams in this section
 show connections required to perform individual calibration
