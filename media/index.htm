@@ -1836,17 +1836,17 @@ Rectangular display can show both <font color="red">S11</font> and
 This TAPR VNA application should work with the same driver as other nanoVNA software.<br>
 When you first apply power to nanoVNA and attach it to a Windows PC
 via its USB cable, its USB device ID may not be found.
-The New Hardware Detected wizard will be invoked and will ask if a disk or
+The New Hardware Detected wizard will ask if a disk or
 file is available for the new device.
-<em>recommended</em> option presented). The correct device type is:</p>
+A <em>recommended</em> driver is:</p>
 
 <p><a href="https://www.st.com/en/development-tools/stsw-stm32102.html">STMicroelectronics Virtual COM Port Driver</a></p>
 
 
 
-<p>The wizard creates a registry key associating that USB vendor
+<p>The wizard creates a registry key associating nanoVNA's USB vendor
 and product ID to a device driver.<br>
-When this USB device is subsequently plugged into that USB host port,
+When nanoVNA is subsequently plugged into that USB host port,
 it avoids going through the selection process again.</p>
 
 <p>nanoVNA uses the following USB IDs: Vendor_ID: 0483 Product_ID: 5740</p>
