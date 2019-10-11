@@ -398,8 +398,6 @@ nanoVNA support is expected for no older than Windows 7:</p>
 <td>Windows 10</td><td>nanoVNA</td><td>Tested</td>
 </tr></tbody></table>
 
-<div style="page-break-after: always;"></div>
-
 <h2 id="software-distribution">Software Distribution</h2>
 
 <p>The current software distribution consists of:</p>
@@ -422,6 +420,8 @@ nanoVNA support is expected for no older than Windows 7:</p>
 
 <p>VNAR4 software expects a reasonably current <a href="#initial-software-installation">Windows
 .NET 1.1 framework run time package</a> (version 1.0 is not sufficient).<br>
+A virtual COM port driver is required for nanoVNA; see <a href="#appendix-3">Appendix 3</a> for details.
+<div style="page-break-after: always;"></div>
 
 <h2 id="connecting-nanovna-to-your-computer">Connecting nanoVNA to your Computer</h2>
 
@@ -434,6 +434,8 @@ When prompted, let the wizard search to find the driver
 
 <p>After Windows has installed a driver and with nanoVNA connected and powered on, relaunch VNAR4.<br>
 If launched before nanoVNA connection, VNAR4 may not detect it.</p>
+Select 'SerialPort' under 'Settings" and confirm that 'Hardware:' is set to 'NanoVNA'.<br>
+<p align="center"><img src= "SerialPort.gif"></p>
 
 Once connected to VNAR4, nanoVNA display no longer updates for stimulus or RF connection changes.<br>
 Display changes will reflect data scanned prior to VNAR4 control.
