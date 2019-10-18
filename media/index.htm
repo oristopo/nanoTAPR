@@ -8,6 +8,17 @@ body {
    margin-right: 60px;
    margin-top: 400px;
 }
+
+dl,ul {
+   padding-top: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+#file-menu, #view-menu {
+   margin-bottom: 0px;
+}
+
 th,td {
    text-align:left;
    padding-left: 15px;
@@ -361,7 +372,6 @@ If that fails, the zip file was probably corrupted during download.</p>
 	   Its URL at the time of this manual revision is:<br>
 <a href="https://www.microsoft.com/en-us/download/details.aspx?id=26">https://www.microsoft.com/en-us/download/details.aspx?id=26</a>
     </ul>
-  </li>
 </ul>
 
 <h3 id="hibernation-or-suspension-of-host-computer">Hibernation or Suspension of Host Computer</h3>
@@ -617,212 +627,199 @@ order to minimize errors.</p>
 
 <h1 id="tapr-software-menu">TAPR Software Menu</h1>
 
-<p>The following menu items are available in the TAPR program. Each menu
-item is explained in the following sections.</p>
+<p>The following menu items available in the TAPR program are
+explained in the following sections.</p>
+<dl>
+<dt>File
+<dd>Print
+<dd>Print Setup
+<dd>Print Preview
+<dd>Set Plot title
 
-<p>File</p>
+<dd>Store Forward Parameters
+<dd>Store Reverse Parameters
+<dd>Export S-parameters
 
-<p>View</p>
+<dd>Save Configuration ...
+<dd>Load Configuration ...
+<dd>Exit
+<dt>View
+<dd>Rectangular
+<dd>Polar
+<dd>Time Domain Reflection
 
-<p>Print</p>
+<dt>Calibration
+<dd>Fixture Calibration
+<dd>Load Fixture Calibration File...
 
-<p>Print Setup Print Preview Set Plot title</p>
+<dt>Trace
+<dd><font color="red">S11</font> Magnitude (rectangular) <font color="AA00AA">S11</font> Phase (rectangular) <font color="green">S21</font> Magnitude
+(rectangular) <font color="blue">S21</font> Phase (rectangular)
 
-<p>Store Forward Parameters Store Reverse Parameters Export S-parameters</p>
+<dd><font color="green">S21</font> Group Delay (rectangular)
 
-<p>Rectangular Format Polar Format</p>
+<dd><font color="FF0044">S11</font> Magnitude as SWR (rectangular)
 
-<p>Save Configuration ... Load Configuration ... Exit</p>
+<dd>Raw Calibration Data <font color="green">S21</font> - Through (rectangular) Et - Tracking Error
+(Polar)
 
-<p>Rectangular Polar</p>
+<dd>Es - Source Mismatch Error (Polar) Ed - Directivity Error (Polar)
 
-<p>Time Domain Reflection</p>
+<dd>Raw Calibration Data <font color="red">S11</font> - Short (polar) Raw Calibration Data <font color="red">S11</font> -
+Open (polar)
 
-<p>Calibration</p>
+<dd>Raw Calibration Data <font color="red">S11</font> - Terminated (polar)
 
-<p>Detector Calibration Run Fixture Calibration</p>
+<dt>VertScale
 
-<p>Load Fixture Calibration File</p>
+<dd>10 dB / div 5 dB / div 2 dB / div <font color="0086A6">1 dB / div</font>
+<dd><dl><dt>SWR Scale
+<dd>SWR 1.0 to 11.0
 
-<p>Trace</p>
+<dd>SWR 1.0 to 6.0
 
-<p><font color="red">S11</font> Magnitude (rectangular) <font color="AA00AA">S11</font> Phase (rectangular) <font color="green">S21</font> Magnitude
-(rectangular) <font color="blue">S21</font> Phase (rectangular)</p>
+<dd>SWR 1.0 to 3.0
+<dd><font color="0086A6">SWR 1.0 to 2.0</font>
+</dl>
+<dd><dl><dt>Group Delay Time Scale
+<dd>1 milliseconds / div
+<dd>100 microsec / div
+<dd>10 microsecs / div 1 microsec / div 100 nanosec / div 10 nanosecs / div 1 nanosec / division
+<dd><font color="0086A6">100 picosec / div</font></dl>
+<dd><dl><dt>Group Delay Aperture
+<dd>Group Delay Aperture = 1
+<dd>Group Delay Aperture = 4
+<dd>Group Delay Aperture = 16
+<dd><font color="0086A6">Group Delay Aperture = 64</font></dl>
+<dd><dl><dt>Right Scale display
+<dd>Phase
+<dd>SWR
+<dd>Delay
+<dd>Ohms</dl>
+<dd><dl><dt>Polar Zoom
 
-<p><font color="green">S21</font> Group Delay (rectangular)</p>
+<dd>Zoom = 1.0
 
-<p><font color="FF0044">S11</font> Magnitude as SWR (rectangular)</p>
+<dd>Zoom = 1.5
 
-<p>Raw Calibration Data <font color="green">S21</font> - Through (rectangular) Et - Tracking Error
-(Polar)</p>
+<dd>Zoom = 2.0
 
-<p>Es - Source Mismatch Error (Polar) Ed - Directivity Error (Polar)</p>
+<dd>Zoom = 2.5</dl>
+<dd>TDR Setup (menu)
 
-<p>Raw Calibration Data <font color="red">S11</font> - Short (polar) Raw Calibration Data <font color="red">S11</font> -
-Open (polar)</p>
+<dt>Marker
+<dd>Change Marker Points (menu)
+<dd> Clear All Markers
+<dd><dl><dt>Marker Numbers
+<dd>Enable
+<dd>Disable
+</dl>
+<dd><dl><dt>Marker Parameters<dd>Enable<dd>Disable</dl>
 
-<p>Raw Calibration Data <font color="red">S11</font> - Terminated (polar)</p>
+<dt>FreqGrid
+<dd>100 points
+<dd>201 points
+<dd>401 points
+<dd>1020 points
 
-<p>Vertical Scale</p>
+<dt>Storage
+<dd>Store
+<dd>Recall
+<dd>Display Measured
+<dd>Display Storage
+<dd>Display Measured - Storage
 
-<p>10 dB / division 5 dB / division 2 dB / division <font color="0086A6">1 dB / division</font></p>
+<dt>Help
+<dd>Display Help F1
+<dd><dl><dt> About
+<dd>OK
+<dd>Launch Browser (to check for Software Updates)
+</dl>
 
-<p>SWR 1.0 to 11.0</p>
-
-<p>SWR 1.0 to 6.0</p>
-
-<p>SWR 1.0 to 3.0 <font color="0086A6">SWR 1.0 to 2.0</font></p>
-
-<p>10 microseconds / division 1 microsecond / division 100 nanoseconds /
-division 10 nanoseconds / division 1 nanosecond / division
-<font color="0086A6">100 picoseconds / division</font> Group Delay Aperture = 1 Group
-Delay Aperture = 4 Group Delay Aperture = 16
-<font color="0086A6">Group Delay Aperture = 64</font> Right Scale display</p>
-
-<p>Phase SWR</p>
-
-<p>Delay Polar Zoom</p>
-
-<p>Zoom = 1.0</p>
-
-<p>Zoom = 1.5</p>
-
-<p>Zoom = 2.0</p>
-
-<p>Zoom = 2.5 TDR Setup</p>
-
-<p>Marker</p>
-
-<p>Change Marker Frequencies Clear All Markers</p>
-
-<p>Marker Numbers</p>
-
-<p>Enable Disable</p>
-
-<p>Marker Parameters Enable Disable</p>
-
-<p>FreqGrid</p>
-
-<p>100 points</p>
-
-<p>200 points</p>
-
-<p>400 points</p>
-
-<p>1020 points Storage</p>
-
-<p>Store Recall</p>
-
-<p>Display Storage</p>
-
-<p>Help</p>
-
-<p>Display Help About</p>
-
-<p>Launch Browser (to check for Software Updates)</p>
-
+</dl>
 <div style="page-break-after: always;"></div>
 
 <h2 id="file-menu">File Menu</h2>
+print measurements in graphical format
+and store S-parameters in text files.<br>
+<dl>
+<dd>Print - selected view (rectangular or polar)</dd>
 
-<p>Use File to print measurements in graphical format
-and store S-parameters in text files.</p>
+<dd>Print Preview - preview printed page format</dd>
 
-<p>Print - selected view (rectangular or polar)</p>
+<dd>Print Setup - select printer and set parameters
 
-<p>Print Preview - preview printed page format</p>
+<dd>Title... - set / clear text appearing beneath plots
 
-<p>Print Setup - select printer and set parameters</p>
+<dd>Store Forward Parameters - store measured reflection and
+transmission data as <font color="red">S11</font> and <font color="green">S21</font> to temporary storage
 
-<p>Set Plot Title - set / clear text appearing beneath plots</p>
+<dd>Store Reverse Parameters - store measured reflection and
+transmission data as S22 and S12 to temporary storage
 
-<p>Store Forward Parameters - store measured reflection and
-transmission data as <font color="red">S11</font> and <font color="green">S21</font> to temporary storage</p>
+<dd>Export S-Parameters - exports stored data in text format<br>
 
-<p>Store Reverse Parameters - store measured reflection and
-transmission data as S22 and S12 to temporary storage</p>
+<dd>Save Configuration - Saves to file complete instrument
+settings and display trace state (except stored S-parameters).<br>
+&nbsp The filename can be selected and should be very descriptive.
 
-<p>Export S-Parameters - exports stored data in text format
-Rectangular Format - S-parameters Real and Imaginary components normalized to 50 ohms</p>
+<dd>Load Configuration - Load a previously saved configuration file to
+restore instrument state from a previous measurement setup.
 
-<p>Polar Format - Magnitude in dB and Phase in degrees of S-parameters normalized to 50 ohms</p>
-
-<p>Save Configuration - Saves to file complete instrument
-settings and display trace state (except stored S-parameters).
-The filename can be selected and should be very descriptive.</p>
-
-<p>Load Configuration - Load a previously saved configuration file to
-restore instrument state from a previous measurement setup.</p>
-
-<p>Exit - immediately terminate the TAPR application (and save the
-current instrument configuration to: <font color="0086A6">last.cfg</font>.</p>
+<dd>Exit - immediately terminate the TAPR application (and save the
+current instrument configuration to: <font color="0086A6">last.cfg</font>.
+</dl>
 
 <div style="page-break-after: always;"></div>
 
-<h3 id="exporting-s-parameters">Exporting S-Parameters</h3>
+<h4 id="exporting-s-parameters">Exporting S-Parameters</h4>
 
 <p>The VNA is a reflection-transmission test set. It measures
-half of an S-parameter data set (<font color="red">S11</font> and
-<font color="green">S21</font> in the forward direction) at one time.
-Physically reverse the DUT in the test setup to measure the other half
+the forward direction half of an S-parameter data set (<font color="red">S11</font> and
+<font color="green">S21</font>).
+Physically reverse DUTs in the test setup to measure their reverse direction parameters
 (<font color="0086A6">S12</font> and
-<font color="red">S22</font> in the reverse direction).</p>
+<font color="red">S22</font>).</p>
 
-<p>To measure and export a complete 4 parameter set:</p>
+<p>To measure and export a complete 4 parameter set: <ul>
+  <li>set the frequency sweep (start and stop frequencies) and
+apply calibration as desired.
+  <li>Make a measurement sweep in the forward direction
+  <li>Store Forward Parameters.
+  <li> Next, physically reverse the DUT (exchange input and output).
+  <li> Make a measurement sweep in the reverse direction without changing
+the frequency sweep or calibration-applied boxes.
+  <li> Store Reverse Parameters
+  <li> After storing these two datasets, S-Parameters can be exported to a text file
+      in either the Rectangular or Polar format.
+</ul></p>
 
-<ul>
-  <li>
-    <p>First set the frequency sweep (start and stop frequencies), and
-apply calibration as desired.</p>
-  </li>
-  <li>
-    <p>Make a measurement sweep in the forward direction</p>
-  </li>
-  <li>
-    <p>Store Forward Parameters.</p>
-  </li>
-  <li>
-    <p>Next, physically reverse the DUT (exchange input and output).</p>
-  </li>
-  <li>
-    <p>Make a measurement sweep in the reverse direction without changing
-the frequency sweep or calibration-applied boxes.</p>
-  </li>
-  <li>
-    <p>Store Reverse Parameters</p>
-  </li>
-  <li>
-    <p>After these two datasets have been stored, you may Export the S-
-Parameters in either the Rectangular or Polar formats to a text
-file.</p>
-  </li>
-</ul>
-
-<p>Both the forward and reverse storage arrays are locked once stored;
-this prevents accidental over-write. The menu items appear with a
-checkmark when</p>
-
-<p>locked. The only way to unlock them is to Export the file. Both
-forward and reverse arrays must be filled before the Export function
+<p>Forward and reverse storage arrays are both locked once stored,
+preventing accidental over-write. The menu items appear with a
+checkmark when locked. The only way to unlock them is to Export the file.
+Both forward and reverse arrays must be filled before the Export function
 can work.</p>
 
 <div style="page-break-after: always;"></div>
 
 <h2 id="view-menu">View Menu</h2>
-
-Use View to select the display view:<dl>
+select the display format:
+<dl>
 <dt><b>Rectangular</b>
 <dd>can display <font color="red">S11</font> magnitude and phase, and <font color="green">S21</font>
-magnitude, phase, and group delay. It can also show <font color="green">S21</font> ('Through')
+magnitude, phase, and group delay.<br>
+It can also show <font color="green">S21</font> ('Through')
 calibration parameters. Magnitude is plotted as dB vs. frequency,
 phase is plotted as degrees vs. frequency, and group delay is plotted
-as time vs. frequency. The display units (dB/div, and seconds/div) can
-be selected in the VertScale menu.</dd>
+as time vs. frequency.<br>
+S-parameters Real and Imaginary components are normalized to 50 ohms.<br>
+Display units (dB/div, and seconds/div) can be selected in the VertScale menu.</dd>
 
 <dt><b>Polar</b>
-<dd>can display <font color="red">S11</font> (reflection measurement) and the
-calibration data associated with reflections measurements. The Polar
-display does not show <font color="green">S21</font> measurements.</dd>
+<dd>can display <font color="red">S11</font> (reflection measurement) and
+calibration data associated with reflections measurements.<br>
+Magnitude in dB and Phase in degrees of S-parameters normalized to 50 ohms.<br>
+Polar display does not show <font color="green">S21</font> measurements.</dd>
 
 <dt><b>Time Domain Reflection</b>
 <dd>(TDR) mode performs a reflection
@@ -836,27 +833,19 @@ TDR mode ignores Start and Stop frequencies; it needs to setup
 a custom grid.</dd>
 
 <h2 id="calibration-menu">Calibration Menu</h2>
+<dl>
+<dt><b>Fixture Calibration</b>
+<dd>generate, load, and save a fixture calibration data set<br>
+ &nbsp A separate fixture calibration set is needed for each different test
+fixture.
 
-<p>The Calibration menu provides three options:</p>
+<dt><b>Load Fixture Calibration File...</b>
+<dd>select a previously saved data set by name.<br>
 
-<p>1)  Generate (and save) a Detector calibration data set.</p>
-
-<p>The detector calibration data set is auto-loaded by the application if
-it exists. It does not normally need to run except the first time the
-instrument is used. Only one detector calibration file is needed.</p>
-
-<p>2)  Run (Generate, load, and save) a fixture calibration data set.</p>
-
-<p>A separate fixture calibration set is needed for each different test
-fixture.</p>
-
-<p>3)  Load a previously saved test fixture calibration data set by name.</p>
-
-<p>The Detector calibration procedure is described in section 3. The
-Fixture calibration procedure is described in section 4.</p>
-
-<p><strong>Appendix 2 Calibration Details</strong> provides a more detailed
-description of how the calibration routines work.</p>
+<dt><a href="#appendix-2">Appendix 2: Calibration Details</a> has more information.
+ <dd><a href="#detector-calibration">Detector calibration procedure</a>
+ <dd><a href="#fixture-calibration">Fixture calibration procedure</a>
+</dl>
 
 <div style="page-break-after: always;"></div>
 
@@ -869,11 +858,11 @@ description of how the calibration routines work.</p>
 <p><font color="green">S21</font> displays only on Rectangular display.<br>
 <font color="red">S11</font> displays on both Rectangular and Polar displays.<br>
 Traces supported by Rectangular display are:</p>
-<table style="width:70%">
+<table style="width:85%">
 <tr>
-<td style="width:35%">S11 Magnitude</td><td>Device Under Test (DUT) input return loss magnitude, in dB</td>
+<td style="width:30%">S11 Magnitude</td><td>Device Under Test (DUT) input return loss magnitude, in dB</td>
 </tr><tr>
-<td>S11 Phase</td><td>DUT input return loss phase angle, in degrees, from +180 to --180</td>
+<td>S11 Phase</td><td>DUT input return loss phase angle, in degrees, from +180 to -180</td>
 </tr><tr>
 <td>S21 Magnitude</td><td>DUT forward transfer gain (or loss) magnitude, in dB</td>
 </tr><tr>
@@ -896,14 +885,14 @@ Traces supported by Rectangular display are:</p>
 
 <h3><a href="#polar-display">Polar Display</a> Mode</h3>
 
-<p><font color="red">S11</font> (as a polar complex number) is always displayed on the Polar display.
-<font color="green">S21</font> <em>cannot</em> be displayed on the polar display.
-Raw calibration data (from a calibration file that is loaded)
-as well as error parameters derived from calibration data can be displayed.<br>
+<p><font color="red">S11</font> (as a polar complex number) can be displayed in Polar format,
+along with raw calibration data (from a calibration file that is loaded)
+as well as error parameters derived from calibration data.<br>
 Error compensation and raw data are only for informational purposes
 and normally not displayed.</p>
+<font color="green">S21</font> <em>cannot</em> be displayed in polar format.
 
-<p>Traces that can be added to Polar mode display are <a href="#fixture-calibration-data-set">here</a></p>
+<p>Fixture calibration data that can be formatted as Polar traces are <a href="#fixture-calibration-data-set">here</a></p>
 <div style="page-break-after: always;"></div>
 
 <h3 id="time-domain-reflection-mode">Time Domain Reflection Mode</h3>
@@ -1095,16 +1084,16 @@ the number of measurements made from Start to Stop Frequency.
 Allowed values are:</p>
 <table>
 <tbody><tr>
-<td>100 Points</td><td>Coarsest frequency display, but fastest measurement data acquisition</td>
+<td>101 Points</td><td>Coarsest frequency display, but fastest measurement data acquisition</td>
 </tr><tr>
-<td>200 Points</td><td></td>
+<td>201 Points</td><td></td>
 </tr><tr>
-<td>400 Points</td><td></td>
+<td>401 Points</td><td></td>
 </tr><tr>
 <td>1020 Points</td><td>Finest frequency display, but slowest measurement data acquisition</td>
 </tr></tbody></table>
 
-<p>The instrument defaults to 200 points at startup.<br>
+<p>The instrument defaults to 201 points at startup.<br>
 More points increase display resolution,<br>
 fewer points reduce measurement time period.<br>
 Current FreqGrid setting also affects S-parameter text file exportation,<br>
