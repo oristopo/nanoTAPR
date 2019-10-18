@@ -1,3 +1,3 @@
 
 ## TAPR VNA Software
-## [Instruction Manual](media/index.htm)
+## [Instruction Manual](https://oristopo.github.io/nanoTAPR/media/)
